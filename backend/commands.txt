@@ -1,0 +1,1 @@
+To start the server: "npm run devStart" (it starts the backend server u can see the script in package.json)
