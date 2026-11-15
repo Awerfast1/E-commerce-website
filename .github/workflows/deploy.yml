@@ -3,7 +3,6 @@ name: Gear Shop 4-Stage CI/CD Pipeline
 on:
   push:
     branches:
-      - testing
       - main
 
 jobs:
@@ -51,15 +50,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Set API URL based on Branch
-        id: vars
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            echo "API_URL=http://${{ secrets.PROD_HOST }}:5000" >> $GITHUB_OUTPUT
-          else
-            echo "API_URL=http://${{ secrets.TESTING_HOST }}:5000" >> $GITHUB_OUTPUT
-          fi
-
       - name: Build & Push Backend Image
         uses: docker/build-push-action@v5
         with:
@@ -73,7 +63,7 @@ jobs:
           context: ./frontend
           push: true
           build-args: |
-            NEXT_PUBLIC_API_URL=${{ steps.vars.outputs.API_URL }}
+            NEXT_PUBLIC_API_URL=http://${{ secrets.PROD_HOST }}:5000
           tags: ${{ secrets.DOCKER_USERNAME }}/gearshop-frontend:latest
 
   # ==========================================
@@ -108,7 +98,6 @@ jobs:
   stage-4-deploy-production:
     name: Stage 4 - Auto Deploy Production (Level 4)
     needs: stage-3-deploy-testing
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Production EC2 via SSH
