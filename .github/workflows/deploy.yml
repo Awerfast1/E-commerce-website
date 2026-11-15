@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
 
       - name: Lint Backend
         working-directory: ./backend
@@ -63,7 +63,7 @@ jobs:
           context: ./frontend
           push: true
           build-args: |
-            NEXT_PUBLIC_API_URL=http://${{ secrets.PROD_HOST }}:5000
+            NEXT_PUBLIC_API_URL=http://${{ secrets.PRODUCTION_HOST }}:5000
           tags: ${{ secrets.DOCKER_USERNAME }}/gearshop-frontend:latest
 
   # ==========================================
@@ -103,7 +103,7 @@ jobs:
       - name: Deploy to Production EC2 via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.PROD_HOST }}
+          host: ${{ secrets.PRODUCTION_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
@@ -116,4 +116,4 @@ jobs:
         run: |
           echo "Waiting 15s for Production containers..."
           sleep 15
-          curl --fail --retry 5 --retry-delay 5 http://${{ secrets.PROD_HOST }}:5000/health
+          curl --fail --retry 5 --retry-delay 5 http://${{ secrets.PRODUCTION_HOST }}:5000/health
