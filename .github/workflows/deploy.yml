@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Lint Backend
         working-directory: ./backend
@@ -80,17 +80,18 @@ jobs:
           host: ${{ secrets.TESTING_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
+          script_stop: true
           script: |
             cd ~/app
             docker compose pull
             docker compose up -d --remove-orphans
-            docker image prune -f
+            docker image prune -af
 
       - name: Automated Health Check on Testing
         run: |
-          echo "Waiting 15s for containers to boot..."
-          sleep 15
-          curl --fail --retry 5 --retry-delay 5 http://${{ secrets.TESTING_HOST }}:5000/health
+          echo "Waiting 20s for containers to boot..."
+          sleep 20
+          curl --fail --retry 5 --retry-delay 5 --retry-connrefused http://${{ secrets.TESTING_HOST }}:5000/health
 
   # ==========================================
   # STAGE 4: AUTO-EVOLUTION TO PRODUCTION (LEVEL 4)
@@ -106,14 +107,15 @@ jobs:
           host: ${{ secrets.PRODUCTION_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
+          script_stop: true
           script: |
             cd ~/app
             docker compose pull
             docker compose up -d --remove-orphans
-            docker image prune -f
+            docker image prune -af
 
       - name: Verify Production Health
         run: |
-          echo "Waiting 15s for Production containers..."
-          sleep 15
-          curl --fail --retry 5 --retry-delay 5 http://${{ secrets.PRODUCTION_HOST }}:5000/health
+          echo "Waiting 20s for Production containers..."
+          sleep 20
+          curl --fail --retry 5 --retry-delay 5 --retry-connrefused http://${{ secrets.PRODUCTION_HOST }}:5000/health
