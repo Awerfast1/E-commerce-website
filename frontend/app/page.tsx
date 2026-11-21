@@ -1,10 +1,11 @@
 
 import Link from "next/link";
 import SectionTitle from "./components/SectionTitle";
-import MainPageCard from "./components/MainPageCard";
 import QuickCategories from "./components/QuickCategories";
 import GamingDeals from "./components/GamingDeals";
 import GamingCatalog from "./components/GamingCatalog";
+import OfficeDeals from "./components/OfficeDeals";
+import OfficeCatalog from "./components/OfficeCatalog";
 
 import { categories } from "../data/Categories";
 import { hotDeals } from "../data/HotDeals";
@@ -22,29 +23,8 @@ export default function Home() {
       <QuickCategories />
       <GamingDeals />
       <GamingCatalog />
-
-      <section className="bg-white py-12">
-        <div className="mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
-
-          <SectionTitle
-            eyebrow="Shop by category"
-            title="Find your next upgrade"
-            action="View all products"
-            href="/search"
-          />
-
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-8">
-            {categories.map((category) => (
-              <MainPageCard
-                key={category.id}
-                name={category.name}
-                image={category.image}
-              />
-            ))}
-          </div>
-
-        </div>
-      </section>
+      <OfficeDeals />
+      <OfficeCatalog />
 
       <section className="bg-[#EAF5FF] py-12">
         <div className="mx-auto max-w-7xl px-8 md:px-16 lg:px-24">

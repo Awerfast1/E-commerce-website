@@ -125,6 +125,9 @@ export default function NavBar() {
                             { label: "ACER", brand: "Acer" },
                             { label: "ASUS", brand: "ASUS" },
                             { label: "LENOVO", brand: "Lenovo" },
+                            { label: "DELL", brand: "Dell" },
+                            { label: "HP", brand: "HP" },
+                            { label: "LG", brand: "LG" },
                             { label: "ALIENWARE", brand: "Alienware" },
                           ].map(({ label, brand }) => (
                             <li key={label}>
@@ -138,12 +141,135 @@ export default function NavBar() {
                           ))}
                         </ul>
 
-                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>Giá bán ›</h3>
+                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>Nhu cầu ›</h3>
+                        <ul className={styles.megaList}>
+                          <li>
+                            <Link
+                              href="/categories/laptop?type=gaming"
+                              onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                            >
+                              Laptop Gaming
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/categories/laptop?type=office"
+                              onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                            >
+                              Laptop Văn Phòng
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Cột 2: ACER & ASUS Văn Phòng */}
+                      <div className={styles.megaCol}>
+                        <h3 className={styles.megaColHeading}>ACER ›</h3>
                         <ul className={styles.megaList}>
                           {[
-                            { label: "Dưới 30 triệu", min: "", max: "30000000" },
-                            { label: "Từ 30 đến 50 triệu", min: "30000000", max: "50000000" },
-                            { label: "Trên 50 triệu", min: "50000000", max: "" },
+                            { label: "PREDATOR HELIOS", series: "Predator Helios" },
+                            { label: "NITRO Series", series: "Nitro" },
+                            { label: "SWIFT Series (Mỏng nhẹ)", series: "Swift" },
+                            { label: "ASPIRE Series", series: "Aspire" },
+                          ].map(({ label, series }) => (
+                            <li key={label}>
+                              <Link
+                                href={`/categories/laptop?brand=Acer&series=${encodeURIComponent(series)}`}
+                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                              >
+                                {label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>ASUS ›</h3>
+                        <ul className={styles.megaList}>
+                          {[
+                            { label: "ROG STRIX / ZEPHYRUS", series: "ROG Strix" },
+                            { label: "TUF GAMING", series: "TUF Gaming" },
+                            { label: "ZENBOOK OLED (Cao cấp)", series: "Zenbook" },
+                            { label: "VIVOBOOK Series", series: "Vivobook" },
+                          ].map(({ label, series }) => (
+                            <li key={label}>
+                              <Link
+                                href={`/categories/laptop?brand=ASUS&series=${encodeURIComponent(series)}`}
+                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                              >
+                                {label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Cột 3: LENOVO & DELL */}
+                      <div className={styles.megaCol}>
+                        <h3 className={styles.megaColHeading}>LENOVO ›</h3>
+                        <ul className={styles.megaList}>
+                          {[
+                            { label: "LEGION Gaming", series: "Legion Pro" },
+                            { label: "THINKPAD (Bền bỉ)", series: "ThinkPad" },
+                            { label: "THINKBOOK (Doanh nghiệp)", series: "ThinkBook" },
+                            { label: "IDEAPAD Slim", series: "IdeaPad" },
+                          ].map(({ label, series }) => (
+                            <li key={label}>
+                              <Link
+                                href={`/categories/laptop?brand=Lenovo&series=${encodeURIComponent(series)}`}
+                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                              >
+                                {label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>DELL & ALIENWARE ›</h3>
+                        <ul className={styles.megaList}>
+                          {[
+                            { label: "DELL XPS 13 (Ultrabook)", series: "XPS" },
+                            { label: "DELL INSPIRON 14/15", series: "Inspiron" },
+                            { label: "ALIENWARE Area-51", series: "Area-51" },
+                          ].map(({ label, series }) => (
+                            <li key={label}>
+                              <Link
+                                href={`/categories/laptop?series=${encodeURIComponent(series)}`}
+                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                              >
+                                {label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Cột 4: HP, LG & Mức Giá */}
+                      <div className={styles.megaCol}>
+                        <h3 className={styles.megaColHeading}>HP & LG GRAM ›</h3>
+                        <ul className={styles.megaList}>
+                          {[
+                            { label: "HP ENVY x360 (Cảm ứng)", series: "Envy" },
+                            { label: "HP PAVILION 14", series: "Pavilion" },
+                            { label: "LG GRAM 14/16 (Siêu nhẹ)", series: "gram" },
+                          ].map(({ label, series }) => (
+                            <li key={label}>
+                              <Link
+                                href={`/categories/laptop?series=${encodeURIComponent(series)}`}
+                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                              >
+                                {label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>Khoảng giá ›</h3>
+                        <ul className={styles.megaList}>
+                          {[
+                            { label: "Dưới 15 triệu", max: "15000000" },
+                            { label: "Từ 15 đến 25 triệu", min: "15000000", max: "25000000" },
+                            { label: "Từ 25 đến 40 triệu", min: "25000000", max: "40000000" },
+                            { label: "Trên 40 triệu", min: "40000000" },
                           ].map(({ label, min, max }) => {
                             const params = new URLSearchParams();
                             if (min) params.set("min", min);
@@ -159,115 +285,6 @@ export default function NavBar() {
                               </li>
                             );
                           })}
-                        </ul>
-                      </div>
-
-                      {/* Cột 2: ACER Series */}
-                      <div className={styles.megaCol}>
-                        <h3 className={styles.megaColHeading}>ACER ›</h3>
-                        <ul className={styles.megaList}>
-                          {[
-                            { label: "PREDATOR HELIOS Series", series: "Predator Helios" },
-                            { label: "NITRO V Series", series: "Nitro" },
-                          ].map(({ label, series }) => (
-                            <li key={label}>
-                              <Link
-                                href={`/categories/laptop?brand=Acer&series=${encodeURIComponent(series)}`}
-                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                              >
-                                {label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-
-                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>LAPTOP AI ›</h3>
-                        <ul className={styles.megaList}>
-                          <li>
-                            <Link
-                              href="/categories/laptop?cpu=Core Ultra 9"
-                              onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                            >
-                              Laptop AI Core Ultra / Ryzen AI
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-
-                      {/* Cột 3: ASUS Series */}
-                      <div className={styles.megaCol}>
-                        <h3 className={styles.megaColHeading}>ASUS ›</h3>
-                        <ul className={styles.megaList}>
-                          {[
-                            { label: "ROG STRIX Series", series: "ROG Strix" },
-                            { label: "ROG ZEPHYRUS Series", series: "ROG Zephyrus" },
-                            { label: "TUF GAMING Series", series: "TUF Gaming" },
-                          ].map(({ label, series }) => (
-                            <li key={label}>
-                              <Link
-                                href={`/categories/laptop?brand=ASUS&series=${encodeURIComponent(series)}`}
-                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                              >
-                                {label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-
-                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>CARD ĐỒ HỌA (GPU) ›</h3>
-                        <ul className={styles.megaList}>
-                          {[
-                            { label: "GeForce RTX 5060", gpu: "RTX 5060" },
-                            { label: "GeForce RTX 5070 / 5070 Ti", gpu: "RTX 5070" },
-                            { label: "GeForce RTX 5080", gpu: "RTX 5080" },
-                          ].map(({ label, gpu }) => (
-                            <li key={label}>
-                              <Link
-                                href={`/categories/laptop?gpu=${encodeURIComponent(gpu)}`}
-                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                              >
-                                {label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Cột 4: LENOVO & ALIENWARE */}
-                      <div className={styles.megaCol}>
-                        <h3 className={styles.megaColHeading}>LENOVO ›</h3>
-                        <ul className={styles.megaList}>
-                          {[
-                            { label: "LEGION Pro 7i Series", series: "Legion Pro" },
-                            { label: "LEGION Pro 5i Series", series: "Legion Pro" },
-                            { label: "LEGION 5i Series", series: "Legion" },
-                          ].map(({ label, series }) => (
-                            <li key={label}>
-                              <Link
-                                href={`/categories/laptop?brand=Lenovo&series=${encodeURIComponent(series)}`}
-                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                              >
-                                {label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-
-                        <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>ALIENWARE ›</h3>
-                        <ul className={styles.megaList}>
-                          {[
-                            { label: "AREA-51 16 inch", series: "Area-51" },
-                            { label: "AREA-51 18 inch", series: "Area-51" },
-                          ].map(({ label, series }) => (
-                            <li key={label}>
-                              <Link
-                                href={`/categories/laptop?brand=Alienware&series=${encodeURIComponent(series)}`}
-                                onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                              >
-                                {label}
-                              </Link>
-                            </li>
-                          ))}
                         </ul>
                       </div>
                     </div>

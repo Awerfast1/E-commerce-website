@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { Suspense, use, useEffect, useState } from "react";
 import { notFound } from "next/navigation";
-import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../../data/gamingLaptopDeals";
+import { gamingDealsEndAt } from "../../../data/gamingLaptopDeals";
+import { getAllProducts } from "../../components/cart";
 import { studentPricing } from "../../../data/studentPricing";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -11,7 +12,8 @@ const money = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND
 
 function Summary({ params }: Props) {
   const { slug } = use(params);
-  const laptop = gamingLaptopDeals.find(item => gamingLaptopSlug(item.name) === slug);
+  const allProducts = getAllProducts();
+  const laptop = allProducts.find(item => item.slug === slug);
   if (!laptop) notFound();
 
   const [sale, setSale] = useState(false);
@@ -41,7 +43,7 @@ function Summary({ params }: Props) {
 
   return (
     <main className="mx-auto my-8 max-w-2xl rounded-xl border border-slate-200 bg-white p-6">
-      <Link className="text-blue-700" href={`/gaming-laptops/${slug}`}>‹ Quay lại sản phẩm</Link>
+      <Link className="text-blue-700" href={laptop.link}>‹ Quay lại sản phẩm</Link>
       <h1 className="my-5 text-2xl font-bold">Thanh toán</h1>
       <h2 className="font-semibold">{laptop.name}</h2>
       <dl className="mt-4 space-y-4">
