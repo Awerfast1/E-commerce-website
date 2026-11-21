@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useCart } from "./cart";
 import { useEffect, useRef, useState } from "react";
 import { products } from "../../data/Products";
 import styles from "./NavBar.module.css";
@@ -18,6 +19,7 @@ function Icon({ name }: { name: keyof typeof paths }) {
 }
 
 export default function NavBar() {
+  const count = Object.values(useCart()).reduce((sum, n) => sum + n, 0);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -43,7 +45,7 @@ export default function NavBar() {
     <header className={styles.header} lang="vi">
       <div className={styles.bar}>
         <Link className={styles.brand} href="/" aria-label="ConGears – Trang chủ">
-          <span className={styles.brandMark} aria-hidden="true">N</span>
+          <span className={styles.brandMark} aria-hidden="true">C</span>
           CONGEARS
         </Link>
         <form role="search" className={styles.search}
@@ -68,7 +70,7 @@ export default function NavBar() {
           <span><Icon name="orders" /><span>Tra cứu<br />đơn hàng</span></span>
         </div>
         <div className={styles.actions}>
-          <button disabled aria-label="Giỏ hàng" title="Giỏ hàng đang được phát triển"><Icon name="cart" /></button>
+          <Link className={styles.cartLink} href="/gio-hang" aria-label={`Giỏ hàng, ${count} sản phẩm`}><Icon name="cart" />{count > 0 && <b>{count}</b>}</Link>
           <button disabled title="Đăng nhập đang được phát triển"><Icon name="user" />Đăng nhập</button>
         </div>
       </div>

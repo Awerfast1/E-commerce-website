@@ -1,0 +1,30 @@
+.page { max-width: 80rem; margin: auto; padding: 32px 16px 64px; color: #203246; }
+.page nav { color: #56697d; margin-bottom: 32px; }
+.layout { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(250px, 1fr); gap: 22px; align-items: start; }
+.steps { display: flex; gap: 8px; margin-bottom: 24px; }
+.steps li { flex: 1; list-style: none; text-align: center; padding: 12px 4px; color: #63758a; }
+.steps b { display: block; margin: 0 auto 5px; border: 1px solid; width: 24px; border-radius: 50%; }
+.steps [aria-current] { border: 1px solid #2585d5; border-radius: 9px; background: #eef7ff; color: #165c96; }
+.bar,.row,.panel,.empty { background: white; border: 1px solid #e1e9f1; border-radius: 12px; padding: 18px; }
+.bar,.panel dl div { display: flex; justify-content: space-between; gap: 12px; }
+.row { display: grid; grid-template-columns: auto 60px minmax(100px,1fr) auto auto auto; gap: 12px; align-items: center; margin-top: 12px; }
+.row a { font-weight: 600; }
+.row strong,.panel strong { color: #cb2732; }
+.row del,.panel small { display: block; color: #617184; font-size: 13px; }
+.qty { display: flex; align-items: center; gap: 8px; border: 1px solid #bfccd9; border-radius: 7px; }
+.qty button { padding: 5px 8px; }
+.page button { cursor: pointer; }
+.page button:disabled { cursor: default; opacity: .65; }
+.next { display: block; margin: 16px 0 0 auto; padding: 12px 22px; background: #1769a8; color: white; border-radius: 8px; font-weight: 600; }
+.panel h2,.empty h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+.panel dl div,.panel p { padding: 9px 0; }
+.panel dl div:last-child { border-top: 1px solid #d7e1ea; font-weight: 700; }
+.panel label,.panel input { display: block; width: 100%; margin: 8px 0; }
+.panel input { padding: 8px; border: 1px solid #b9c9d8; border-radius: 6px; }
+.empty { text-align: center; padding: 50px 16px; }
+.empty { min-height:340px; display:grid; place-content:center; justify-items:center; gap:12px; }
+.empty svg { color:#c5ced5; }.empty h2 { margin:0; }.empty p { color:#63758a; }
+.empty a { color:white; background:#1769a8; padding:12px 22px; border-radius:9px; font-weight:650; }
+.orderDisabled { width:100%; background:#edf0f3; color:#677586; padding:12px; border-radius:8px; margin:12px 0; }
+@media(max-width:960px){.layout{grid-template-columns:1fr}}
+@media(max-width:650px){.row{grid-template-columns:auto 48px 1fr}.qty{justify-self:start}.steps{font-size:13px}}

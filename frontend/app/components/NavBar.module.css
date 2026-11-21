@@ -70,7 +70,7 @@
 .actions { gap: clamp(8px, .85vw, 16px); }
 .actions button {
   justify-content: center;
-  background: #0b0b0b;
+  background: #124b78;
   color: white;
   border-radius: 14px;
   height: 59px;
@@ -282,3 +282,6 @@
   .services { order: 2; justify-content: space-between; font-size: 12px; gap: 5px; }
   .services svg { width: 20px; }
 }
+.cartLink { position: relative; display: grid; place-items: center; align-self: stretch; padding-inline: 1em; border-radius: 12px; background: #15578c; color: white; }
+.cartLink svg { width: 24px; height: 24px; }
+.cartLink b { position: absolute; right: 2px; top: 1px; background: #ca2635; padding: 1px 5px; border-radius: 20px; font: 700 12px/1.4 Arial; }

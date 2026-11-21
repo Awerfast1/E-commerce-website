@@ -2,6 +2,9 @@
 import Link from "next/link";
 import SectionTitle from "./components/SectionTitle";
 import MainPageCard from "./components/MainPageCard";
+import QuickCategories from "./components/QuickCategories";
+import GamingDeals from "./components/GamingDeals";
+import GamingCatalog from "./components/GamingCatalog";
 
 import { categories } from "../data/Categories";
 import { hotDeals } from "../data/HotDeals";
@@ -16,18 +19,9 @@ function formatPrice(price: number) {
 export default function Home() {
   return (
     <main className="w-full flex-1 bg-gray-50">
-
-      <section className="py-10">
-        <div className="mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Welcome to ConGears
-          </h1>
-
-          <p className="mt-2 text-gray-600">
-            Explore our latest computer hardware and accessories.
-          </p>
-        </div>
-      </section>
+      <QuickCategories />
+      <GamingDeals />
+      <GamingCatalog />
 
       <section className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-8 md:px-16 lg:px-24">

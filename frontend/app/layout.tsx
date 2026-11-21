@@ -29,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <NavBar></NavBar>
         {children}
         <Footer></Footer>
+        <script src="/gaming-deals.js?v=6" defer />
         </body>
     </html>
   );
