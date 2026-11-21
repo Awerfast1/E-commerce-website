@@ -1,5 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../data/gamingLaptopDeals";
+import { gamingLaptopDeals, gamingLaptopSlug } from "../../data/gamingLaptopDeals";
 import LaptopIllustration from "./LaptopIllustration";
 import styles from "./GamingCatalog.module.css";
 
@@ -16,22 +19,35 @@ const specPaths = {
 
 function SpecIcon({ type }: { type: keyof typeof specPaths }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
-      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
       <path d={specPaths[type]} />
     </svg>
   );
 }
 
 export default function GamingCatalog() {
+  const [selectedBrand, setSelectedBrand] = useState("TẤT CẢ");
+
   return (
-    <section id="laptop-gaming" className={styles.section} aria-label="Laptop gaming" data-laptop-catalog data-deals-end-at={gamingDealsEndAt}>
+    <section id="laptop-gaming" className={styles.section} aria-label="Laptop gaming">
       <div className={styles.heading}>
         <h2>Laptop gaming</h2>
         <div className={styles.filters} aria-label="Lọc theo thương hiệu">
-          {brands.map((brand, index) => (
-            <button key={brand} type="button" data-brand-filter={brand}
-              aria-pressed={index === 0}>
+          {brands.map((brand) => (
+            <button
+              key={brand}
+              type="button"
+              aria-pressed={selectedBrand === brand}
+              onClick={() => setSelectedBrand(brand)}
+            >
               {brand}
             </button>
           ))}
@@ -39,8 +55,16 @@ export default function GamingCatalog() {
       </div>
       <div className={styles.grid}>
         {gamingLaptopDeals.map((deal, index) => (
-          <article className={styles.card} key={deal.name} data-catalog-card data-brand={deal.brand}>
-            <Link href={`/gaming-laptops/${gamingLaptopSlug(deal.name)}`} className={styles.productLink} aria-label={`Xem chi tiết ${deal.name}`}>
+          <article
+            className={styles.card}
+            key={deal.name}
+            hidden={selectedBrand !== "TẤT CẢ" && deal.brand !== selectedBrand}
+          >
+            <Link
+              href={`/gaming-laptops/${gamingLaptopSlug(deal.name)}`}
+              className={styles.productLink}
+              aria-label={`Xem chi tiết ${deal.name}`}
+            >
               <div className={styles.image}>
                 <LaptopIllustration index={index} />
               </div>
@@ -54,9 +78,9 @@ export default function GamingCatalog() {
               <span><SpecIcon type="screen" />{deal.screen}</span>
             </div>
             <div className={styles.prices}>
-              <del data-deal-original>{currency.format(deal.oldPrice)}</del>
-              <span className={styles.discount} data-deal-discount>-{Math.round((1 - deal.price / deal.oldPrice) * 100)}%</span>
-              <strong data-deal-price data-sale-price={deal.price} data-original-price={deal.oldPrice}>{currency.format(deal.price)}</strong>
+              <del>{currency.format(deal.oldPrice)}</del>
+              <span className={styles.discount}>-{Math.round((1 - deal.price / deal.oldPrice) * 100)}%</span>
+              <strong>{currency.format(deal.price)}</strong>
             </div>
           </article>
         ))}

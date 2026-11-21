@@ -1,4 +1,6 @@
 import Link from "next/link";
+import LaptopCollection from "../../components/LaptopCollection";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { products } from "../../../data/Products";
 import { quickCategories } from "../../../data/quickCategories";
@@ -7,7 +9,7 @@ export function generateStaticParams() {
   return quickCategories.map(category => ({ slug: category.slug }));
 }
 
-export default async function CategoryPage({
+async function CategoryContent({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -15,6 +17,7 @@ export default async function CategoryPage({
   const { slug } = await params;
   const category = quickCategories.find(item => item.slug === slug);
   if (!category) notFound();
+  if (slug === "laptop") return <LaptopCollection />;
 
   const categoryProducts = products.filter(product => product.categoryId === category.id);
 
@@ -40,5 +43,21 @@ export default async function CategoryPage({
         )}
       </div>
     </main>
+  );
+}
+
+export default function CategoryPage(props: { params: Promise<{ slug: string }> }) {
+  return (
+    <Suspense
+      fallback={
+        <main className="w-full flex-1 bg-gray-50 py-10">
+          <div className="mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
+            <p className="text-gray-500">Đang tải danh mục...</p>
+          </div>
+        </main>
+      }
+    >
+      <CategoryContent {...props} />
+    </Suspense>
   );
 }
