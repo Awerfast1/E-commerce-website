@@ -45,72 +45,87 @@ const money = (n:number)=>n.toLocaleString("vi-VN")+"đ";
 
 export default function LaptopCollection(){
   const searchParams = useSearchParams();
-  const [filters,setFilters]=useState<Record<string,string>>({});
-  const [expanded,setExpanded]=useState<Record<string,boolean>>({});
-  const [min,setMin]=useState(""),[max,setMax]=useState("");
-  const [sort,setSort]=useState("Mặc định");
-  const [sale,setSale]=useState(false);
+
+  const brandParam = searchParams.get("brand");
+  const seriesParam = searchParams.get("series");
+  const gpuParam = searchParams.get("gpu");
+  const cpuParam = searchParams.get("cpu");
+  const minParam = searchParams.get("min") ?? "";
+  const maxParam = searchParams.get("max") ?? "";
+
+  const initialFilters: Record<string, string> = {};
+  if (brandParam) {
+    const match = ["Acer", "ASUS", "Lenovo", "Alienware"].find(b => b.toLowerCase() === brandParam.toLowerCase());
+    if (match) initialFilters["Hãng sản xuất"] = match;
+  }
+  if (seriesParam) initialFilters["Dòng sản phẩm"] = seriesParam;
+  if (gpuParam) initialFilters["Dòng GPU"] = gpuParam;
+  if (cpuParam) initialFilters["Dòng CPU"] = cpuParam;
+
+  const [userFilters, setUserFilters] = useState<Record<string, string> | null>(null);
+  const [userMin, setUserMin] = useState<string | null>(null);
+  const [userMax, setUserMax] = useState<string | null>(null);
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const [sort, setSort] = useState("Mặc định");
+  const [sale, setSale] = useState(false);
+
+  const activeFilters = userFilters ?? initialFilters;
+  const activeMin = userMin ?? minParam;
+  const activeMax = userMax ?? maxParam;
 
   useEffect(() => {
-    const nextFilters: Record<string, string> = {};
-    let nextMin = "";
-    let nextMax = "";
+    const end = Date.parse(gamingDealsEndAt);
+    const delay = end - Date.now();
+    if (delay <= 0) return;
 
-    const brand = searchParams.get("brand");
-    if (brand) {
-      const match = ["Acer", "ASUS", "Lenovo", "Alienware"].find(b => b.toLowerCase() === brand.toLowerCase());
-      if (match) nextFilters["Hãng sản xuất"] = match;
-    }
+    const timer = setTimeout(() => {
+      setSale(Date.now() < end);
+    }, 0);
 
-    const series = searchParams.get("series");
-    if (series) {
-      nextFilters["Dòng sản phẩm"] = series;
-    }
+    const endTimer = setTimeout(() => {
+      setSale(false);
+    }, delay);
 
-    const gpu = searchParams.get("gpu");
-    if (gpu) {
-      nextFilters["Dòng GPU"] = gpu;
-    }
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(endTimer);
+    };
+  }, []);
 
-    const cpu = searchParams.get("cpu");
-    if (cpu) {
-      nextFilters["Dòng CPU"] = cpu;
-    }
-
-    const priceMin = searchParams.get("min");
-    if (priceMin) nextMin = priceMin;
-    const priceMax = searchParams.get("max");
-    if (priceMax) nextMax = priceMax;
-
-    setFilters(nextFilters);
-    if (nextMin) setMin(nextMin);
-    if (nextMax) setMax(nextMax);
-  }, [searchParams]);
-
-  useEffect(()=>{const delay=Date.parse(gamingDealsEndAt)-Date.now();setSale(delay>0);if(delay>0){const timer=setTimeout(()=>setSale(false),delay);return ()=>clearTimeout(timer);}},[]);
-  function reset(){setFilters({});setMin("");setMax("");}
-  function toggle(key:string,value?:string){
-    if(key==="Khoảng giá"){setMin("");setMax("");}
-    setFilters(old=>({...old,[key]:value ?? ""}));
+  function reset(){
+    setUserFilters({});
+    setUserMin("");
+    setUserMax("");
   }
-  const rows=laptops.map(l=>({...l,price:sale?l.product.price:l.product.oldPrice})).filter(({values,price})=>
-    (!min || price>=Number(min)) && (!max || price<=Number(max)) && Object.entries(filters).every(([key,value])=>{
+
+  function toggle(key:string,value?:string){
+    if(key==="Khoảng giá"){
+      setUserMin("");
+      setUserMax("");
+    }
+    setUserFilters(old => ({ ...(old ?? activeFilters), [key]: value ?? "" }));
+  }
+
+  const rows = laptops.map(l=>({...l,price:sale?l.product.price:l.product.oldPrice})).filter(({values,price})=>
+    (!activeMin || price>=Number(activeMin)) && (!activeMax || price<=Number(activeMax)) && Object.entries(activeFilters).every(([key,value])=>{
       if(!value)return true;
       if(key!=="Khoảng giá")return values[key] === value;
       const i=ranges.indexOf(value); return price>=limits[i]*1e6 && (price<limits[i+1]*1e6 || (i===ranges.length-1 && price===limits[i+1]*1e6));
     }));
+
   if(sort==="Giá tăng dần")rows.sort((a,b)=>a.price-b.price);
   if(sort==="Giá giảm dần")rows.sort((a,b)=>b.price-a.price);
   if(sort==="Tên A-Z")rows.sort((a,b)=>a.product.name.localeCompare(b.product.name,"vi"));
+
   return <main className={css.page}><nav className={css.breadcrumb} aria-label="Đường dẫn">
     <Link href="/">Trang chủ</Link><span aria-hidden="true">/</span><span aria-current="page">Laptop</span>
   </nav><h1>Laptop</h1><div className={css.layout}>
     <aside><header><strong>Bộ lọc tìm kiếm</strong><button onClick={reset}>Xóa lọc</button></header><div className={css.scroll}>
       {Object.entries(options).map(([key,choices])=><details open key={key}><summary>{key}</summary>
-        <label><input type="radio" name={key} checked={!filters[key]?.length && !(key==="Khoảng giá" && (min||max))} onChange={()=>toggle(key)}/> Tất cả</label>
-        {(expanded[key]?choices:choices.slice(0,6)).map(v=><label key={v}><input type="radio" name={key} checked={filters[key]===v} onChange={()=>toggle(key,v)}/> {v}</label>)}
+        <label><input type="radio" name={key} checked={!activeFilters[key]?.length && !(key==="Khoảng giá" && (activeMin||activeMax))} onChange={()=>toggle(key)}/> Tất cả</label>
+        {(expanded[key]?choices:choices.slice(0,6)).map(v=><label key={v}><input type="radio" name={key} checked={activeFilters[key]===v} onChange={()=>toggle(key,v)}/> {v}</label>)}
         {choices.length>6 && <button onClick={()=>setExpanded({...expanded,[key]:!expanded[key]})}>{expanded[key]?"Thu gọn":"Xem thêm"}</button>}
-        {key==="Khoảng giá" && <><small>Hoặc nhập khoảng giá (đồng)</small><div className={css.range}>{[min,max].map((v,i)=><input key={i} aria-label={i?"Giá tối đa":"Giá tối thiểu"} type="number" min="0" placeholder={i?"Đến":"Từ"} value={v} onChange={e=>{setFilters(old=>({...old,[key]:""}));(i?setMax:setMin)(e.target.value);}}/>)}</div></>}
+        {key==="Khoảng giá" && <><small>Hoặc nhập khoảng giá (đồng)</small><div className={css.range}>{[activeMin,activeMax].map((v,i)=><input key={i} aria-label={i?"Giá tối đa":"Giá tối thiểu"} type="number" min="0" placeholder={i?"Đến":"Từ"} value={v} onChange={e=>{setUserFilters(old=>({... (old ?? activeFilters),[key]:""}));(i?setUserMax:setUserMin)(e.target.value);}}/>)}</div></>}
       </details>)}</div></aside>
     <section><header className={css.toolbar}>
       <span aria-live="polite">Tìm thấy <b>{rows.length}</b> kết quả</span>

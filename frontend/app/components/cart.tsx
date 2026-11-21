@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import LaptopIllustration from "./LaptopIllustration";
 import styles from "./CartDrawer.module.css";
 import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../data/gamingLaptopDeals";
@@ -7,6 +7,12 @@ import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../dat
 const key = "congears.cart.v1";
 const empty = () => "{}";
 const snapshot = () => localStorage.getItem(key) || "{}";
+const emptySubscribe = () => () => {};
+const clientSnapshot = () => true;
+const serverSnapshot = () => false;
+function useIsHydrated() {
+  return useSyncExternalStore(emptySubscribe, clientSnapshot, serverSnapshot);
+}
 const catalog = new Set(gamingLaptopDeals.map(d => gamingLaptopSlug(d.name)));
 function parse(raw: string): Record<string, number> {
   try {
@@ -33,9 +39,8 @@ export function changeCart(id: string, delta: number | "remove") {
 }
 export function AddToCart({ slug, children }: { slug: string; children: ReactNode }) {
   const dialog = useRef<HTMLElement>(null);
-  const [ready, setReady] = useState(false);
+  const ready = useIsHydrated();
   const [error, setError] = useState("");
-  useEffect(() => setReady(true), []);
   const panelId = `cart-quantity-${slug}`;
   const [quantity, setQuantity] = useState("1");
   const [sale, setSale] = useState(false);

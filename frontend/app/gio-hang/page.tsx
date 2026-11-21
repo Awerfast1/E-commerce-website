@@ -14,9 +14,22 @@ export default function CartPage() {
   const [recipient, setRecipient] = useState({ name: "", phone: "", address: "" });
   const [sale, setSale] = useState(false);
   useEffect(() => {
-    const remaining = Date.parse(gamingDealsEndAt) - Date.now();
-    setSale(remaining > 0);
-    if (remaining > 0) { const timer = setTimeout(() => setSale(false), remaining); return () => clearTimeout(timer); }
+    const end = Date.parse(gamingDealsEndAt);
+    const delay = end - Date.now();
+    if (delay <= 0) return;
+
+    const timer = setTimeout(() => {
+      setSale(Date.now() < end);
+    }, 0);
+
+    const endTimer = setTimeout(() => {
+      setSale(false);
+    }, delay);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(endTimer);
+    };
   }, []);
   const rows = gamingLaptopDeals.map((p,index) => ({p,index,id:gamingLaptopSlug(p.name)})).filter(r => items[r.id]);
   const selected = rows.filter(r => !excluded.includes(r.id));
