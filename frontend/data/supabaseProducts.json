@@ -1,0 +1,3142 @@
+[
+  {
+    "product_id": "f37f4ae9-7b28-4a17-88d0-9430f0446894",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 001",
+    "slug": "chargers-demo-001",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 001 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-001-STD",
+        "price": 295000,
+        "compare_at_price": 354000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-001-PRO",
+        "price": 395000,
+        "compare_at_price": 474000
+      }
+    ]
+  },
+  {
+    "product_id": "c68bad2c-51ac-4a8e-995b-a1c44c6b38f3",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 002",
+    "slug": "cables-demo-002",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 002 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-002-STD",
+        "price": 105000,
+        "compare_at_price": 126000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-002-PRO",
+        "price": 205000,
+        "compare_at_price": 246000
+      }
+    ]
+  },
+  {
+    "product_id": "e5d7b9a9-f505-47f3-9915-befc3c2f4de4",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 003",
+    "slug": "power-banks-demo-003",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 003 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-003-STD",
+        "price": 510000,
+        "compare_at_price": 612000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-003-PRO",
+        "price": 610000,
+        "compare_at_price": 732000
+      }
+    ]
+  },
+  {
+    "product_id": "ef8278a2-4dcd-43d9-94ac-084c0e6cfa25",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 004",
+    "slug": "phone-cases-demo-004",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 004 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-004-STD",
+        "price": 180000,
+        "compare_at_price": 216000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-004-PRO",
+        "price": 280000,
+        "compare_at_price": 336000
+      }
+    ]
+  },
+  {
+    "product_id": "74e81db7-39eb-44ff-a83d-31e5b8dded07",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 005",
+    "slug": "screen-protectors-demo-005",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 005 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-005-STD",
+        "price": 170000,
+        "compare_at_price": 204000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-005-PRO",
+        "price": 270000,
+        "compare_at_price": 324000
+      }
+    ]
+  },
+  {
+    "product_id": "e8373ebc-ec50-4572-b3e1-36bf629d5a5b",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 006",
+    "slug": "headphones-demo-006",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 006 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-006-STD",
+        "price": 725000,
+        "compare_at_price": 870000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-006-PRO",
+        "price": 825000,
+        "compare_at_price": 990000
+      }
+    ]
+  },
+  {
+    "product_id": "36238984-2f16-4aee-b809-f0df8238a607",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 007",
+    "slug": "speakers-demo-007",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 007 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-007-STD",
+        "price": 750000,
+        "compare_at_price": 900000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-007-PRO",
+        "price": 850000,
+        "compare_at_price": 1020000
+      }
+    ]
+  },
+  {
+    "product_id": "99158498-64d4-4efd-a34e-bc3b0453a0e4",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 008",
+    "slug": "keyboards-demo-008",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 008 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-008-STD",
+        "price": 850000,
+        "compare_at_price": 1020000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-008-PRO",
+        "price": 950000,
+        "compare_at_price": 1140000
+      }
+    ]
+  },
+  {
+    "product_id": "e0d6a1c7-d092-4e0a-a524-f508c3cf80ab",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 009",
+    "slug": "mice-demo-009",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 009 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-009-STD",
+        "price": 365000,
+        "compare_at_price": 438000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-009-PRO",
+        "price": 465000,
+        "compare_at_price": 558000
+      }
+    ]
+  },
+  {
+    "product_id": "c2fa0eee-cf98-4338-8f0b-ce3d4c405aed",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 010",
+    "slug": "storage-demo-010",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 010 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-010-STD",
+        "price": 330000,
+        "compare_at_price": 396000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-010-PRO",
+        "price": 430000,
+        "compare_at_price": 516000
+      }
+    ]
+  },
+  {
+    "product_id": "c0ad5e8b-0f42-4ef4-93ab-93d981f2e5e4",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 011",
+    "slug": "hubs-adapters-demo-011",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 011 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-011-STD",
+        "price": 490000,
+        "compare_at_price": 588000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-011-PRO",
+        "price": 590000,
+        "compare_at_price": 708000
+      }
+    ]
+  },
+  {
+    "product_id": "e350ba8c-2b5e-40a1-bade-51d2e534d239",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 012",
+    "slug": "stands-mounts-demo-012",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 012 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-012-STD",
+        "price": 235000,
+        "compare_at_price": 282000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-012-PRO",
+        "price": 335000,
+        "compare_at_price": 402000
+      }
+    ]
+  },
+  {
+    "product_id": "31ed5a23-48b2-4361-bedd-380d52504920",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 013",
+    "slug": "chargers-demo-013",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 013 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-013-STD",
+        "price": 310000,
+        "compare_at_price": 372000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-013-PRO",
+        "price": 410000,
+        "compare_at_price": 492000
+      }
+    ]
+  },
+  {
+    "product_id": "553ff5a4-e9c3-4c67-bf6a-871b840aa27c",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 014",
+    "slug": "cables-demo-014",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 014 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-014-STD",
+        "price": 120000,
+        "compare_at_price": 144000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-014-PRO",
+        "price": 220000,
+        "compare_at_price": 264000
+      }
+    ]
+  },
+  {
+    "product_id": "a1cf0417-dfef-4922-8e61-224f02d2a616",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 015",
+    "slug": "power-banks-demo-015",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 015 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-015-STD",
+        "price": 525000,
+        "compare_at_price": 630000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-015-PRO",
+        "price": 625000,
+        "compare_at_price": 750000
+      }
+    ]
+  },
+  {
+    "product_id": "f42e3621-9fdd-47e2-84b4-40bd801ab535",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 016",
+    "slug": "phone-cases-demo-016",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 016 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-016-STD",
+        "price": 195000,
+        "compare_at_price": 234000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-016-PRO",
+        "price": 295000,
+        "compare_at_price": 354000
+      }
+    ]
+  },
+  {
+    "product_id": "2faff263-4944-40d8-8c31-3b727b150be3",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 017",
+    "slug": "screen-protectors-demo-017",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 017 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-017-STD",
+        "price": 80000,
+        "compare_at_price": 96000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-017-PRO",
+        "price": 180000,
+        "compare_at_price": 216000
+      }
+    ]
+  },
+  {
+    "product_id": "8566d3c7-f35e-4f7c-a283-59761b07d510",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 018",
+    "slug": "headphones-demo-018",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 018 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-018-STD",
+        "price": 740000,
+        "compare_at_price": 888000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-018-PRO",
+        "price": 840000,
+        "compare_at_price": 1008000
+      }
+    ]
+  },
+  {
+    "product_id": "80ff08f5-ee7f-4fec-bb01-bb35c723b9ab",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 019",
+    "slug": "speakers-demo-019",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 019 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-019-STD",
+        "price": 765000,
+        "compare_at_price": 918000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-019-PRO",
+        "price": 865000,
+        "compare_at_price": 1038000
+      }
+    ]
+  },
+  {
+    "product_id": "69a2d99c-54fd-4cc9-a920-5be5cce3e685",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 020",
+    "slug": "keyboards-demo-020",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 020 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-020-STD",
+        "price": 865000,
+        "compare_at_price": 1038000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-020-PRO",
+        "price": 965000,
+        "compare_at_price": 1158000
+      }
+    ]
+  },
+  {
+    "product_id": "4a0df612-7546-4a80-97e5-cc6c5d958a91",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 021",
+    "slug": "mice-demo-021",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 021 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-021-STD",
+        "price": 380000,
+        "compare_at_price": 456000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-021-PRO",
+        "price": 480000,
+        "compare_at_price": 576000
+      }
+    ]
+  },
+  {
+    "product_id": "eb77d499-b358-4d08-9422-cfd3dbcf516e",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 022",
+    "slug": "storage-demo-022",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 022 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-022-STD",
+        "price": 345000,
+        "compare_at_price": 414000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-022-PRO",
+        "price": 445000,
+        "compare_at_price": 534000
+      }
+    ]
+  },
+  {
+    "product_id": "e516024b-4f70-4fe1-864b-9d651cddbde1",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 023",
+    "slug": "hubs-adapters-demo-023",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 023 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-023-STD",
+        "price": 400000,
+        "compare_at_price": 480000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-023-PRO",
+        "price": 500000,
+        "compare_at_price": 600000
+      }
+    ]
+  },
+  {
+    "product_id": "b282b761-cd2e-4fe6-9451-64f17592e0c4",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 024",
+    "slug": "stands-mounts-demo-024",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 024 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-024-STD",
+        "price": 250000,
+        "compare_at_price": 300000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-024-PRO",
+        "price": 350000,
+        "compare_at_price": 420000
+      }
+    ]
+  },
+  {
+    "product_id": "4ddee2c0-8016-4fe6-8c0d-c2886b1fa578",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 025",
+    "slug": "chargers-demo-025",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 025 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-025-STD",
+        "price": 325000,
+        "compare_at_price": 390000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-025-PRO",
+        "price": 425000,
+        "compare_at_price": 510000
+      }
+    ]
+  },
+  {
+    "product_id": "35c5091a-e189-4886-a3a7-d56e6bbdcafb",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 026",
+    "slug": "cables-demo-026",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 026 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-026-STD",
+        "price": 135000,
+        "compare_at_price": 162000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-026-PRO",
+        "price": 235000,
+        "compare_at_price": 282000
+      }
+    ]
+  },
+  {
+    "product_id": "a63a91ef-1d80-4e1b-bdb0-ed6bd15d7f0e",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 027",
+    "slug": "power-banks-demo-027",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 027 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-027-STD",
+        "price": 540000,
+        "compare_at_price": 648000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-027-PRO",
+        "price": 640000,
+        "compare_at_price": 768000
+      }
+    ]
+  },
+  {
+    "product_id": "06655b61-4af6-4dfe-bb78-0110066050bf",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 028",
+    "slug": "phone-cases-demo-028",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 028 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-028-STD",
+        "price": 210000,
+        "compare_at_price": 252000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-028-PRO",
+        "price": 310000,
+        "compare_at_price": 372000
+      }
+    ]
+  },
+  {
+    "product_id": "64fc773a-bd34-4927-98b9-0998c9774999",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 029",
+    "slug": "screen-protectors-demo-029",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 029 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-029-STD",
+        "price": 95000,
+        "compare_at_price": 114000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-029-PRO",
+        "price": 195000,
+        "compare_at_price": 234000
+      }
+    ]
+  },
+  {
+    "product_id": "5497b7b5-9086-4b78-a2c3-8e34e8952d36",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 030",
+    "slug": "headphones-demo-030",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 030 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-030-STD",
+        "price": 650000,
+        "compare_at_price": 780000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-030-PRO",
+        "price": 750000,
+        "compare_at_price": 900000
+      }
+    ]
+  },
+  {
+    "product_id": "a193832f-b145-4355-8a22-055b4d83c2de",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 031",
+    "slug": "speakers-demo-031",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 031 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-031-STD",
+        "price": 780000,
+        "compare_at_price": 936000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-031-PRO",
+        "price": 880000,
+        "compare_at_price": 1056000
+      }
+    ]
+  },
+  {
+    "product_id": "993bde64-4f33-4fbf-8180-fb1295aa7d6e",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 032",
+    "slug": "keyboards-demo-032",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 032 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-032-STD",
+        "price": 880000,
+        "compare_at_price": 1056000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-032-PRO",
+        "price": 980000,
+        "compare_at_price": 1176000
+      }
+    ]
+  },
+  {
+    "product_id": "f52b18e8-6cf5-45f5-b8fc-7a01972b6b43",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 033",
+    "slug": "mice-demo-033",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 033 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-033-STD",
+        "price": 395000,
+        "compare_at_price": 474000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-033-PRO",
+        "price": 495000,
+        "compare_at_price": 594000
+      }
+    ]
+  },
+  {
+    "product_id": "4ff1f2c9-e8ab-4d43-ae9c-b3616858d2d2",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 034",
+    "slug": "storage-demo-034",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 034 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-034-STD",
+        "price": 360000,
+        "compare_at_price": 432000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-034-PRO",
+        "price": 460000,
+        "compare_at_price": 552000
+      }
+    ]
+  },
+  {
+    "product_id": "b221f889-042c-4202-9fc4-aa21a767521b",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 035",
+    "slug": "hubs-adapters-demo-035",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 035 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-035-STD",
+        "price": 415000,
+        "compare_at_price": 498000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-035-PRO",
+        "price": 515000,
+        "compare_at_price": 618000
+      }
+    ]
+  },
+  {
+    "product_id": "834622cd-d1df-48c5-8eac-0753652f302d",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 036",
+    "slug": "stands-mounts-demo-036",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 036 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-036-STD",
+        "price": 265000,
+        "compare_at_price": 318000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-036-PRO",
+        "price": 365000,
+        "compare_at_price": 438000
+      }
+    ]
+  },
+  {
+    "product_id": "46ad737f-65b7-4920-84d4-43ac1c72421a",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 037",
+    "slug": "chargers-demo-037",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 037 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-037-STD",
+        "price": 340000,
+        "compare_at_price": 408000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-037-PRO",
+        "price": 440000,
+        "compare_at_price": 528000
+      }
+    ]
+  },
+  {
+    "product_id": "36f8e492-107b-4f91-818b-6f5df95cd6ec",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 038",
+    "slug": "cables-demo-038",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 038 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-038-STD",
+        "price": 150000,
+        "compare_at_price": 180000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-038-PRO",
+        "price": 250000,
+        "compare_at_price": 300000
+      }
+    ]
+  },
+  {
+    "product_id": "815fdd5a-500b-4f9d-8bf9-58540c3aac36",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 039",
+    "slug": "power-banks-demo-039",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 039 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-039-STD",
+        "price": 450000,
+        "compare_at_price": 540000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-039-PRO",
+        "price": 550000,
+        "compare_at_price": 660000
+      }
+    ]
+  },
+  {
+    "product_id": "8611d207-d71e-48c4-a253-ac2bc54fb955",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 040",
+    "slug": "phone-cases-demo-040",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 040 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-040-STD",
+        "price": 225000,
+        "compare_at_price": 270000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-040-PRO",
+        "price": 325000,
+        "compare_at_price": 390000
+      }
+    ]
+  },
+  {
+    "product_id": "1643505a-326d-456a-93fc-4237c0936bdf",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 041",
+    "slug": "screen-protectors-demo-041",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 041 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-041-STD",
+        "price": 110000,
+        "compare_at_price": 132000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-041-PRO",
+        "price": 210000,
+        "compare_at_price": 252000
+      }
+    ]
+  },
+  {
+    "product_id": "6a547f7d-5dba-4872-a6ab-47f5ccfbe563",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 042",
+    "slug": "headphones-demo-042",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 042 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-042-STD",
+        "price": 665000,
+        "compare_at_price": 798000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-042-PRO",
+        "price": 765000,
+        "compare_at_price": 918000
+      }
+    ]
+  },
+  {
+    "product_id": "960e5324-c045-45a8-a371-7b300a7a0884",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 043",
+    "slug": "speakers-demo-043",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 043 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-043-STD",
+        "price": 795000,
+        "compare_at_price": 954000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-043-PRO",
+        "price": 895000,
+        "compare_at_price": 1074000
+      }
+    ]
+  },
+  {
+    "product_id": "a055f781-d7af-43e8-a30d-d3a3054b1df2",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 044",
+    "slug": "keyboards-demo-044",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 044 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-044-STD",
+        "price": 895000,
+        "compare_at_price": 1074000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-044-PRO",
+        "price": 995000,
+        "compare_at_price": 1194000
+      }
+    ]
+  },
+  {
+    "product_id": "a0511a02-21ee-4a20-85a0-90b3b1df60e9",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 045",
+    "slug": "mice-demo-045",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 045 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-045-STD",
+        "price": 410000,
+        "compare_at_price": 492000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-045-PRO",
+        "price": 510000,
+        "compare_at_price": 612000
+      }
+    ]
+  },
+  {
+    "product_id": "1c8a3f0f-ff4d-4f38-b4ec-710135f58598",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 046",
+    "slug": "storage-demo-046",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 046 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-046-STD",
+        "price": 375000,
+        "compare_at_price": 450000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-046-PRO",
+        "price": 475000,
+        "compare_at_price": 570000
+      }
+    ]
+  },
+  {
+    "product_id": "24e89ca6-e025-431f-9014-85adb0254d5b",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 047",
+    "slug": "hubs-adapters-demo-047",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 047 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-047-STD",
+        "price": 430000,
+        "compare_at_price": 516000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-047-PRO",
+        "price": 530000,
+        "compare_at_price": 636000
+      }
+    ]
+  },
+  {
+    "product_id": "0eeffd52-4384-4bfc-a310-2c21e69df4c0",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 048",
+    "slug": "stands-mounts-demo-048",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 048 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-048-STD",
+        "price": 280000,
+        "compare_at_price": 336000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-048-PRO",
+        "price": 380000,
+        "compare_at_price": 456000
+      }
+    ]
+  },
+  {
+    "product_id": "c566fd28-ba6e-4411-9a16-fdde62761639",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 049",
+    "slug": "chargers-demo-049",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 049 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-049-STD",
+        "price": 250000,
+        "compare_at_price": 300000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-049-PRO",
+        "price": 350000,
+        "compare_at_price": 420000
+      }
+    ]
+  },
+  {
+    "product_id": "595d9b83-0984-41b2-a581-c69deeff5d82",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 050",
+    "slug": "cables-demo-050",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 050 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-050-STD",
+        "price": 165000,
+        "compare_at_price": 198000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-050-PRO",
+        "price": 265000,
+        "compare_at_price": 318000
+      }
+    ]
+  },
+  {
+    "product_id": "c6028162-54ef-4e34-a38b-b14af46c4dad",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 051",
+    "slug": "power-banks-demo-051",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 051 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-051-STD",
+        "price": 465000,
+        "compare_at_price": 558000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-051-PRO",
+        "price": 565000,
+        "compare_at_price": 678000
+      }
+    ]
+  },
+  {
+    "product_id": "56cff25c-069e-495f-8698-3dd4458772d1",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 052",
+    "slug": "phone-cases-demo-052",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 052 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-052-STD",
+        "price": 240000,
+        "compare_at_price": 288000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-052-PRO",
+        "price": 340000,
+        "compare_at_price": 408000
+      }
+    ]
+  },
+  {
+    "product_id": "54013219-de06-4fd6-96ff-75394aa55f57",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 053",
+    "slug": "screen-protectors-demo-053",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 053 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-053-STD",
+        "price": 125000,
+        "compare_at_price": 150000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-053-PRO",
+        "price": 225000,
+        "compare_at_price": 270000
+      }
+    ]
+  },
+  {
+    "product_id": "4013322e-190d-4456-ae7c-01cb299d4a40",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 054",
+    "slug": "headphones-demo-054",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 054 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-054-STD",
+        "price": 680000,
+        "compare_at_price": 816000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-054-PRO",
+        "price": 780000,
+        "compare_at_price": 936000
+      }
+    ]
+  },
+  {
+    "product_id": "58fca643-7491-47b7-84e7-333693d37123",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 055",
+    "slug": "speakers-demo-055",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 055 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-055-STD",
+        "price": 810000,
+        "compare_at_price": 972000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-055-PRO",
+        "price": 910000,
+        "compare_at_price": 1092000
+      }
+    ]
+  },
+  {
+    "product_id": "79256bc6-bf34-4642-a7c2-dcf16ca010c3",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 056",
+    "slug": "keyboards-demo-056",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 056 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-056-STD",
+        "price": 910000,
+        "compare_at_price": 1092000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-056-PRO",
+        "price": 1010000,
+        "compare_at_price": 1212000
+      }
+    ]
+  },
+  {
+    "product_id": "9c33f700-bfd1-491f-bbf5-8062f702ac4c",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 057",
+    "slug": "mice-demo-057",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 057 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-057-STD",
+        "price": 425000,
+        "compare_at_price": 510000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-057-PRO",
+        "price": 525000,
+        "compare_at_price": 630000
+      }
+    ]
+  },
+  {
+    "product_id": "05fd3e72-d7f9-44e3-a778-602ec8a2740f",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 058",
+    "slug": "storage-demo-058",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 058 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-058-STD",
+        "price": 390000,
+        "compare_at_price": 468000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-058-PRO",
+        "price": 490000,
+        "compare_at_price": 588000
+      }
+    ]
+  },
+  {
+    "product_id": "1c49cde6-53c9-40b5-875b-f2fbf86a6da7",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 059",
+    "slug": "hubs-adapters-demo-059",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 059 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-059-STD",
+        "price": 445000,
+        "compare_at_price": 534000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-059-PRO",
+        "price": 545000,
+        "compare_at_price": 654000
+      }
+    ]
+  },
+  {
+    "product_id": "2f8c812d-9cd3-4e55-b61b-287049782cd5",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 060",
+    "slug": "stands-mounts-demo-060",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 060 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-060-STD",
+        "price": 295000,
+        "compare_at_price": 354000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-060-PRO",
+        "price": 395000,
+        "compare_at_price": 474000
+      }
+    ]
+  },
+  {
+    "product_id": "91d32718-2aad-4531-8203-0eccf7f7f060",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 061",
+    "slug": "chargers-demo-061",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 061 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-061-STD",
+        "price": 265000,
+        "compare_at_price": 318000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-061-PRO",
+        "price": 365000,
+        "compare_at_price": 438000
+      }
+    ]
+  },
+  {
+    "product_id": "144f2daa-bf61-4814-9e04-d21caa193219",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 062",
+    "slug": "cables-demo-062",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 062 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-062-STD",
+        "price": 180000,
+        "compare_at_price": 216000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-062-PRO",
+        "price": 280000,
+        "compare_at_price": 336000
+      }
+    ]
+  },
+  {
+    "product_id": "5b0a9478-f1bd-4259-a07b-6157b57851f5",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 063",
+    "slug": "power-banks-demo-063",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 063 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-063-STD",
+        "price": 480000,
+        "compare_at_price": 576000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-063-PRO",
+        "price": 580000,
+        "compare_at_price": 696000
+      }
+    ]
+  },
+  {
+    "product_id": "77c204d1-bba2-4030-aa18-bfbeab8650c4",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 064",
+    "slug": "phone-cases-demo-064",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 064 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-064-STD",
+        "price": 150000,
+        "compare_at_price": 180000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-064-PRO",
+        "price": 250000,
+        "compare_at_price": 300000
+      }
+    ]
+  },
+  {
+    "product_id": "a0bf92cc-6d7a-486f-8af5-ce83604993ba",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 065",
+    "slug": "screen-protectors-demo-065",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 065 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-065-STD",
+        "price": 140000,
+        "compare_at_price": 168000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-065-PRO",
+        "price": 240000,
+        "compare_at_price": 288000
+      }
+    ]
+  },
+  {
+    "product_id": "a2de694c-3e3e-4d6e-a479-57ffef61d7ec",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 066",
+    "slug": "headphones-demo-066",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 066 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-066-STD",
+        "price": 695000,
+        "compare_at_price": 834000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-066-PRO",
+        "price": 795000,
+        "compare_at_price": 954000
+      }
+    ]
+  },
+  {
+    "product_id": "a6bc78a3-2947-404c-9645-a1c1031e708c",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 067",
+    "slug": "speakers-demo-067",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 067 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-067-STD",
+        "price": 825000,
+        "compare_at_price": 990000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-067-PRO",
+        "price": 925000,
+        "compare_at_price": 1110000
+      }
+    ]
+  },
+  {
+    "product_id": "344db8d3-c340-49cd-a9b9-ca2cb93de71d",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 068",
+    "slug": "keyboards-demo-068",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 068 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-068-STD",
+        "price": 925000,
+        "compare_at_price": 1110000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-068-PRO",
+        "price": 1025000,
+        "compare_at_price": 1230000
+      }
+    ]
+  },
+  {
+    "product_id": "2ed59012-7a87-4ac6-8310-b6fd9484a7bc",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 069",
+    "slug": "mice-demo-069",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 069 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-069-STD",
+        "price": 440000,
+        "compare_at_price": 528000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-069-PRO",
+        "price": 540000,
+        "compare_at_price": 648000
+      }
+    ]
+  },
+  {
+    "product_id": "f377934a-e9fc-4899-8ba0-9bceb7408e03",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 070",
+    "slug": "storage-demo-070",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 070 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-070-STD",
+        "price": 300000,
+        "compare_at_price": 360000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-070-PRO",
+        "price": 400000,
+        "compare_at_price": 480000
+      }
+    ]
+  },
+  {
+    "product_id": "85dfb2f3-3aac-4950-89e9-115959472c15",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 071",
+    "slug": "hubs-adapters-demo-071",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 071 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-071-STD",
+        "price": 460000,
+        "compare_at_price": 552000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-071-PRO",
+        "price": 560000,
+        "compare_at_price": 672000
+      }
+    ]
+  },
+  {
+    "product_id": "dfa9e00f-e09a-4d75-bcea-5acfce7019db",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 072",
+    "slug": "stands-mounts-demo-072",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 072 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-072-STD",
+        "price": 310000,
+        "compare_at_price": 372000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-072-PRO",
+        "price": 410000,
+        "compare_at_price": 492000
+      }
+    ]
+  },
+  {
+    "product_id": "cee2a976-d9f5-480f-9a07-4ff3097f67aa",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 073",
+    "slug": "chargers-demo-073",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 073 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-073-STD",
+        "price": 280000,
+        "compare_at_price": 336000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-073-PRO",
+        "price": 380000,
+        "compare_at_price": 456000
+      }
+    ]
+  },
+  {
+    "product_id": "bceeb6bc-cb1c-4ef8-b954-e05d7a36dd05",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 074",
+    "slug": "cables-demo-074",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 074 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-074-STD",
+        "price": 90000,
+        "compare_at_price": 108000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-074-PRO",
+        "price": 190000,
+        "compare_at_price": 228000
+      }
+    ]
+  },
+  {
+    "product_id": "93f649c7-14a6-4ccb-a7d2-55c5e41f697e",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 075",
+    "slug": "power-banks-demo-075",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 075 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-075-STD",
+        "price": 495000,
+        "compare_at_price": 594000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-075-PRO",
+        "price": 595000,
+        "compare_at_price": 714000
+      }
+    ]
+  },
+  {
+    "product_id": "6c91ae0f-b1a0-4304-bd57-2ecf2f1d3594",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 076",
+    "slug": "phone-cases-demo-076",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 076 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-076-STD",
+        "price": 165000,
+        "compare_at_price": 198000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-076-PRO",
+        "price": 265000,
+        "compare_at_price": 318000
+      }
+    ]
+  },
+  {
+    "product_id": "37722d83-c75c-414f-8c05-337ef40fb2c1",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 077",
+    "slug": "screen-protectors-demo-077",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 077 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-077-STD",
+        "price": 155000,
+        "compare_at_price": 186000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-077-PRO",
+        "price": 255000,
+        "compare_at_price": 306000
+      }
+    ]
+  },
+  {
+    "product_id": "4f62b4dd-a22c-498e-b2ce-97c43b15c449",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 078",
+    "slug": "headphones-demo-078",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 078 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-078-STD",
+        "price": 710000,
+        "compare_at_price": 852000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-078-PRO",
+        "price": 810000,
+        "compare_at_price": 972000
+      }
+    ]
+  },
+  {
+    "product_id": "9111ad1d-30fd-4655-866d-58e56c79b64b",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 079",
+    "slug": "speakers-demo-079",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 079 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-079-STD",
+        "price": 840000,
+        "compare_at_price": 1008000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-079-PRO",
+        "price": 940000,
+        "compare_at_price": 1128000
+      }
+    ]
+  },
+  {
+    "product_id": "5a6b6ec1-bc8c-43ed-88c9-2ffab626c0f4",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 080",
+    "slug": "keyboards-demo-080",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 080 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-080-STD",
+        "price": 940000,
+        "compare_at_price": 1128000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-080-PRO",
+        "price": 1040000,
+        "compare_at_price": 1248000
+      }
+    ]
+  },
+  {
+    "product_id": "20c3756f-0c79-4157-b488-526dae0dc9fa",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 081",
+    "slug": "mice-demo-081",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 081 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-081-STD",
+        "price": 350000,
+        "compare_at_price": 420000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-081-PRO",
+        "price": 450000,
+        "compare_at_price": 540000
+      }
+    ]
+  },
+  {
+    "product_id": "d6bb5873-e5e0-42a7-8ef4-e824a4fe8119",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 082",
+    "slug": "storage-demo-082",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 082 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-082-STD",
+        "price": 315000,
+        "compare_at_price": 378000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-082-PRO",
+        "price": 415000,
+        "compare_at_price": 498000
+      }
+    ]
+  },
+  {
+    "product_id": "f3b3b8cf-82f0-48a4-be88-fa70bb68a3c2",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 083",
+    "slug": "hubs-adapters-demo-083",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 083 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-083-STD",
+        "price": 475000,
+        "compare_at_price": 570000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-083-PRO",
+        "price": 575000,
+        "compare_at_price": 690000
+      }
+    ]
+  },
+  {
+    "product_id": "0a8f5d19-5b10-4454-95d8-93f1eaec2c58",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 084",
+    "slug": "stands-mounts-demo-084",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 084 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-084-STD",
+        "price": 220000,
+        "compare_at_price": 264000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-084-PRO",
+        "price": 320000,
+        "compare_at_price": 384000
+      }
+    ]
+  },
+  {
+    "product_id": "6385f1ff-5825-4661-9009-f2b4f814f4fa",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 085",
+    "slug": "chargers-demo-085",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 085 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-085-STD",
+        "price": 295000,
+        "compare_at_price": 354000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-085-PRO",
+        "price": 395000,
+        "compare_at_price": 474000
+      }
+    ]
+  },
+  {
+    "product_id": "d4d1991b-fa3d-468c-861f-f5c643d7c2c0",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 086",
+    "slug": "cables-demo-086",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 086 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-086-STD",
+        "price": 105000,
+        "compare_at_price": 126000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-086-PRO",
+        "price": 205000,
+        "compare_at_price": 246000
+      }
+    ]
+  },
+  {
+    "product_id": "ad9c361a-8e28-4c88-a7fa-1ec2ee6fc623",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 087",
+    "slug": "power-banks-demo-087",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 087 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-087-STD",
+        "price": 510000,
+        "compare_at_price": 612000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-087-PRO",
+        "price": 610000,
+        "compare_at_price": 732000
+      }
+    ]
+  },
+  {
+    "product_id": "85f7dca8-365c-4a6a-8d5f-afc78e5b7735",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 088",
+    "slug": "phone-cases-demo-088",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 088 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-088-STD",
+        "price": 180000,
+        "compare_at_price": 216000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-088-PRO",
+        "price": 280000,
+        "compare_at_price": 336000
+      }
+    ]
+  },
+  {
+    "product_id": "c0cb1246-a9b7-400e-b965-74b48176b792",
+    "category_id": "9c66b851-0431-491b-a607-7d716f8f3a2e",
+    "brand_id": "b8c76d96-4ff5-4599-bf0f-ae4c64113a94",
+    "product_name": "Screen Protectors Demo Model 089",
+    "slug": "screen-protectors-demo-089",
+    "short_description": "Quality screen protectors accessory.",
+    "description": "Screen Protectors Demo Model 089 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "screen-protectors",
+      "category_name": "Screen Protectors"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-089-STD",
+        "price": 170000,
+        "compare_at_price": 204000
+      },
+      {
+        "sku": "ABC-SCREEN-PROTECTORS-DEMO-089-PRO",
+        "price": 270000,
+        "compare_at_price": 324000
+      }
+    ]
+  },
+  {
+    "product_id": "e5ca0e67-a52d-4e09-bacb-1d8e72fc1c29",
+    "category_id": "8a691ed1-c008-4a7a-843f-39c34247c648",
+    "brand_id": "d00bd89f-fa7e-4732-ba0b-6623f6f779d0",
+    "product_name": "Headphones Demo Model 090",
+    "slug": "headphones-demo-090",
+    "short_description": "Quality headphones accessory.",
+    "description": "Headphones Demo Model 090 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "headphones",
+      "category_name": "Headphones"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HEADPHONES-DEMO-090-STD",
+        "price": 725000,
+        "compare_at_price": 870000
+      },
+      {
+        "sku": "ABC-HEADPHONES-DEMO-090-PRO",
+        "price": 825000,
+        "compare_at_price": 990000
+      }
+    ]
+  },
+  {
+    "product_id": "d2e353dc-8f10-4fc6-bb52-ef21a67f60b9",
+    "category_id": "3a8458d6-4e01-49f5-80e1-80d93e58c9e9",
+    "brand_id": "b76be2d6-fce2-4972-8745-af20a37d206f",
+    "product_name": "Speakers Demo Model 091",
+    "slug": "speakers-demo-091",
+    "short_description": "Quality speakers accessory.",
+    "description": "Speakers Demo Model 091 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "speakers",
+      "category_name": "Speakers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-SPEAKERS-DEMO-091-STD",
+        "price": 750000,
+        "compare_at_price": 900000
+      },
+      {
+        "sku": "ABC-SPEAKERS-DEMO-091-PRO",
+        "price": 850000,
+        "compare_at_price": 1020000
+      }
+    ]
+  },
+  {
+    "product_id": "0e6c96fb-7f7c-4e3b-b00c-24519e374b9c",
+    "category_id": "f15c6e06-8a54-4cba-878a-cfdcc8c026ae",
+    "brand_id": "17f517e8-9194-4e4f-bdb3-c86b85812e73",
+    "product_name": "Keyboards Demo Model 092",
+    "slug": "keyboards-demo-092",
+    "short_description": "Quality keyboards accessory.",
+    "description": "Keyboards Demo Model 092 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "keyboards",
+      "category_name": "Keyboards"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-092-STD",
+        "price": 850000,
+        "compare_at_price": 1020000
+      },
+      {
+        "sku": "ABC-KEYBOARDS-DEMO-092-PRO",
+        "price": 950000,
+        "compare_at_price": 1140000
+      }
+    ]
+  },
+  {
+    "product_id": "b47ebb19-8921-4543-8e6a-4cf34e418c61",
+    "category_id": "ad83184f-1ea2-4a4e-a0fa-ea5e69f2123a",
+    "brand_id": "0cfe3523-e8b2-445a-a689-45b24810d338",
+    "product_name": "Mice Demo Model 093",
+    "slug": "mice-demo-093",
+    "short_description": "Quality mice accessory.",
+    "description": "Mice Demo Model 093 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "mice",
+      "category_name": "Mice"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-MICE-DEMO-093-STD",
+        "price": 365000,
+        "compare_at_price": 438000
+      },
+      {
+        "sku": "ABC-MICE-DEMO-093-PRO",
+        "price": 465000,
+        "compare_at_price": 558000
+      }
+    ]
+  },
+  {
+    "product_id": "8197be97-1272-41ab-aad5-0472f1fe7c89",
+    "category_id": "104d2b42-33b0-40f7-a3ad-0416b5c6278d",
+    "brand_id": "1eb3e63f-975a-4847-a930-4480d7cfee63",
+    "product_name": "Storage Demo Model 094",
+    "slug": "storage-demo-094",
+    "short_description": "Quality storage accessory.",
+    "description": "Storage Demo Model 094 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "storage",
+      "category_name": "Storage"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STORAGE-DEMO-094-STD",
+        "price": 330000,
+        "compare_at_price": 396000
+      },
+      {
+        "sku": "ABC-STORAGE-DEMO-094-PRO",
+        "price": 430000,
+        "compare_at_price": 516000
+      }
+    ]
+  },
+  {
+    "product_id": "33313a79-5420-4059-8ad9-b15610e86cf8",
+    "category_id": "da02df1b-2a67-4c89-923c-f5f324d14734",
+    "brand_id": "a075aa22-8d4a-49e1-869d-01a5115fd8ea",
+    "product_name": "Hubs & Adapters Demo Model 095",
+    "slug": "hubs-adapters-demo-095",
+    "short_description": "Quality hubs & adapters accessory.",
+    "description": "Hubs & Adapters Demo Model 095 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "hubs-adapters",
+      "category_name": "Hubs & Adapters"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-095-STD",
+        "price": 490000,
+        "compare_at_price": 588000
+      },
+      {
+        "sku": "ABC-HUBS-ADAPTERS-DEMO-095-PRO",
+        "price": 590000,
+        "compare_at_price": 708000
+      }
+    ]
+  },
+  {
+    "product_id": "3b1c31a1-b840-4ec3-882a-00f797ab88bf",
+    "category_id": "17329ace-6333-4589-9f3f-886732a1c92d",
+    "brand_id": "9608b564-cbe0-4ad5-adda-72a37cb87bd6",
+    "product_name": "Stands & Mounts Demo Model 096",
+    "slug": "stands-mounts-demo-096",
+    "short_description": "Quality stands & mounts accessory.",
+    "description": "Stands & Mounts Demo Model 096 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "stands-mounts",
+      "category_name": "Stands & Mounts"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-096-STD",
+        "price": 235000,
+        "compare_at_price": 282000
+      },
+      {
+        "sku": "ABC-STANDS-MOUNTS-DEMO-096-PRO",
+        "price": 335000,
+        "compare_at_price": 402000
+      }
+    ]
+  },
+  {
+    "product_id": "a04a97d8-893b-41aa-9dd6-8e9796a69d0e",
+    "category_id": "bb852652-1bc0-4afe-8827-9289269826a9",
+    "brand_id": "b4a10c3a-3570-4cd7-afd2-d5d68828b4d5",
+    "product_name": "Chargers Demo Model 097",
+    "slug": "chargers-demo-097",
+    "short_description": "Quality chargers accessory.",
+    "description": "Chargers Demo Model 097 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "chargers",
+      "category_name": "Chargers"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CHARGERS-DEMO-097-STD",
+        "price": 310000,
+        "compare_at_price": 372000
+      },
+      {
+        "sku": "ABC-CHARGERS-DEMO-097-PRO",
+        "price": 410000,
+        "compare_at_price": 492000
+      }
+    ]
+  },
+  {
+    "product_id": "b95b0a2e-13d0-41be-b7f0-bc65a37f98a7",
+    "category_id": "5d1112ce-88fb-4675-b200-6ead1132d133",
+    "brand_id": "b1a92d5c-9c8b-4b86-a9ac-db92bc7c5a37",
+    "product_name": "Cables Demo Model 098",
+    "slug": "cables-demo-098",
+    "short_description": "Quality cables accessory.",
+    "description": "Cables Demo Model 098 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "cables",
+      "category_name": "Cables"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-CABLES-DEMO-098-STD",
+        "price": 120000,
+        "compare_at_price": 144000
+      },
+      {
+        "sku": "ABC-CABLES-DEMO-098-PRO",
+        "price": 220000,
+        "compare_at_price": 264000
+      }
+    ]
+  },
+  {
+    "product_id": "6a0fe9aa-a2b0-4e06-ae61-300e8f805d32",
+    "category_id": "d605176d-160d-4cee-8a5d-bc9afa791a6d",
+    "brand_id": "8b018bea-91de-44f8-8cb0-4b1f46fd9ee0",
+    "product_name": "Power Banks Demo Model 099",
+    "slug": "power-banks-demo-099",
+    "short_description": "Quality power banks accessory.",
+    "description": "Power Banks Demo Model 099 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "power-banks",
+      "category_name": "Power Banks"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-099-STD",
+        "price": 525000,
+        "compare_at_price": 630000
+      },
+      {
+        "sku": "ABC-POWER-BANKS-DEMO-099-PRO",
+        "price": 625000,
+        "compare_at_price": 750000
+      }
+    ]
+  },
+  {
+    "product_id": "21b9f320-dc2c-47e4-bfe3-60991166b1b3",
+    "category_id": "f14ae2e7-ae8e-400d-a9cf-d76bb0e98d1f",
+    "brand_id": "9aef84d5-0d93-47f5-929b-51148c656f8d",
+    "product_name": "Phone Cases Demo Model 100",
+    "slug": "phone-cases-demo-100",
+    "short_description": "Quality phone cases accessory.",
+    "description": "Phone Cases Demo Model 100 is a demo product for ABC E-Commerce. Designed for testing product management, search, filtering and checkout.",
+    "categories": {
+      "slug": "phone-cases",
+      "category_name": "Phone Cases"
+    },
+    "product_variants": [
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-100-STD",
+        "price": 195000,
+        "compare_at_price": 234000
+      },
+      {
+        "sku": "ABC-PHONE-CASES-DEMO-100-PRO",
+        "price": 295000,
+        "compare_at_price": 354000
+      }
+    ]
+  },
+  {
+    "product_id": "8e3aebb8-7972-45f0-aec3-416bfb8c6b20",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS ROG Strix G16 (2025) G615JMR-S5155W",
+    "slug": "asus-rog-strix-g16-2025-g615jmr-s5155w",
+    "short_description": "Core i7-14650HX / RTX 5060 / 32 GB / 1 TB SSD / 16 inch 2.5K",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-001-ASUSROGSTRIX",
+        "price": 44990000,
+        "compare_at_price": 49990000
+      }
+    ]
+  },
+  {
+    "product_id": "7ed19779-f3cf-4573-84ba-d5153460a560",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS ROG Zephyrus G14 (2025) GA403WM-QS051WS",
+    "slug": "asus-rog-zephyrus-g14-2025-ga403wm-qs051ws",
+    "short_description": "Ryzen AI 9 HX 370 / RTX 5060 / 32 GB / 1 TB SSD / 14 inch OLED 3K",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-002-ASUSROGZEPHYR",
+        "price": 50990000,
+        "compare_at_price": 55990000
+      }
+    ]
+  },
+  {
+    "product_id": "2bbb5e12-37cb-42ac-872a-80887e3e37d4",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS ROG Zephyrus G16 (2025) GU605CP-QR115W",
+    "slug": "asus-rog-zephyrus-g16-2025-gu605cp-qr115w",
+    "short_description": "Core Ultra 7 255H / RTX 5070 / 16 GB / 512 GB SSD / 16 inch OLED 2.5K",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-003-ASUSROGZEPHYR",
+        "price": 67990000,
+        "compare_at_price": 74990000
+      }
+    ]
+  },
+  {
+    "product_id": "91c50b98-6bc6-4cb8-8cf4-6df66ca60bc8",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS TUF Gaming A16 (2025) FA608UM-RV266W",
+    "slug": "asus-tuf-gaming-a16-2025-fa608um-rv266w",
+    "short_description": "Ryzen 7 260 / RTX 5060 / 16 GB / 512 GB SSD / 16 inch FHD+",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-004-ASUSTUFGAMING",
+        "price": 36990000,
+        "compare_at_price": 40990000
+      }
+    ]
+  },
+  {
+    "product_id": "f69aa2e9-ff87-4041-92ca-5d8ecf7ba583",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "eea3503a-05e7-4471-839c-ec14d82e8bf9",
+    "product_name": "Acer Predator Helios Neo 16S AI PHN16S-I51-98CX",
+    "slug": "acer-predator-helios-neo-16s-ai-phn16s-i51-98cx",
+    "short_description": "Core Ultra 9 386H / RTX 5060 / 32 GB / 512 GB SSD / 16 inch OLED 2.5K",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-005-ACERPREDATORH",
+        "price": 71990000,
+        "compare_at_price": 79990000
+      }
+    ]
+  },
+  {
+    "product_id": "d4550086-97c6-4bc2-ac20-ac87a0e1cd1d",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "eea3503a-05e7-4471-839c-ec14d82e8bf9",
+    "product_name": "Acer Nitro V 16 AI ANV16-42-R309",
+    "slug": "acer-nitro-v-16-ai-anv16-42-r309",
+    "short_description": "Ryzen AI 5 240 / RTX 5050 / 16 GB / 512 GB SSD / 16 inch FHD+",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-006-ACERNITROV16",
+        "price": 27900000,
+        "compare_at_price": 31200000
+      }
+    ]
+  },
+  {
+    "product_id": "1f79b324-c467-4f34-bb49-43866da837c1",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "eea3503a-05e7-4471-839c-ec14d82e8bf9",
+    "product_name": "Acer Nitro V 16S AI ANV16S-61-R7KQ",
+    "slug": "acer-nitro-v-16s-ai-anv16s-61-r7kq",
+    "short_description": "Ryzen AI 5 340 / RTX 5060 / 16 GB / 1 TB SSD / 16 inch FHD+",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-007-ACERNITROV16",
+        "price": 39999000,
+        "compare_at_price": 43999000
+      }
+    ]
+  },
+  {
+    "product_id": "ef912da0-41ff-4614-ab96-a553f1f5e5c4",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "7ba28e54-bf81-4a00-a287-a81281ed1134",
+    "product_name": "Lenovo Legion Pro 7i Gen 10",
+    "slug": "lenovo-legion-pro-7i-gen-10",
+    "short_description": "Core Ultra 9 275HX / RTX 5080 / 32 GB / 1 TB SSD / 16 inch OLED 2.5K",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-008-LENOVOLEGIONP",
+        "price": 75900000,
+        "compare_at_price": 83900000
+      }
+    ]
+  },
+  {
+    "product_id": "83ad7719-ad90-4558-a17c-5f69d7976a95",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "7ba28e54-bf81-4a00-a287-a81281ed1134",
+    "product_name": "Lenovo Legion Pro 5i Gen 10",
+    "slug": "lenovo-legion-pro-5i-gen-10",
+    "short_description": "Core Ultra 9 275HX / RTX 5070 / 32 GB / 1 TB SSD / 16 inch 2.5K",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-009-LENOVOLEGIONP",
+        "price": 57800000,
+        "compare_at_price": 63800000
+      }
+    ]
+  },
+  {
+    "product_id": "83511a95-2e0b-4a99-95a1-07d7ab88b16b",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "7ba28e54-bf81-4a00-a287-a81281ed1134",
+    "product_name": "Lenovo Legion 5i Gen 10",
+    "slug": "lenovo-legion-5i-gen-10",
+    "short_description": "Core Ultra 7 255HX / RTX 5060 / 16 GB / 512 GB SSD / 15.1 inch OLED 2.5K",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-010-LENOVOLEGION5",
+        "price": 51000000,
+        "compare_at_price": 56000000
+      }
+    ]
+  },
+  {
+    "product_id": "900a37fe-b2f5-4d70-8648-49c872146b44",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "2ab38f62-f5bd-477f-b4b7-8e6ecc5b57bf",
+    "product_name": "Alienware 16 Area-51",
+    "slug": "alienware-16-area-51",
+    "short_description": "Core Ultra 9 275HX / RTX 5080 / 32 GB / 1 TB SSD / 16 inch QHD+",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-011-ALIENWARE16AR",
+        "price": 80990000,
+        "compare_at_price": 89990000
+      }
+    ]
+  },
+  {
+    "product_id": "914d8990-fe5c-471d-9d53-6b913dc691eb",
+    "category_id": "d9e0f08b-b06a-4fc7-a913-89395c331903",
+    "brand_id": "2ab38f62-f5bd-477f-b4b7-8e6ecc5b57bf",
+    "product_name": "Alienware 18 Area-51",
+    "slug": "alienware-18-area-51",
+    "short_description": "Core Ultra 9 275HX / RTX 5070 Ti / 32 GB / 2 TB SSD / 18 inch QHD+",
+    "description": "Sản phẩm Laptop Gaming chính hãng hiệu năng vượt trội.",
+    "categories": {
+      "slug": "laptop-gaming",
+      "category_name": "Laptop Gaming"
+    },
+    "product_variants": [
+      {
+        "sku": "GM-012-ALIENWARE18AR",
+        "price": 71800000,
+        "compare_at_price": 79800000
+      }
+    ]
+  },
+  {
+    "product_id": "23a5795d-6b12-4223-844a-af1c9cca3ab7",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS Zenbook 14 OLED UX3405MA-PP151W",
+    "slug": "asus-zenbook-14-oled-ux3405ma-pp151w",
+    "short_description": "Core Ultra 5 125H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 14.0 inch 3K OLED 120Hz / 1.20 kg",
+    "description": "Chuẩn Intel Evo, màn hình Lumina OLED 3K, pin 75Wh dùng cả ngày",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-001-ASUSZENBOOK14",
+        "price": 24990000,
+        "compare_at_price": 28990000
+      }
+    ]
+  },
+  {
+    "product_id": "874c9495-65d9-4eab-9423-938736c26bc9",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS Zenbook S 14 OLED UX5406SA-PV140W",
+    "slug": "asus-zenbook-s-14-oled-ux5406sa-pv140w",
+    "short_description": "Core Ultra 7 258V / Intel Arc Graphics 140V / 32 GB LPDDR5X / 1 TB SSD / 14.0 inch 3K OLED 120Hz / 1.20 kg",
+    "description": "Chất liệu gốm nhôm Ceraluminum, NPU 47 TOPS chuẩn Copilot+ PC",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-002-ASUSZENBOOKS",
+        "price": 44990000,
+        "compare_at_price": 48990000
+      }
+    ]
+  },
+  {
+    "product_id": "6113f814-fdcf-4086-9944-7e0040700d88",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS Vivobook 15 X1504ZA-NJ517W",
+    "slug": "asus-vivobook-15-x1504za-nj517w",
+    "short_description": "Core i3-1215U / Intel UHD Graphics / 8 GB DDR4 / 512 GB SSD / 15.6 inch FHD IPS / 1.70 kg",
+    "description": "Bản lề 180 độ, bảo vệ kháng khuẩn ASUS Antimicrobial Guard",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-003-ASUSVIVOBOOK1",
+        "price": 10490000,
+        "compare_at_price": 12990000
+      }
+    ]
+  },
+  {
+    "product_id": "33ae7a8e-e61a-4fa6-b736-3b5eeac256ca",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS Vivobook 16 X1605VA-MB105W",
+    "slug": "asus-vivobook-16-x1605va-mb105w",
+    "short_description": "Core i5-13500H / Intel Iris Xe / 16 GB DDR4 / 512 GB SSD / 16.0 inch WUXGA (1920x1200) / 1.88 kg",
+    "description": "Chip dòng H hiệu năng cao, màn hình tỉ lệ 16:10 rộng rãi",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-004-ASUSVIVOBOOK1",
+        "price": 16490000,
+        "compare_at_price": 18990000
+      }
+    ]
+  },
+  {
+    "product_id": "d2a8509e-77f4-4beb-8d03-0695b4839921",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "95935020-183f-44cc-a477-2a559734bdad",
+    "product_name": "ASUS Vivobook S 14 OLED S5406MA-PP051W",
+    "slug": "asus-vivobook-s-14-oled-s5406ma-pp051w",
+    "short_description": "Core Ultra 5 125H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 14.0 inch 3K OLED 120Hz / 1.30 kg",
+    "description": "Thiết kế kim loại siêu mỏng nhẹ, bàn phím RGB 1 vùng cá tính",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-005-ASUSVIVOBOOKS",
+        "price": 23990000,
+        "compare_at_price": 26990000
+      }
+    ]
+  },
+  {
+    "product_id": "0fb29da8-f3de-4cdb-8d20-59ed042c5ddb",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "eea3503a-05e7-4471-839c-ec14d82e8bf9",
+    "product_name": "Acer Swift Go 14 AI SFG14-73-7188",
+    "slug": "acer-swift-go-14-ai-sfg14-73-7188",
+    "short_description": "Core Ultra 7 155H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 14.0 inch 2.8K OLED 90Hz / 1.32 kg",
+    "description": "Camera QHD 1440p tích hợp AI PurifiedVoice khử ồn 3 micro",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-006-ACERSWIFTGO1",
+        "price": 23490000,
+        "compare_at_price": 26990000
+      }
+    ]
+  },
+  {
+    "product_id": "84637e45-2370-4f9d-aef7-4df67c12c0f7",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "eea3503a-05e7-4471-839c-ec14d82e8bf9",
+    "product_name": "Acer Swift Go 14 AI SFG14-73-53X7",
+    "slug": "acer-swift-go-14-ai-sfg14-73-53x7",
+    "short_description": "Core Ultra 5 125H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 14.0 inch 2.8K OLED 90Hz / 1.32 kg",
+    "description": "Màn hình OLED 100% DCI-P3 sắc nét, chuẩn văn phòng doanh nhân",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-007-ACERSWIFTGO1",
+        "price": 20990000,
+        "compare_at_price": 23990000
+      }
+    ]
+  },
+  {
+    "product_id": "06df0329-9909-492b-8a47-5f10f22cb4c1",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "eea3503a-05e7-4471-839c-ec14d82e8bf9",
+    "product_name": "Acer Aspire 5 A515-58P-56P3",
+    "slug": "acer-aspire-5-a515-58p-56p3",
+    "short_description": "Core i5-1335U / Intel Iris Xe / 16 GB LPDDR5 / 512 GB SSD / 15.6 inch FHD IPS / 1.70 kg",
+    "description": "Tản nhiệt 2 quạt hiệu quả, vỏ nhôm sang trọng phân khúc học sinh",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-008-ACERASPIRE5A",
+        "price": 13990000,
+        "compare_at_price": 16490000
+      }
+    ]
+  },
+  {
+    "product_id": "76b03493-70c9-445f-8f6c-5f73eee1a509",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "eea3503a-05e7-4471-839c-ec14d82e8bf9",
+    "product_name": "Acer Aspire Lite 14 AL14-51M-59G0",
+    "slug": "acer-aspire-lite-14-al14-51m-59g0",
+    "short_description": "Core i5-1235U / Intel Iris Xe / 16 GB DDR5 / 512 GB SSD / 14.0 inch WUXGA IPS 16:10 / 1.50 kg",
+    "description": "RAM DDR5 tốc độ cao, kích thước gọn gàng cho học sinh sinh viên",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-009-ACERASPIRELIT",
+        "price": 11990000,
+        "compare_at_price": 14490000
+      }
+    ]
+  },
+  {
+    "product_id": "d32302bf-986a-4487-b5eb-67b253a329cc",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "7ba28e54-bf81-4a00-a287-a81281ed1134",
+    "product_name": "Lenovo ThinkPad E14 Gen 6 21M3004JVN",
+    "slug": "lenovo-thinkpad-e14-gen-6-21m3004jvn",
+    "short_description": "Core Ultra 5 125U / Intel Graphics / 16 GB DDR5 / 512 GB SSD / 14.0 inch WUXGA IPS 300 nits / 1.44 kg",
+    "description": "Độ bền chuẩn quân đội MIL-STD-810H, bàn phím gõ êm số 1 thế giới",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-010-LENOVOTHINKPAD",
+        "price": 21990000,
+        "compare_at_price": 24990000
+      }
+    ]
+  },
+  {
+    "product_id": "6968a32c-59ad-435e-b4a1-b3743d9eb3a0",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "7ba28e54-bf81-4a00-a287-a81281ed1134",
+    "product_name": "Lenovo ThinkBook 14 G7 IML 21MR008DVN",
+    "slug": "lenovo-thinkbook-14-g7-iml-21mr008dvn",
+    "short_description": "Core Ultra 7 155H / Intel Arc Graphics / 16 GB DDR5 5600 / 512 GB SSD / 14.0 inch WUXGA IPS / 1.38 kg",
+    "description": "Thiết kế 2 tông màu thời thượng, vỏ nhôm nguyên khối bền chắc",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-011-LENOVOTHINKBOO",
+        "price": 22990000,
+        "compare_at_price": 25990000
+      }
+    ]
+  },
+  {
+    "product_id": "a67b427d-f3c6-4e72-9812-303cbb49e95e",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "7ba28e54-bf81-4a00-a287-a81281ed1134",
+    "product_name": "Lenovo ThinkBook 16 G6+ IMH 21MS001BVN",
+    "slug": "lenovo-thinkbook-16-g6-imh-21ms001bvn",
+    "short_description": "Core Ultra 5 125H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 16.0 inch 2.5K IPS 120Hz / 1.80 kg",
+    "description": "Màn hình 2.5K tần số quét 120Hz mượt mà, đầy đủ cổng kết nối",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-012-LENOVOTHINKBOO",
+        "price": 23990000,
+        "compare_at_price": 26990000
+      }
+    ]
+  },
+  {
+    "product_id": "95f3d561-271d-4136-ab0a-f3bdce591bcf",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "7ba28e54-bf81-4a00-a287-a81281ed1134",
+    "product_name": "Lenovo IdeaPad Slim 3 15IAH8 83ER000EVN",
+    "slug": "lenovo-ideapad-slim-3-15iah8-83er000evn",
+    "short_description": "Core i5-12450H / Intel UHD Graphics / 16 GB LPDDR5 / 512 GB SSD / 15.6 inch FHD IPS / 1.62 kg",
+    "description": "Chip dòng H mạnh mẽ trong phân khúc phổ thông, cảm biến vân tay",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-013-LENOVOIDEAPAD",
+        "price": 13490000,
+        "compare_at_price": 15490000
+      }
+    ]
+  },
+  {
+    "product_id": "1c8b766f-667d-42e2-887d-78fe9fa3df5f",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "59c7d85d-38e9-445e-b6ef-ead5f816b0ca",
+    "product_name": "Dell Inspiron 14 5440 N5440-U5125H",
+    "slug": "dell-inspiron-14-5440-n5440-u5125h",
+    "short_description": "Core Ultra 5 125H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 14.0 inch FHD+ IPS 16:10 / 1.56 kg",
+    "description": "Độ bền trứ danh từ Dell, bảo hành tận nơi Dell ProSupport",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-014-DELLINSPIRON1",
+        "price": 21490000,
+        "compare_at_price": 24490000
+      }
+    ]
+  },
+  {
+    "product_id": "24f7ee75-545c-4eb8-90bf-dbacd8763ab0",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "59c7d85d-38e9-445e-b6ef-ead5f816b0ca",
+    "product_name": "Dell Inspiron 15 3520 71027003",
+    "slug": "dell-inspiron-15-3520-71027003",
+    "short_description": "Core i5-1235U / Intel Iris Xe / 16 GB DDR4 / 512 GB SSD / 15.6 inch FHD 120Hz / 1.65 kg",
+    "description": "Màn hình 120Hz cuộn lướt văn bản mượt, nâng cấp RAM dễ dàng",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-015-DELLINSPIRON1",
+        "price": 14490000,
+        "compare_at_price": 16990000
+      }
+    ]
+  },
+  {
+    "product_id": "9b1874f5-e049-4cd8-a2f3-1b31b8089e1e",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "59c7d85d-38e9-445e-b6ef-ead5f816b0ca",
+    "product_name": "Dell XPS 13 9340 71034032",
+    "slug": "dell-xps-13-9340-71034032",
+    "short_description": "Core Ultra 7 155H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 13.4 inch FHD+ 120Hz / 1.19 kg",
+    "description": "Kiệt tác thiết kế nhôm phay xước CNC và kính cường lực Gorilla Glass 7",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-016-DELLXPS13934",
+        "price": 46990000,
+        "compare_at_price": 51990000
+      }
+    ]
+  },
+  {
+    "product_id": "03c8ba93-ce7d-4fed-8eb8-f52b3672349d",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "df4cc519-b2f4-43e4-a09b-20280a7a532c",
+    "product_name": "HP Pavilion 14-dv2073TU 7C0P9PA",
+    "slug": "hp-pavilion-14-dv2073tu-7c0p9pa",
+    "short_description": "Core i5-1235U / Intel Iris Xe / 16 GB DDR4 / 512 GB SSD / 14.0 inch FHD IPS / 1.41 kg",
+    "description": "Hệ thống âm thanh Bang & Olufsen cao cấp, màu vàng gold sang trọng",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-017-HPPAVILION14",
+        "price": 15490000,
+        "compare_at_price": 17990000
+      }
+    ]
+  },
+  {
+    "product_id": "a617994d-12d0-4643-8126-3595a5de7203",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "df4cc519-b2f4-43e4-a09b-20280a7a532c",
+    "product_name": "HP Envy x360 14-fc0085TU 9Y351PA",
+    "slug": "hp-envy-x360-14-fc0085tu-9y351pa",
+    "short_description": "Core Ultra 7 155U / Intel Graphics / 16 GB LPDDR5X / 512 GB SSD / 14.0 inch 2.8K OLED Cảm ứng xoay gập 360 / 1.39 kg",
+    "description": "Xoay gập 2-trong-1 tiện lợi, màn hình cảm ứng OLED kèm bút stylus",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-018-HPENVYX36014",
+        "price": 27990000,
+        "compare_at_price": 30990000
+      }
+    ]
+  },
+  {
+    "product_id": "2d1365aa-0f89-4f73-98f3-3ddbc6b1296c",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "060ca633-32c5-4788-9968-a9ead8e9b423",
+    "product_name": "LG gram 14 2024 14Z90S-G.AH75A5",
+    "slug": "lg-gram-14-2024-14z90s-g-ah75a5",
+    "short_description": "Core Ultra 7 155H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 14.0 inch WUXGA IPS chống chói / 1.12 kg",
+    "description": "Trọng lượng siêu nhẹ kỷ lục 1.12kg, chuẩn độ bền quân sự Mỹ MIL-STD",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-019-LGGRAM142024",
+        "price": 31990000,
+        "compare_at_price": 35990000
+      }
+    ]
+  },
+  {
+    "product_id": "e7620a0d-9c5f-4e78-9cee-3463ad9f1640",
+    "category_id": "2c8405b0-8197-4315-9152-675318862e00",
+    "brand_id": "060ca633-32c5-4788-9968-a9ead8e9b423",
+    "product_name": "LG gram 16 2024 16Z90S-G.AH55A5",
+    "slug": "lg-gram-16-2024-16z90s-g-ah55a5",
+    "short_description": "Core Ultra 5 125H / Intel Arc Graphics / 16 GB LPDDR5X / 512 GB SSD / 16.0 inch WQXGA (2560x1600) / 1.19 kg",
+    "description": "Màn hình lớn 16 inch nhưng chỉ nặng 1.19kg, pin khủng 77Wh",
+    "categories": {
+      "slug": "laptop-van-phong",
+      "category_name": "Laptop Văn Phòng"
+    },
+    "product_variants": [
+      {
+        "sku": "VP-020-LGGRAM162024",
+        "price": 33990000,
+        "compare_at_price": 37990000
+      }
+    ]
+  }
+]
