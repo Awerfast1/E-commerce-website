@@ -2,10 +2,79 @@
 
 import Link from "next/link";
 import { useCart } from "./cart";
-import { useEffect, useRef, useState } from "react";
-import { products } from "../../data/Products";
+import { useEffect, useRef, useState, useMemo } from "react";
+import supabaseProductsRaw from "../../data/supabaseProducts.json";
 import { megaMenuData } from "../../data/megaMenuData";
 import styles from "./NavBar.module.css";
+
+interface SearchProduct {
+  product_id: string;
+  slug: string;
+  product_name: string;
+  categorySlug: string;
+  categoryName: string;
+  brandName: string;
+  price: number;
+  compareAtPrice: number;
+  imageUrl?: string;
+}
+
+const allSearchProducts: SearchProduct[] = (supabaseProductsRaw as any[]).map(p => {
+  const variant = p.product_variants?.[0];
+  const price = Number(variant?.price || 0);
+  const compareAtPrice = Number(variant?.compare_at_price || price);
+  const primaryImage =
+    p.product_images?.find((img: any) => img.is_primary)?.image_url ||
+    p.product_images?.[0]?.image_url ||
+    "https://placehold.co/800x800?text=" + encodeURIComponent(p.product_name || "ConGears");
+
+  return {
+    product_id: p.product_id,
+    slug: p.slug,
+    product_name: p.product_name,
+    categorySlug: p.categories?.slug || "laptop",
+    categoryName: p.categories?.category_name || "Sản phẩm",
+    brandName: p.brands?.brand_name || "",
+    price,
+    compareAtPrice,
+    imageUrl: primaryImage,
+  };
+});
+
+function getProductLink(product: SearchProduct): string {
+  if (product.categorySlug === "laptop-gaming") {
+    return `/gaming-laptops/${product.slug}`;
+  }
+  if (product.categorySlug === "laptop-van-phong") {
+    return `/laptop-van-phong/${product.slug}`;
+  }
+  return `/Product/${product.product_id}`;
+}
+
+function highlightMatches(text: string, query: string) {
+  if (!query.trim()) return text;
+  const terms = query
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .map(t => t.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"));
+
+  if (!terms.length) return text;
+
+  const regex = new RegExp(`(${terms.join("|")})`, "gi");
+  const parts = text.split(regex);
+
+  return parts.map((part, i) => {
+    const isMatch = terms.some(t => new RegExp(`^${t}$`, "i").test(part));
+    return isMatch ? (
+      <span key={i} className={styles.highlight}>
+        {part}
+      </span>
+    ) : (
+      part
+    );
+  });
+}
 
 const paths = {
   search: "M21 21l-5-5 M18 10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z",
@@ -46,10 +115,89 @@ export default function NavBar() {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const categoryDropdownRef = useRef<HTMLDetailsElement>(null);
+  const searchContainerRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("congears_recent_searches");
+      if (saved) {
+        setRecentSearches(JSON.parse(saved));
+      } else {
+        setRecentSearches(["bàn phím dareu", "chuột logitech"]);
+      }
+    } catch {
+      setRecentSearches(["bàn phím dareu", "chuột logitech"]);
+    }
+  }, []);
+
+  const saveRecentSearch = (termToSave: string) => {
+    const trimmed = termToSave.trim();
+    if (!trimmed) return;
+    setRecentSearches(prev => {
+      const updated = [trimmed, ...prev.filter(t => t.toLowerCase() !== trimmed.toLowerCase())].slice(0, 5);
+      try {
+        localStorage.setItem("congears_recent_searches", JSON.stringify(updated));
+      } catch {
+        // ignore storage errors
+      }
+      return updated;
+    });
+  };
+
+  const removeRecentSearch = (termToRemove: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setRecentSearches(prev => {
+      const updated = prev.filter(t => t !== termToRemove);
+      try {
+        localStorage.setItem("congears_recent_searches", JSON.stringify(updated));
+      } catch {
+        // ignore
+      }
+      return updated;
+    });
+  };
+
+  const clearAllRecent = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setRecentSearches([]);
+    try {
+      localStorage.removeItem("congears_recent_searches");
+    } catch {
+      // ignore
+    }
+  };
 
   const term = query.trim().toLowerCase();
-  const matches = products.filter(product => product.name.toLowerCase().includes(term));
+
+  // Tìm kiếm thông minh: tách query thành các từ khóa con và check match trên tên sp, brand, category
+  const matches = useMemo(() => {
+    if (!term) return [];
+    const tokens = term.split(/\s+/).filter(Boolean);
+    return allSearchProducts
+      .filter(product => {
+        const fullSearchTarget = `${product.product_name} ${product.brandName} ${product.categoryName}`.toLowerCase();
+        return tokens.every(tok => fullSearchTarget.includes(tok));
+      })
+      .slice(0, 6);
+  }, [term]);
+
+  // Sản phẩm nổi bật khi focus nhưng chưa nhập gì
+  const featuredProducts = useMemo(() => {
+    return allSearchProducts.slice(0, 5);
+  }, []);
+
+  const trendingKeywords = [
+    "Bàn phím DareU",
+    "Chuột Logitech",
+    "Bàn phím cơ",
+    "Laptop Gaming",
+    "ASUS ROG",
+    "SSD 1TB"
+  ];
 
   useEffect(() => {
     function handleOutsideClick(event: PointerEvent) {
@@ -58,11 +206,18 @@ export default function NavBar() {
         categoryDropdownRef.current?.removeAttribute("open");
         setActiveCategory(null);
       }
+      if (!searchContainerRef.current?.contains(target)) {
+        setOpen(false);
+      }
     }
 
     document.addEventListener("pointerdown", handleOutsideClick);
     return () => document.removeEventListener("pointerdown", handleOutsideClick);
   }, []);
+
+  const formatPrice = (val: number) => {
+    return new Intl.NumberFormat("vi-VN").format(val) + "đ";
+  };
 
   return (
     <header className={styles.header} lang="vi">
@@ -72,28 +227,204 @@ export default function NavBar() {
           CONGEARS
         </Link>
         <form
+          ref={searchContainerRef}
           role="search"
           className={styles.search}
-          onSubmit={event => { event.preventDefault(); setOpen(true); }}
-          onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}
-          onKeyDown={event => { if (event.key === "Escape") setOpen(false); }}
+          onSubmit={event => {
+            event.preventDefault();
+            if (term) {
+              saveRecentSearch(term);
+              setOpen(false);
+            }
+          }}
+          onKeyDown={event => {
+            if (event.key === "Escape") setOpen(false);
+          }}
         >
           <input
             type="search"
             aria-label="Tìm sản phẩm"
             placeholder="Bạn cần tìm gì?"
             value={query}
-            onChange={event => { setQuery(event.target.value); setOpen(true); }}
+            onChange={event => {
+              setQuery(event.target.value);
+              setOpen(true);
+            }}
             onFocus={() => setOpen(true)}
           />
-          <button aria-label="Tìm kiếm"><Icon name="search" /></button>
-          {open && term && (
-            <div className={styles.results}>
-              {matches.length ? matches.map(product => (
-                <Link key={product.id} href={`/Product/${product.id}`} onClick={() => { setQuery(""); setOpen(false); }}>
-                  {product.name}
-                </Link>
-              )) : <p>Không tìm thấy sản phẩm.</p>}
+          <button type="submit" aria-label="Tìm kiếm">
+            <Icon name="search" />
+          </button>
+
+          {/* Modal kết quả tìm kiếm chuẩn GearVN */}
+          {open && (
+            <div className={styles.searchDropdown}>
+              {term ? (
+                /* Trạng thái 1: Đang có từ khóa tìm kiếm */
+                <div>
+                  <div className={styles.searchDropdownHeader}>
+                    <span>Kết quả tìm kiếm</span>
+                  </div>
+
+                  {matches.length > 0 ? (
+                    <div>
+                      {matches.map(product => (
+                        <Link
+                          key={product.product_id}
+                          href={getProductLink(product)}
+                          className={styles.searchItem}
+                          onClick={() => {
+                            saveRecentSearch(term);
+                            setOpen(false);
+                          }}
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={product.imageUrl}
+                            alt={product.product_name}
+                            className={styles.searchThumb}
+                          />
+                          <div className={styles.searchItemContent}>
+                            <div className={styles.searchItemTitle}>
+                              {highlightMatches(product.product_name, query)}
+                            </div>
+                            <div className={styles.searchBadgeRow}>
+                              <span className={styles.badgeExpress}>⚡ HỎA TỐC</span>
+                            </div>
+                            <div className={styles.searchPriceRow}>
+                              <span className={styles.priceSale}>
+                                {formatPrice(product.price)}
+                              </span>
+                              {product.compareAtPrice > product.price && (
+                                <span className={styles.priceOriginal}>
+                                  {formatPrice(product.compareAtPrice)}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+
+                      <Link
+                        href={`/categories/keyboards`}
+                        className={styles.searchFooter}
+                        onClick={() => {
+                          saveRecentSearch(term);
+                          setOpen(false);
+                        }}
+                      >
+                        → Xem tất cả kết quả cho &ldquo;{query}&rdquo;
+                      </Link>
+                    </div>
+                  ) : (
+                    <div style={{ padding: "24px 16px", textAlign: "center", color: "#6b7280" }}>
+                      Không tìm thấy sản phẩm phù hợp với &ldquo;{query}&rdquo;
+                    </div>
+                  )}
+                </div>
+              ) : (
+                /* Trạng thái 2: Focus ô input nhưng chưa gõ gì (Gợi ý, Sản phẩm nổi bật, Lịch sử, Xu hướng) */
+                <div>
+                  {/* Sản phẩm nổi bật */}
+                  <div className={styles.searchDropdownHeader}>
+                    <span>Sản phẩm nổi bật</span>
+                  </div>
+                  <div>
+                    {featuredProducts.map(product => (
+                      <Link
+                        key={product.product_id}
+                        href={getProductLink(product)}
+                        className={styles.searchItem}
+                        onClick={() => setOpen(false)}
+                      >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={product.imageUrl}
+                          alt={product.product_name}
+                          className={styles.searchThumb}
+                        />
+                        <div className={styles.searchItemContent}>
+                          <div className={styles.searchItemTitle}>
+                            {product.product_name}
+                          </div>
+                          <div className={styles.searchPriceRow}>
+                            <span className={styles.priceSale}>
+                              {formatPrice(product.price)}
+                            </span>
+                            {product.compareAtPrice > product.price && (
+                              <span className={styles.priceOriginal}>
+                                {formatPrice(product.compareAtPrice)}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Tìm kiếm gần đây */}
+                  {recentSearches.length > 0 && (
+                    <div style={{ borderTop: "1px solid #f3f4f6", marginTop: 8, paddingTop: 8 }}>
+                      <div className={styles.searchDropdownHeader}>
+                        <span>Tìm kiếm gần đây</span>
+                        <button
+                          type="button"
+                          className={styles.clearHistoryBtn}
+                          onClick={clearAllRecent}
+                        >
+                          Xóa tất cả
+                        </button>
+                      </div>
+                      <div className={styles.recentList}>
+                        {recentSearches.map((item, idx) => (
+                          <div
+                            key={idx}
+                            className={styles.recentItem}
+                            onClick={() => {
+                              setQuery(item);
+                              setOpen(true);
+                            }}
+                          >
+                            <span className={styles.recentItemText}>
+                              🕒 {item}
+                            </span>
+                            <button
+                              type="button"
+                              className={styles.removeRecentBtn}
+                              title="Xóa"
+                              onClick={(e) => removeRecentSearch(item, e)}
+                            >
+                              ×
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Xu hướng tìm kiếm */}
+                  <div style={{ borderTop: "1px solid #f3f4f6", paddingTop: 8 }}>
+                    <div className={styles.searchDropdownHeader}>
+                      <span>Xu hướng tìm kiếm</span>
+                    </div>
+                    <div className={styles.trendingList}>
+                      {trendingKeywords.map((kw, idx) => (
+                        <button
+                          key={idx}
+                          type="button"
+                          className={styles.trendingTag}
+                          onClick={() => {
+                            setQuery(kw);
+                            setOpen(true);
+                          }}
+                        >
+                          📈 {kw}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </form>

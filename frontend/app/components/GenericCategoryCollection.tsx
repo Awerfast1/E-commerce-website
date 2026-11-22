@@ -395,7 +395,12 @@ export default function GenericCategoryCollection({
                 : 0;
 
               return (
-                <div className={css.card} key={p.product_id}>
+                <Link
+                  href={`/Product/${p.product_id}`}
+                  className={css.card}
+                  key={p.product_id}
+                  style={{ textDecoration: "none", color: "inherit", display: "flex", flexDirection: "column" }}
+                >
                   <div className={css.art}>
                     <CategoryIllustration categorySlug={category.slug} index={index} />
                   </div>
@@ -416,7 +421,7 @@ export default function GenericCategoryCollection({
                     )}
                     <strong>{money(price)}</strong>
                   </footer>
-                </div>
+                </Link>
               );
             })}
           </div>

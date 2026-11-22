@@ -106,7 +106,7 @@ export default function AccessoryShowcase({
 
           return (
             <article className={styles.card} key={product.product_id}>
-              <Link href={`/categories/${categorySlug}`} className={styles.productLink}>
+              <Link href={`/Product/${product.product_id}`} className={styles.productLink}>
                 <div className={styles.image}>
                   <AccessoryIllustration slug={categorySlug} index={idx} />
                 </div>
