@@ -104,22 +104,19 @@ export default function NavBar({ products }: { products: StoreProduct[] }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const categoryDropdownRef = useRef<HTMLDetailsElement>(null);
-  const searchContainerRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
+  const [recentSearches, setRecentSearches] = useState<string[]>(() => {
+    if (typeof window === "undefined") {
+      return ["bàn phím dareu", "chuột logitech"];
+    }
     try {
       const saved = localStorage.getItem("congears_recent_searches");
-      if (saved) {
-        setRecentSearches(JSON.parse(saved));
-      } else {
-        setRecentSearches(["bàn phím dareu", "chuột logitech"]);
-      }
+      return saved ? JSON.parse(saved) : ["bàn phím dareu", "chuột logitech"];
     } catch {
-      setRecentSearches(["bàn phím dareu", "chuột logitech"]);
+      return ["bàn phím dareu", "chuột logitech"];
     }
-  }, []);
+  });
+  const categoryDropdownRef = useRef<HTMLDetailsElement>(null);
+  const searchContainerRef = useRef<HTMLFormElement>(null);
 
   const saveRecentSearch = (termToSave: string) => {
     const trimmed = termToSave.trim();

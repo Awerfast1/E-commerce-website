@@ -13,11 +13,10 @@ function CartContent() {
   const searchParams = useSearchParams();
   const selectParam = searchParams.get("select");
   const items = useCart();
-  const [excluded, setExcluded] = useState<string[]>([]);
+  const [userExcluded, setUserExcluded] = useState<string[] | null>(null);
   const [step, setStep] = useState(0);
   const [recipient, setRecipient] = useState({ name: "", phone: "", address: "" });
   const [sale, setSale] = useState(false);
-  const [initializedSelect, setInitializedSelect] = useState(false);
 
   useEffect(() => {
     const end = Date.parse(gamingDealsEndAt);
@@ -48,17 +47,7 @@ function CartContent() {
       index: p.artIndex,
     }));
 
-  useEffect(() => {
-    if (!initializedSelect && rows.length > 0) {
-      if (selectParam) {
-        // Exclude everything except the selected item
-        const toExclude = rows.filter(r => r.id !== selectParam).map(r => r.id);
-        setExcluded(toExclude);
-      }
-      setInitializedSelect(true);
-    }
-  }, [selectParam, rows, initializedSelect]);
-
+  const excluded = userExcluded ?? (selectParam ? rows.filter(r => r.id !== selectParam).map(r => r.id) : []);
   const selected = rows.filter(r => !excluded.includes(r.id));
   const count = Object.values(items).reduce((sum, n) => sum + n, 0);
   const original = selected.reduce((sum, { p, id }) => sum + p.oldPrice * items[id], 0);
@@ -101,7 +90,7 @@ function CartContent() {
                   <input
                     type="checkbox"
                     checked={selected.length === rows.length}
-                    onChange={e => setExcluded(e.target.checked ? [] : rows.map(r => r.id))}
+                    onChange={e => setUserExcluded(e.target.checked ? [] : rows.map(r => r.id))}
                   />{" "}
                   Tất cả sản phẩm ({count})
                 </label>
@@ -109,7 +98,7 @@ function CartContent() {
                   disabled={!selected.length}
                   onClick={() => {
                     selected.forEach(r => changeCart(r.id, "remove"));
-                    setExcluded([]);
+                    setUserExcluded([]);
                   }}
                 >
                   Xóa đã chọn
@@ -121,7 +110,7 @@ function CartContent() {
                     aria-label={`Chọn ${p.name}`}
                     type="checkbox"
                     checked={!excluded.includes(id)}
-                    onChange={e => setExcluded(e.target.checked ? excluded.filter(v => v !== id) : [...excluded, id])}
+                    onChange={e => setUserExcluded(e.target.checked ? excluded.filter(v => v !== id) : [...excluded, id])}
                   />
                   <div className={styles.art}>
                     {p.imageUrl ? (
@@ -153,13 +142,17 @@ function CartContent() {
                     </button>
                   </div>
                   <button
+                    className={styles.remove}
                     aria-label={`Xóa ${p.name}`}
+                    title={`Xóa ${p.name}`}
                     onClick={() => {
                       changeCart(id, "remove");
-                      setExcluded(excluded.filter(v => v !== id));
+                      setUserExcluded(excluded.filter(v => v !== id));
                     }}
                   >
-                    Xóa
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 7h16M10 11v6m4-6v6M5 7l1 14h12l1-14M9 7V4h6v3" />
+                    </svg>
                   </button>
                 </article>
               ))}
