@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { Suspense, use, useEffect, useState } from "react";
 import { notFound } from "next/navigation";
-import { gamingDealsEndAt } from "../../../data/gamingLaptopDeals";
-import { getAllProducts } from "../../components/cart";
-import { studentPricing } from "../../../data/studentPricing";
+import { gamingDealsEndAt } from "@/data/gamingLaptopDeals";
+import { getAllProducts } from "@/app/components/cart";
+import { studentPricing } from "@/data/studentPricing";
 
 type Props = { params: Promise<{ slug: string }> };
 const money = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" });
