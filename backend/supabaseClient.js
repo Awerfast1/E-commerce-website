@@ -4,10 +4,14 @@ require("dotenv").config();
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn("WARNING: SUPABASE_URL or SUPABASE_ANON_KEY is missing in backend .env");
+const hasSupabaseConfig = Boolean(supabaseUrl && supabaseAnonKey);
+
+if (!hasSupabaseConfig) {
+  console.warn("WARNING: SUPABASE_URL or SUPABASE_ANON_KEY is missing; database access is disabled.");
 }
 
-const supabase = createClient(supabaseUrl || "", supabaseAnonKey || "");
+// Avoid constructing a client with empty credentials: createClient can throw
+// during module loading when required environment values are absent.
+const supabase = hasSupabaseConfig ? createClient(supabaseUrl, supabaseAnonKey) : null;
 
 module.exports = { supabase };
