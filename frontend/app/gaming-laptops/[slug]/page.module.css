@@ -26,7 +26,8 @@
 .offer h2 span { border: 1px solid currentColor; border-radius: 4px; padding: 0 4px; color: #1769a8; font-size: 14px; }
 .offer p { margin-top: 12px; padding: 14px; background: white; border-radius: 8px; }
 .actions { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 22px; }
-.buy { display: grid; place-items: center; border-radius: 10px; background: #1769a8; color: white; font-weight: 700; font-size: 18px; }
+.buy { display: grid; place-items: center; border-radius: 10px; background: #1769a8; color: white; font-weight: 700; font-size: 18px; cursor: pointer; border: none; width: 100%; transition: background-color 0.15s ease; }
+.buy:hover { background: #145c94; }
 .lower { margin-top: 18px; }
 .description, .specTable, .related { padding: 24px; }
 .description h2, .specTable h2, .related h2 { margin: 0 0 18px; font-size: 22px; }

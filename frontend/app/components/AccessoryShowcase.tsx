@@ -38,11 +38,47 @@ function AccessoryIllustration({ slug, index }: { slug: string; index: number })
           <rect x="108" y="60" width="14" height="28" rx="7" />
         </g>
       )}
+      {slug === "speakers" && (
+        <g stroke={stroke} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="45" y="25" width="70" height="70" rx="10" />
+          <circle cx="80" cy="55" r="14" />
+          <circle cx="80" cy="78" r="4" />
+        </g>
+      )}
       {slug === "storage" && (
         <g stroke={stroke} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
           <rect x="35" y="30" width="90" height="60" rx="8" />
           <path d="M50 45h60M50 60h40m15 15h5" />
           <circle cx="108" cy="75" r="3" fill={stroke} />
+        </g>
+      )}
+      {slug === "chargers" && (
+        <g stroke={stroke} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="50" y="30" width="60" height="60" rx="8" />
+          <path d="M70 20v10M90 20v10M75 55l15-10-5 12h10l-18 18 5-12H72" />
+        </g>
+      )}
+      {slug === "power-banks" && (
+        <g stroke={stroke} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="45" y="25" width="70" height="70" rx="8" />
+          <rect x="70" y="20" width="20" height="5" rx="2" />
+          <circle cx="65" cy="45" r="3" fill={stroke} />
+          <circle cx="75" cy="45" r="3" fill={stroke} />
+          <circle cx="85" cy="45" r="3" fill={stroke} />
+        </g>
+      )}
+      {slug === "hubs-adapters" && (
+        <g stroke={stroke} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="35" y="35" width="90" height="50" rx="6" />
+          <circle cx="55" cy="60" r="5" />
+          <rect x="75" y="55" width="12" height="10" rx="2" />
+          <rect x="95" y="55" width="12" height="10" rx="2" />
+        </g>
+      )}
+      {!["keyboards", "mice", "headphones", "speakers", "storage", "chargers", "power-banks", "hubs-adapters"].includes(slug) && (
+        <g stroke={stroke} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="40" y="25" width="80" height="70" rx="8" />
+          <circle cx="80" cy="60" r="15" />
         </g>
       )}
     </svg>
@@ -56,7 +92,7 @@ export default function AccessoryShowcase({
 }: {
   title: string;
   badge: string;
-  categorySlug: "mice" | "keyboards" | "headphones" | "storage";
+  categorySlug: string;
 }) {
   const categoryProducts = supabaseProducts.filter(p => p.categories?.slug === categorySlug);
   const brands = [

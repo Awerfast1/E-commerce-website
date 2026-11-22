@@ -2,8 +2,10 @@ import { getGamingLaptopSpecifications } from "../../../data/gamingLaptopSpecifi
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import LaptopIllustration from "../../components/LaptopIllustration";
 import GamingLaptopSpecs from "../../components/GamingLaptopSpecs";
+import { AddToCart, BuyNowButton } from "../../components/cart";
 import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../../data/gamingLaptopDeals";
 import styles from "./page.module.css";
 
@@ -20,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: deal ? `${deal.name} | ConGears` : "Không tìm thấy sản phẩm | ConGears" };
 }
 
-export default async function GamingLaptopDetail({ params }: Props) {
+async function GamingLaptopContent({ params }: Props) {
   const { slug } = await params;
   const index = gamingLaptopDeals.findIndex((item) => gamingLaptopSlug(item.name) === slug);
   if (index < 0) notFound();
@@ -56,17 +58,17 @@ export default async function GamingLaptopDetail({ params }: Props) {
           <h1 id="product-title">Laptop gaming {deal.name}</h1>
           <p className={styles.configuration}>{[deal.cpu, deal.gpu, deal.ram + " RAM", deal.storage, deal.screen].join(" / ")}</p>
           <button type="button" className={styles.specLink} popoverTarget={`laptop-specs-${index}`}>Thông số kỹ thuật ›</button>
-            <div className={styles.priceRow}>
-              <strong data-deal-price data-sale-price={deal.price} data-original-price={deal.oldPrice}>{currency.format(deal.price)}</strong>
-              <del data-deal-original>{currency.format(deal.oldPrice)}</del>
-              <span className={styles.discount} data-deal-discount>-{Math.round((1 - deal.price / deal.oldPrice) * 100)}%</span>
-            </div>
+          <div className={styles.priceRow}>
+            <strong data-deal-price data-sale-price={deal.price} data-original-price={deal.oldPrice}>{currency.format(deal.price)}</strong>
+            <del data-deal-original>{currency.format(deal.oldPrice)}</del>
+            <span className={styles.discount} data-deal-discount>-{Math.round((1 - deal.price / deal.oldPrice) * 100)}%</span>
+          </div>
           <section className={styles.offer}>
             <h2><span aria-hidden="true">%</span> Ưu đãi đi kèm</h2>
             <p>Học sinh, sinh viên được giảm <strong>10%, tối đa 500.000đ</strong> khi thanh toán sau khi xác minh.</p>
           </section>
           <div className={styles.actions}>
-            <Link className={styles.buy} href={`/thanh-toan/${slug}`}>Mua ngay</Link>
+            <BuyNowButton className={styles.buy} slug={slug}>Mua ngay</BuyNowButton>
             <AddToCart slug={slug}>
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M2 3h3l3 13h11l3-10H6M10 20h.01M18 20h.01M14 7v6m-3-3h6" strokeLinecap="round" /></svg>
             </AddToCart>
@@ -103,4 +105,11 @@ export default async function GamingLaptopDetail({ params }: Props) {
     </main>
   );
 }
-import { AddToCart } from "../../components/cart";
+
+export default function GamingLaptopDetail(props: Props) {
+  return (
+    <Suspense fallback={<div className="min-h-96 w-full flex items-center justify-center text-gray-500">Đang tải sản phẩm...</div>}>
+      <GamingLaptopContent params={props.params} />
+    </Suspense>
+  );
+}

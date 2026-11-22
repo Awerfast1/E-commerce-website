@@ -50,6 +50,34 @@ export default function Home() {
         badge="⚡ Đọc ghi siêu tốc"
         categorySlug="storage"
       />
+
+      {/* 10. Container Loa & Soundbar Bán Chạy */}
+      <AccessoryShowcase
+        title="Loa Bluetooth & Soundbar"
+        badge="🔊 Âm thanh sống động"
+        categorySlug="speakers"
+      />
+
+      {/* 11. Container Củ Sạc Nhanh GaN */}
+      <AccessoryShowcase
+        title="Củ sạc nhanh GaN chính hãng"
+        badge="⚡ Chuẩn sạc PD / QC"
+        categorySlug="chargers"
+      />
+
+      {/* 12. Container Pin Sạc Dự Phòng */}
+      <AccessoryShowcase
+        title="Pin sạc dự phòng dung lượng cao"
+        badge="🔋 An toàn chuẩn bay"
+        categorySlug="power-banks"
+      />
+
+      {/* 13. Container Hub & Cáp Chuyển Đổi */}
+      <AccessoryShowcase
+        title="Hub chuyển đổi & Adapter"
+        badge="🔌 Đa cổng kết nối"
+        categorySlug="hubs-adapters"
+      />
     </main>
   );
 }

@@ -4,6 +4,7 @@ import LaptopIllustration from "./LaptopIllustration";
 import styles from "./CartDrawer.module.css";
 import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../data/gamingLaptopDeals";
 import { officeLaptopDeals, officeLaptopSlug } from "../../data/officeLaptopDeals";
+import supabaseProductsRaw from "../../data/supabaseProducts.json";
 
 const key = "congears.cart.v1";
 const empty = () => "{}";
@@ -21,6 +22,7 @@ export interface CartProduct {
   oldPrice: number;
   slug: string;
   artIndex: number;
+  imageUrl?: string;
   link: string;
 }
 
@@ -43,7 +45,31 @@ export function getAllProducts(): CartProduct[] {
     link: `/laptop-van-phong/${officeLaptopSlug(item.name)}`,
   }));
 
-  return [...gaming, ...office];
+  const existingSlugs = new Set([...gaming, ...office].map(p => p.slug));
+
+  const catalogProducts: CartProduct[] = [];
+  for (let i = 0; i < (supabaseProductsRaw as any[]).length; i++) {
+    const p = (supabaseProductsRaw as any[])[i];
+    const slug = p.slug || p.product_id;
+    if (existingSlugs.has(slug)) continue;
+
+    const variant = p.product_variants?.[0];
+    const price = variant?.price ?? 1000000;
+    const oldPrice = variant?.compare_at_price && variant.compare_at_price > price ? variant.compare_at_price : price;
+    const image = p.product_images?.find((img: any) => img.is_primary)?.image_url ?? p.product_images?.[0]?.image_url;
+
+    catalogProducts.push({
+      name: p.product_name,
+      price,
+      oldPrice,
+      slug,
+      artIndex: -1,
+      imageUrl: image,
+      link: `/Product/${p.product_id}`,
+    });
+  }
+
+  return [...gaming, ...office, ...catalogProducts];
 }
 
 const allProductsList = getAllProducts();
@@ -81,6 +107,26 @@ export function changeCart(id: string, delta: number | "remove") {
   else delete items[id];
   localStorage.setItem(key, JSON.stringify(items));
   window.dispatchEvent(new Event(key));
+}
+
+export function BuyNowButton({ slug, className, children }: { slug: string; className?: string; children?: ReactNode }) {
+  return (
+    <button
+      type="button"
+      className={className}
+      style={{ cursor: "pointer" }}
+      onClick={() => {
+        try {
+          changeCart(slug, 1);
+        } catch {
+          // ignore error if storage fails
+        }
+        window.location.assign(`/gio-hang?select=${encodeURIComponent(slug)}`);
+      }}
+    >
+      {children || "Mua ngay"}
+    </button>
+  );
 }
 
 export function AddToCart({ slug, children }: { slug: string; children: ReactNode }) {
@@ -148,7 +194,15 @@ export function AddToCart({ slug, children }: { slug: string; children: ReactNod
           <section>
             <div className={styles.card}>
               <div className={styles.image}>
-                <LaptopIllustration index={product.artIndex} />
+                {product.imageUrl ? (
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "8px" }}
+                  />
+                ) : (
+                  <LaptopIllustration index={product.artIndex >= 0 ? product.artIndex : 0} />
+                )}
               </div>
               <div>
                 <h3>{product.name}</h3>

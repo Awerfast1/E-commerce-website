@@ -2,9 +2,10 @@ import { getOfficeLaptopSpecifications } from "../../../data/officeLaptopSpecifi
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import LaptopIllustration from "../../components/LaptopIllustration";
 import OfficeLaptopSpecs from "../../components/OfficeLaptopSpecs";
-import { AddToCart } from "../../components/cart";
+import { AddToCart, BuyNowButton } from "../../components/cart";
 import { officeLaptopDeals, officeLaptopSlug } from "../../../data/officeLaptopDeals";
 import styles from "./page.module.css";
 
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: deal ? `${deal.name} | ConGears` : "Không tìm thấy sản phẩm | ConGears" };
 }
 
-export default async function OfficeLaptopDetail({ params }: Props) {
+async function OfficeLaptopContent({ params }: Props) {
   const { slug } = await params;
   const index = officeLaptopDeals.findIndex((item) => officeLaptopSlug(item.name) === slug);
   if (index < 0) notFound();
@@ -68,7 +69,7 @@ export default async function OfficeLaptopDetail({ params }: Props) {
             <p>Tặng kèm balo, túi chống sốc chính hãng. Học sinh, sinh viên giảm thêm <strong>10%, tối đa 500.000đ</strong> khi thanh toán.</p>
           </section>
           <div className={styles.actions}>
-            <Link className={styles.buy} href={`/thanh-toan/${slug}`}>Mua ngay</Link>
+            <BuyNowButton className={styles.buy} slug={slug}>Mua ngay</BuyNowButton>
             <AddToCart slug={slug}>
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
                 <path d="M2 3h3l3 13h11l3-10H6M10 20h.01M18 20h.01M14 7v6m-3-3h6" strokeLinecap="round" />
@@ -105,5 +106,13 @@ export default async function OfficeLaptopDetail({ params }: Props) {
         </Link>)}</div>
       </section>}
     </main>
+  );
+}
+
+export default function OfficeLaptopDetail(props: Props) {
+  return (
+    <Suspense fallback={<div className="min-h-96 w-full flex items-center justify-center text-gray-500">Đang tải sản phẩm...</div>}>
+      <OfficeLaptopContent params={props.params} />
+    </Suspense>
   );
 }

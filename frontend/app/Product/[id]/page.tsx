@@ -1,311 +1,106 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
+import { Suspense } from "react";
 import supabaseProductsRaw from "../../../data/supabaseProducts.json";
 import { products as dummyProducts } from "../../../data/Products";
+import styles from "../../gaming-laptops/[slug]/page.module.css";
+import catalogStyles from "./page.module.css";
+import ProductSpecsDrawer from "../../components/ProductSpecsDrawer";
+import { AddToCart, BuyNowButton } from "../../components/cart";
+const highlightLabels = ["CPU", "Processor", "RAM", "Storage", "Ổ cứng", "Graphics Card", "Card đồ họa", "Screen Size", "Màn hình", "Refresh Rate", "Độ phân giải"];
 
-interface ProductSpec {
-  specification_name: string;
-  specification_value: string;
-}
-
-interface ProductVariant {
-  sku: string;
-  price: number;
-  compare_at_price: number;
-}
-
+interface ProductSpec { specification_name: string; specification_value: string }
+interface ProductVariant { sku: string; price: number; compare_at_price: number }
 interface ProductDetail {
   product_id: string;
-  category_id?: string;
   product_name: string;
   slug: string;
   short_description?: string;
   description?: string;
-  categories?: {
-    slug: string;
-    category_name: string;
-  };
-  brands?: {
-    brand_name: string;
-  };
-  product_images?: {
-    image_url: string;
-    is_primary: boolean;
-  }[];
+  categories?: { slug: string; category_name: string };
+  brands?: { brand_name: string };
+  product_images?: { image_url: string; is_primary: boolean }[];
   product_variants?: ProductVariant[];
   product_specifications?: ProductSpec[];
 }
-
 const supabaseProducts = supabaseProductsRaw as ProductDetail[];
+const formatVND = (price: number) => new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(price);
 
-// Format giá VNĐ
-function formatVND(price: number) {
-  return new Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency: "VND",
-  }).format(price);
-}
-
-// Generate static params cho build Next.js (bao gồm cả ID UUID từ Supabase và legacy number ID)
 export function generateStaticParams() {
-  const supabaseParams = supabaseProducts.map((p) => ({
-    id: p.product_id,
-  }));
-  const legacyParams = dummyProducts.map((p) => ({
-    id: String(p.id),
-  }));
-  return [...supabaseParams, ...legacyParams];
+  return [...supabaseProducts.map(p => ({id:p.product_id})), ...dummyProducts.map(p => ({id:String(p.id)}))];
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}): Promise<Metadata> {
-  const { id } = await params;
-  const product = supabaseProducts.find((p) => p.product_id === id);
-  if (product) {
-    return {
-      title: `${product.product_name} | ConGears`,
-      description: product.short_description || product.description,
-    };
-  }
-  const legacy = dummyProducts.find((p) => String(p.id) === id);
-  if (legacy) {
-    return {
-      title: `${legacy.name} | ConGears`,
-      description: legacy.shortDescription,
-    };
-  }
-  return {
-    title: "Sản phẩm | ConGears",
-  };
+export async function generateMetadata({params}:{params:Promise<{id:string}>}):Promise<Metadata>{
+  const {id}=await params;
+  const remote=supabaseProducts.find(p=>p.product_id===id);
+  const legacy=dummyProducts.find(p=>String(p.id)===id);
+  return {title: remote ? `${remote.product_name} | ConGears` : legacy ? `${legacy.name} | ConGears` : "Sản phẩm | ConGears"};
 }
 
-export default async function ProductDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
+async function ProductContent({params}:{params:Promise<{id:string}>}){
+  const {id}=await params;
+  const remote=supabaseProducts.find(p=>p.product_id===id);
+  const legacy=dummyProducts.find(p=>String(p.id)===id);
+  if(!remote&&!legacy)notFound();
 
-  // 1. Tìm trong database Supabase
-  const supabaseProduct = supabaseProducts.find((p) => p.product_id === id);
+  const name=remote?.product_name ?? legacy!.name;
+  const brand=remote?.brands?.brand_name ?? legacy!.brand.name;
+  const category=remote?.categories?.category_name ?? "Sản phẩm";
+  const categorySlug=remote?.categories?.slug ?? "laptop";
+  const variant=remote?.product_variants?.[0];
+  const price=variant?.price ?? legacy!.price*25000;
+  const oldPrice=variant?.compare_at_price && variant.compare_at_price>price ? variant.compare_at_price : 0;
+  const specs=remote?.product_specifications?.map(s=>[s.specification_name,s.specification_value] as const)
+    ?? legacy!.specifications.map(s=>[s.name,`${s.value}${s.unit ? ` ${s.unit}` : ""}`] as const);
+  const image=remote?.product_images?.find(i=>i.is_primary)?.image_url ?? remote?.product_images?.[0]?.image_url ?? legacy?.images[0];
+  const description=remote?.description ?? legacy?.longDescription ?? legacy?.shortDescription ?? "";
 
-  if (supabaseProduct) {
-    const variant = supabaseProduct.product_variants?.[0];
-    const price = variant?.price || 0;
-    const compareAtPrice = variant?.compare_at_price || 0;
-    const discount =
-      compareAtPrice > price
-        ? Math.round((1 - price / compareAtPrice) * 100)
-        : 0;
-
-    const brandName = supabaseProduct.brands?.brand_name || "Chính hãng";
-    const categoryName = supabaseProduct.categories?.category_name || "Phụ kiện";
-    const categorySlug = supabaseProduct.categories?.slug || "laptop";
-
-    const primaryImage =
-      supabaseProduct.product_images?.find((img) => img.is_primary)?.image_url ||
-      supabaseProduct.product_images?.[0]?.image_url ||
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&auto=format&fit=crop&q=60";
-
-    return (
-      <main className="w-full flex-1 bg-gray-50 py-8" lang="vi">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb điều hướng */}
-          <nav className="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-500" aria-label="Đường dẫn">
-            <Link href="/" className="hover:text-[#2585D5]">
-              Trang chủ
-            </Link>
-            <span>›</span>
-            <Link href={`/categories/${categorySlug}`} className="hover:text-[#2585D5]">
-              {categoryName}
-            </Link>
-            <span>›</span>
-            <span className="text-gray-900 font-medium truncate max-w-md">
-              {supabaseProduct.product_name}
-            </span>
-          </nav>
-
-          {/* Khối thông tin chính của sản phẩm */}
-          <div className="grid grid-cols-1 gap-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:grid-cols-2 md:p-10">
-            {/* Ảnh sản phẩm */}
-            <div className="relative flex min-h-[360px] items-center justify-center overflow-hidden rounded-xl bg-gray-50 p-6 border border-gray-100">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={primaryImage}
-                alt={supabaseProduct.product_name}
-                className="max-h-[380px] w-full object-contain"
-              />
-            </div>
-
-            {/* Chi tiết sản phẩm */}
-            <div className="flex flex-col">
-              {/* Thương hiệu & Danh mục */}
-              <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#2585D5]">
-                <span>{brandName}</span>
-                <span>•</span>
-                <span>{categoryName}</span>
-              </div>
-
-              {/* Tên sản phẩm */}
-              <h1 className="mb-3 text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
-                {supabaseProduct.product_name}
-              </h1>
-
-              {/* Mã sản phẩm */}
-              <p className="mb-4 text-xs text-gray-500">
-                Mã SP: <span className="font-mono text-gray-700">{variant?.sku || supabaseProduct.slug}</span>
-              </p>
-
-              {/* Mô tả ngắn */}
-              <p className="mb-6 leading-relaxed text-gray-600 text-sm">
-                {supabaseProduct.short_description || "Sản phẩm công nghệ chính hãng phân phối tại ConGears, bảo hành 12-24 tháng đổi mới 1:1."}
-              </p>
-
-              {/* Giá bán và Khuyến mãi */}
-              <div className="mb-6 rounded-xl bg-gray-50 border border-gray-200/80 p-4">
-                <div className="flex items-baseline gap-3">
-                  <span className="text-3xl font-extrabold text-[#dc2626]">
-                    {formatVND(price)}
-                  </span>
-                  {discount > 0 && (
-                    <>
-                      <del className="text-sm font-medium text-gray-400">
-                        {formatVND(compareAtPrice)}
-                      </del>
-                      <span className="rounded bg-red-100 px-2 py-0.5 text-xs font-bold text-red-700">
-                        -{discount}%
-                      </span>
-                    </>
-                  )}
-                </div>
-                <div className="mt-2 flex items-center gap-2 text-xs text-emerald-700 font-semibold">
-                  <span>✓ Còn hàng</span>
-                  <span>•</span>
-                  <span>Giao siêu tốc 2H</span>
-                </div>
-              </div>
-
-              {/* Thông tin bảo hành & cam kết */}
-              <div className="mb-6 space-y-2 text-sm text-gray-600 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-                <div className="flex items-center gap-2">
-                  <span className="text-blue-600 font-bold">🛡️ Bảo hành:</span>
-                  <span>Chính hãng toàn quốc, đổi mới trong 30 ngày nếu lỗi.</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-blue-600 font-bold">📦 Hộp gồm:</span>
-                  <span>Thân máy/phụ kiện, cáp kết nối, sách hướng dẫn sử dụng.</span>
-                </div>
-              </div>
-
-              {/* Nút thao tác mua hàng */}
-              <div className="mt-auto flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/gio-hang"
-                  className="flex-1 rounded-xl bg-[#dc2626] hover:bg-[#b91c1c] text-white py-3.5 px-6 text-center font-bold transition shadow-sm"
-                >
-                  MUA NGAY (Giao tận nơi)
-                </Link>
-                <Link
-                  href={`/categories/${categorySlug}`}
-                  className="rounded-xl border border-gray-300 hover:bg-gray-100 text-gray-800 py-3.5 px-6 text-center font-semibold transition"
-                >
-                  Xem thêm {categoryName}
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Mô tả chi tiết */}
-          <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 md:p-8">
-            <h2 className="mb-4 text-xl font-bold text-gray-900">
-              Mô tả chi tiết sản phẩm
-            </h2>
-            <div className="prose max-w-none text-gray-600 leading-relaxed text-sm">
-              <p>
-                {supabaseProduct.description ||
-                  `${supabaseProduct.product_name} là sản phẩm công nghệ cao cấp chính hãng từ ${brandName}. Được thiết kế với độ bền vượt trội, tích hợp công nghệ tiên tiến nhất đáp ứng hoàn hảo nhu cầu sử dụng công việc và giải trí hàng ngày.`}
-              </p>
-            </div>
-          </section>
-
-          {/* Thông số kỹ thuật */}
-          {supabaseProduct.product_specifications && supabaseProduct.product_specifications.length > 0 && (
-            <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 md:p-8">
-              <h2 className="mb-6 text-xl font-bold text-gray-900">
-                Thông số kỹ thuật
-              </h2>
-              <div className="divide-y divide-gray-100 border-t border-gray-100">
-                {supabaseProduct.product_specifications.map((spec, index) => (
-                  <div
-                    key={index}
-                    className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 py-3.5 text-sm"
-                  >
-                    <span className="font-medium text-gray-500">
-                      {spec.specification_name}
-                    </span>
-                    <span className="sm:col-span-2 font-semibold text-gray-800">
-                      {spec.specification_value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
+  return <main className={styles.page} lang="vi">
+    <nav className={styles.breadcrumb} aria-label="Đường dẫn"><Link href="/">Trang chủ</Link><span>›</span><Link href={`/categories/${categorySlug}`}>{category}</Link><span>›</span><span aria-current="page">{name}</span></nav>
+    <div className={styles.hero}>
+      <section className={styles.gallery} aria-label={`Hình sản phẩm ${name}`}>
+        <div className={styles.mainImage}>{image ? <img src={image} alt={name}/> : <div className={catalogStyles.imageFallback}>{name}</div>}</div>
+        <div className={styles.galleryCaption}><span>Hình sản phẩm</span><span>{brand}</span></div>
+        <ProductSpecsDrawer name={name} specs={specs} image={image}/>
+      </section>
+      <section className={styles.summary} aria-labelledby="product-title">
+        <h1 id="product-title">{name}</h1>
+        {variant?.sku && <p className={catalogStyles.sku}>Mã sản phẩm: {variant.sku}</p>}
+        <p className={styles.configuration}>{brand} · {category}</p>
+        <Link className={styles.specLink} href="#product-specifications">Thông số kỹ thuật ›</Link>
+        <div className={styles.priceRow}><strong>{formatVND(price)}</strong>{oldPrice>price&&<><del>{formatVND(oldPrice)}</del><span className={styles.discount}>-{Math.round((1-price/oldPrice)*100)}%</span></>}</div>
+        <section className={styles.offer}><h2><span>%</span> Ưu đãi đi kèm</h2><p>Ưu đãi hiện có sẽ được áp dụng theo chương trình của sản phẩm.</p></section>
+        <div className={styles.actions}>
+          <BuyNowButton className={styles.buy} slug={remote?.slug || id}>Mua ngay</BuyNowButton>
+          <AddToCart slug={remote?.slug || id}>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path d="M2 3h3l3 13h11l3-10H6M10 20h.01M18 20h.01M14 7v6m-3-3h6" strokeLinecap="round" />
+            </svg>
+          </AddToCart>
         </div>
-      </main>
-    );
-  }
-
-  // 2. Fallback cho legacy dummy products (ID: 101, 102)
-  const legacy = dummyProducts.find((item) => String(item.id) === id);
-  if (!legacy) {
-    notFound();
-  }
-
-  return (
-    <main className="w-full flex-1 bg-gray-50 py-10" lang="vi">
-      <div className="mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
-        <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-gray-500">
-          <Link href="/" className="hover:text-[#45A0F0]">
-            Trang chủ
-          </Link>
-          <span>/</span>
-          <span className="text-gray-900">{legacy.name}</span>
-        </div>
-
-        <div className="grid grid-cols-1 gap-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:grid-cols-2 md:p-10">
-          <div className="relative flex min-h-[350px] items-center justify-center overflow-hidden rounded-xl bg-gray-50 p-6">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={legacy.images[0] || "https://placehold.co/800x800"}
-              alt={legacy.name}
-              className="max-h-[400px] w-full object-contain"
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#45A0F0]">
-              {legacy.brand.name}
-            </p>
-            <h1 className="mb-4 text-3xl font-bold text-gray-900">{legacy.name}</h1>
-            <p className="mb-4 text-sm text-gray-500">Model: {legacy.modelNumber}</p>
-            <p className="mb-6 leading-7 text-gray-600">{legacy.shortDescription}</p>
-            <div className="mb-6 border-y border-gray-200 py-5">
-              <p className="text-3xl font-bold text-[#2585D5]">{formatVND(legacy.price * 25000)}</p>
-            </div>
-            <Link
-              href="/"
-              className="mt-auto block w-full rounded-lg bg-[#45A0F0] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#2585D5]"
-            >
-              Về trang chủ
-            </Link>
-          </div>
+      </section>
+    </div>
+    <section className={catalogStyles.productInfo}>
+      <h2>Thông tin sản phẩm</h2>
+      <div className={catalogStyles.articleLayout}>
+        <nav className={catalogStyles.contents} aria-label="Mục lục thông tin sản phẩm"><strong>Mục lục</strong><ol>
+          <li><a href="#product-specifications">Thông số kỹ thuật</a></li>
+          <li><a href="#product-overview">Tổng quan sản phẩm</a></li>
+          <li><a href="#product-performance">Đặc điểm nổi bật</a></li>
+          <li><a href="#product-usage">Khả năng sử dụng</a></li>
+        </ol></nav>
+        <div className={catalogStyles.article}>
+          <section id="product-specifications"><h3>Thông số kỹ thuật</h3><table><tbody>{specs.map(([label,value])=><tr key={label}><th>{label}</th><td>{value}</td></tr>)}</tbody></table></section>
+          <section id="product-overview"><h3>Tổng quan sản phẩm {name}</h3><p>{description || `${name} là sản phẩm thuộc danh mục ${category} của thương hiệu ${brand}. Các thông tin cấu hình chi tiết được trình bày trong bảng thông số kỹ thuật.`}</p></section>
+          <section id="product-performance"><h3>Đặc điểm nổi bật</h3><p>{specs.slice(0,4).map(([label,value])=>`${label}: ${value}`).join(". ")}.</p></section>
+          <section id="product-usage"><h3>Khả năng sử dụng</h3><p>Sản phẩm được thiết kế phục vụ nhu cầu sử dụng thuộc nhóm {category.toLowerCase()}. Hãy tham khảo các thông số phía trên để đối chiếu với nhu cầu của bạn.</p></section>
         </div>
       </div>
-    </main>
-  );
+    </section>
+  </main>;
+}
+
+export default function ProductDetailPage(props:{params:Promise<{id:string}>}){
+  return <Suspense fallback={<div className="min-h-96"/>}><ProductContent params={props.params}/></Suspense>;
 }

@@ -36,6 +36,9 @@
 :global(body):has(.drawer:popover-open) { overflow: hidden; }
 .product { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid #ddd; }
 .product svg { width: 58px; flex: none; }
+.product img { width:58px; height:48px; flex:none; object-fit:contain; }
+.productFallback { display:grid; place-items:center; width:58px; height:48px; flex:none; color:#1769a8; background:#eef6fc; border-radius:6px; }
+.productFallback svg { width:32px; }
 .group h3 { border: 0; }
 .group dl > div { padding-inline: 0; border-bottom: 1px dashed #d4d8dc; }
 .group dl > div:nth-child(odd) { background: white; }

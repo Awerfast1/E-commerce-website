@@ -223,7 +223,7 @@ export default function NavBar() {
     <header className={styles.header} lang="vi">
       <div className={styles.bar}>
         <Link className={styles.brand} href="/" aria-label="ConGears – Trang chủ">
-          <span className={styles.brandMark} aria-hidden="true">C</span>
+          <span className={styles.brandMark} aria-hidden="true">N</span>
           CONGEARS
         </Link>
         <form

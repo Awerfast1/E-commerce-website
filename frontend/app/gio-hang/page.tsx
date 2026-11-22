@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { useState, useEffect, Suspense } from "react";
 import { changeCart, useCart, getAllProducts } from "../components/cart";
 import LaptopIllustration from "../components/LaptopIllustration";
 import { gamingDealsEndAt } from "../../data/gamingLaptopDeals";
@@ -8,12 +9,15 @@ import styles from "./page.module.css";
 
 const money = (n: number) => n.toLocaleString("vi-VN") + "đ";
 
-export default function CartPage() {
+function CartContent() {
+  const searchParams = useSearchParams();
+  const selectParam = searchParams.get("select");
   const items = useCart();
   const [excluded, setExcluded] = useState<string[]>([]);
   const [step, setStep] = useState(0);
   const [recipient, setRecipient] = useState({ name: "", phone: "", address: "" });
   const [sale, setSale] = useState(false);
+  const [initializedSelect, setInitializedSelect] = useState(false);
 
   useEffect(() => {
     const end = Date.parse(gamingDealsEndAt);
@@ -42,6 +46,17 @@ export default function CartPage() {
       id: p.slug,
       index: p.artIndex,
     }));
+
+  useEffect(() => {
+    if (!initializedSelect && rows.length > 0) {
+      if (selectParam) {
+        // Exclude everything except the selected item
+        const toExclude = rows.filter(r => r.id !== selectParam).map(r => r.id);
+        setExcluded(toExclude);
+      }
+      setInitializedSelect(true);
+    }
+  }, [selectParam, rows, initializedSelect]);
 
   const selected = rows.filter(r => !excluded.includes(r.id));
   const count = Object.values(items).reduce((sum, n) => sum + n, 0);
@@ -108,7 +123,15 @@ export default function CartPage() {
                     onChange={e => setExcluded(e.target.checked ? excluded.filter(v => v !== id) : [...excluded, id])}
                   />
                   <div className={styles.art}>
-                    <LaptopIllustration index={index} />
+                    {p.imageUrl ? (
+                      <img
+                        src={p.imageUrl}
+                        alt={p.name}
+                        style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "6px" }}
+                      />
+                    ) : (
+                      <LaptopIllustration index={index >= 0 ? index : 0} />
+                    )}
                   </div>
                   <Link href={p.link}>{p.name}</Link>
                   <div>
@@ -208,5 +231,13 @@ export default function CartPage() {
         </aside>
       </div>
     </main>
+  );
+}
+
+export default function CartPage() {
+  return (
+    <Suspense fallback={<main className={styles.page}><p>Đang tải giỏ hàng...</p></main>}>
+      <CartContent />
+    </Suspense>
   );
 }

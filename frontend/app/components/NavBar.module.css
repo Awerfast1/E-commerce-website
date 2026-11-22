@@ -30,9 +30,11 @@
   width: 1.35em;
   height: 1.35em;
   margin-right: .25em;
-  border: 2px solid currentColor;
-  border-radius: .25em;
-  font-weight: 900;
+  border: 2px solid rgb(255 255 255 / 78%);
+  border-radius: 50%;
+  background: #15578c;
+  box-shadow: 0 2px 8px rgb(10 48 78 / 24%);
+  font-weight: 500;
   letter-spacing: 0;
 }
 .bar svg { flex-shrink: 0; }
