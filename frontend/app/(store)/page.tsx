@@ -1,9 +1,50 @@
+import { Suspense } from "react";
+import { connection } from "next/server";
+
 import QuickCategories from "@/app/components/QuickCategories";
 import GamingDeals from "@/app/components/GamingDeals";
 import GamingCatalog from "@/app/components/GamingCatalog";
 import OfficeDeals from "@/app/components/OfficeDeals";
 import OfficeCatalog from "@/app/components/OfficeCatalog";
 import AccessoryShowcase from "@/app/components/AccessoryShowcase";
+import { getStoreProducts, type StoreProduct } from "@/lib/store/catalog";
+
+const accessorySections = [
+  { title: "Bàn phím bán chạy", badge: "🚀 Giao hỏa tốc 2H", categorySlug: "keyboards" },
+  { title: "Chuột Gaming & Văn phòng", badge: "🎁 Tặng kèm Lót chuột", categorySlug: "mice" },
+  { title: "Tai nghe & Âm thanh", badge: "🔥 Giảm đến 40%", categorySlug: "headphones" },
+  { title: "Ổ cứng, SSD & Lưu trữ", badge: "⚡ Đọc ghi siêu tốc", categorySlug: "storage" },
+  { title: "Loa Bluetooth & Soundbar", badge: "🔊 Âm thanh sống động", categorySlug: "speakers" },
+  { title: "Củ sạc nhanh GaN chính hãng", badge: "⚡ Chuẩn sạc PD / QC", categorySlug: "chargers" },
+  { title: "Pin sạc dự phòng dung lượng cao", badge: "🔋 An toàn chuẩn bay", categorySlug: "power-banks" },
+  { title: "Hub chuyển đổi & Adapter", badge: "🔌 Đa cổng kết nối", categorySlug: "hubs-adapters" },
+];
+
+async function AccessorySections() {
+  await connection();
+
+  const products = await getStoreProducts();
+  const byCategory = new Map<string, StoreProduct[]>();
+  for (const product of products) {
+    const list = byCategory.get(product.categorySlug);
+    if (list) list.push(product);
+    else byCategory.set(product.categorySlug, [product]);
+  }
+
+  return (
+    <>
+      {accessorySections.map((section) => (
+        <AccessoryShowcase
+          key={section.categorySlug}
+          title={section.title}
+          badge={section.badge}
+          categorySlug={section.categorySlug}
+          products={byCategory.get(section.categorySlug) ?? []}
+        />
+      ))}
+    </>
+  );
+}
 
 export default function Home() {
   return (
@@ -23,61 +64,16 @@ export default function Home() {
       {/* 5/ Container Laptop Văn Phòng Bán Chạy (Chuẩn GearVN: Top 5 + Lọc Hãng góc phải) */}
       <OfficeCatalog />
 
-      {/* 6/ Container Bàn Phím Bán Chạy (Chuẩn GearVN: Top 5 + Lọc Hãng góc phải) */}
-      <AccessoryShowcase
-        title="Bàn phím bán chạy"
-        badge="🚀 Giao hỏa tốc 2H"
-        categorySlug="keyboards"
-      />
-
-      {/* 7/ Container Chuột Bán Chạy (Chuẩn GearVN: Top 5 + Lọc Hãng góc phải) */}
-      <AccessoryShowcase
-        title="Chuột Gaming & Văn phòng"
-        badge="🎁 Tặng kèm Lót chuột"
-        categorySlug="mice"
-      />
-
-      {/* 8/ Container Tai Nghe Nổi Bật (Chuẩn GearVN: Top 5 + Lọc Hãng góc phải) */}
-      <AccessoryShowcase
-        title="Tai nghe & Âm thanh"
-        badge="🔥 Giảm đến 40%"
-        categorySlug="headphones"
-      />
-
-      {/* 9/ Container Ổ Cứng & Lưu Trữ (Chuẩn GearVN: Top 5 + Lọc Hãng góc phải) */}
-      <AccessoryShowcase
-        title="Ổ cứng, SSD & Lưu trữ"
-        badge="⚡ Đọc ghi siêu tốc"
-        categorySlug="storage"
-      />
-
-      {/* 10/ Container Loa & Soundbar Bán Chạy */}
-      <AccessoryShowcase
-        title="Loa Bluetooth & Soundbar"
-        badge="🔊 Âm thanh sống động"
-        categorySlug="speakers"
-      />
-
-      {/* 11/ Container Củ Sạc Nhanh GaN */}
-      <AccessoryShowcase
-        title="Củ sạc nhanh GaN chính hãng"
-        badge="⚡ Chuẩn sạc PD / QC"
-        categorySlug="chargers"
-      />
-
-      {/* 12/ Container Pin Sạc Dự Phòng */}
-      <AccessoryShowcase
-        title="Pin sạc dự phòng dung lượng cao"
-        badge="🔋 An toàn chuẩn bay"
-        categorySlug="power-banks"
-      />
-
-      {/* 13/ Container Hub & Cáp Chuyển Đổi */}
-      <AccessoryShowcase
-        title="Hub chuyển đổi & Adapter"
-        badge="🔌 Đa cổng kết nối"
-        categorySlug="hubs-adapters"
-      />
+      {/* 6-13/ Các danh mục phụ kiện, đọc trực tiếp từ Supabase */}
+      <Suspense
+        fallback={
+          <div className="mx-auto max-w-7xl px-4 py-10 text-center text-gray-500">
+            Đang tải sản phẩm...
+          </div>
+        }
+      >
+        <AccessorySections />
+      </Suspense>
     </main>
   );
 }
