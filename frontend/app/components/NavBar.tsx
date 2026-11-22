@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useCart } from "./cart";
 import { useEffect, useRef, useState, useMemo } from "react";
-import supabaseProductsRaw from "../../data/supabaseProducts.json";
 import { megaMenuData } from "../../data/megaMenuData";
+import type { StoreProduct } from "@/lib/store/catalog";
 import styles from "./NavBar.module.css";
 
 interface SearchProduct {
@@ -19,35 +19,23 @@ interface SearchProduct {
   imageUrl?: string;
 }
 
-const allSearchProducts: SearchProduct[] = (supabaseProductsRaw as any[]).map(p => {
-  const variant = p.product_variants?.[0];
-  const price = Number(variant?.price || 0);
-  const compareAtPrice = Number(variant?.compare_at_price || price);
-  const primaryImage =
-    p.product_images?.find((img: any) => img.is_primary)?.image_url ||
-    p.product_images?.[0]?.image_url ||
-    "https://placehold.co/800x800?text=" + encodeURIComponent(p.product_name || "ConGears");
-
+function toSearchProduct(product: StoreProduct): SearchProduct {
   return {
-    product_id: p.product_id,
-    slug: p.slug,
-    product_name: p.product_name,
-    categorySlug: p.categories?.slug || "laptop",
-    categoryName: p.categories?.category_name || "Sản phẩm",
-    brandName: p.brands?.brand_name || "",
-    price,
-    compareAtPrice,
-    imageUrl: primaryImage,
+    product_id: product.product_id,
+    slug: product.slug,
+    product_name: product.product_name,
+    categorySlug: product.categorySlug,
+    categoryName: product.categoryName,
+    brandName: product.brandName,
+    price: product.price,
+    compareAtPrice: product.compareAtPrice,
+    imageUrl:
+      product.imageUrl ||
+      "https://placehold.co/800x800?text=" + encodeURIComponent(product.product_name || "ConGears"),
   };
-});
+}
 
 function getProductLink(product: SearchProduct): string {
-  if (product.categorySlug === "laptop-gaming") {
-    return `/gaming-laptops/${product.slug}`;
-  }
-  if (product.categorySlug === "laptop-van-phong") {
-    return `/laptop-van-phong/${product.slug}`;
-  }
   return `/Product/${product.product_id}`;
 }
 
@@ -110,8 +98,9 @@ export const navCategories = [
 // 11 danh mục hiển thị trên thanh ngang lấp đầy chiều rộng thẩm mỹ và cân đối
 export const topBarCategories = navCategories.slice(0, 11);
 
-export default function NavBar() {
+export default function NavBar({ products }: { products: StoreProduct[] }) {
   const count = Object.values(useCart()).reduce((sum, n) => sum + n, 0);
+  const allSearchProducts = useMemo(() => products.map(toSearchProduct), [products]);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -183,12 +172,10 @@ export default function NavBar() {
         return tokens.every(tok => fullSearchTarget.includes(tok));
       })
       .slice(0, 6);
-  }, [term]);
+  }, [term, allSearchProducts]);
 
   // Sản phẩm nổi bật khi focus nhưng chưa nhập gì
-  const featuredProducts = useMemo(() => {
-    return allSearchProducts.slice(0, 5);
-  }, []);
+  const featuredProducts = useMemo(() => allSearchProducts.slice(0, 5), [allSearchProducts]);
 
   const trendingKeywords = [
     "Bàn phím DareU",
