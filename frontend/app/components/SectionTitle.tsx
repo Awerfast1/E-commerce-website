@@ -12,7 +12,7 @@ export default function SectionTitle({
   eyebrow,
   title,
   action,
-  href = "/search",
+  href = "/Search",
 }: SectionTitleProps) {
   return (
     <div className="mb-6 flex items-end justify-between gap-4">

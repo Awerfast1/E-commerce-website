@@ -2,31 +2,20 @@
 import type { Product } from "../types/catalog";
 
 export const products: Product[] = [
+  // ==========================================
+  // MOTHERBOARDS
+  // ==========================================
   {
     id: 101,
     name: "ASUS ROG Strix X870-E Gaming WiFi",
     sku: "ASUS-X870E-001",
     modelNumber: "ROG-STRIX-X870E",
-
-    brand: {
-      id: 1,
-      name: "ASUS",
-    },
-
+    brand: { id: 1, name: "ASUS" },
     categoryId: 3,
-
     price: 599,
-
     shortDescription: "High-performance AM5 gaming motherboard.",
-
-    longDescription:
-      "A high-performance motherboard designed for gaming and demanding desktop workloads.",
-
-    images: [
-      "/images/products/x870-front.jpg",
-      "/images/products/x870-back.jpg",
-    ],
-
+    longDescription: "A high-performance motherboard designed for gaming and demanding desktop workloads.",
+    images: ["/images/products/x870-front.jpg", "/images/products/x870-back.jpg"],
     specifications: [
       { name: "Socket", value: "AM5" },
       { name: "Chipset", value: "X870" },
@@ -35,31 +24,59 @@ export const products: Product[] = [
       { name: "WiFi", value: "WiFi 7" },
     ],
   },
+  {
+    id: 103,
+    name: "MSI MAG B650 Tomahawk WiFi",
+    sku: "MSI-B650-001",
+    modelNumber: "MAG-B650-TOMAHAWK",
+    brand: { id: 2, name: "MSI" },
+    categoryId: 3,
+    price: 329,
+    shortDescription: "Reliable AM5 motherboard for gaming builds.",
+    longDescription: "An ATX motherboard featuring DDR5 memory support, WiFi connectivity and a robust power delivery design.",
+    images: ["/images/products/msi-b650.jpg"],
+    specifications: [
+      { name: "Socket", value: "AM5" },
+      { name: "Chipset", value: "B650" },
+      { name: "RAM Slots", value: 4 },
+      { name: "Form Factor", value: "ATX" },
+      { name: "WiFi", value: "WiFi 6E" },
+    ],
+  },
+  {
+    id: 104,
+    name: "Gigabyte Z790 AORUS Elite AX",
+    sku: "GIGA-Z790-001",
+    modelNumber: "Z790-AORUS-ELITE-AX",
+    brand: { id: 3, name: "Gigabyte" },
+    categoryId: 3,
+    price: 399,
+    shortDescription: "Intel LGA1700 motherboard with DDR5 support.",
+    longDescription: "A gaming motherboard designed for Intel desktop processors with PCIe 5.0 and wireless networking.",
+    images: ["/images/products/z790-aorus.jpg"],
+    specifications: [
+      { name: "Socket", value: "LGA1700" },
+      { name: "Chipset", value: "Z790" },
+      { name: "RAM", value: "DDR5" },
+      { name: "Form Factor", value: "ATX" },
+      { name: "WiFi", value: "WiFi 6E" },
+    ],
+  },
 
+  // ==========================================
+  // GAMING LAPTOPS
+  // ==========================================
   {
     id: 102,
     name: "Gaming Laptop 16-inch",
     sku: "LAPTOP-001",
     modelNumber: "GAMING-16",
-
-    brand: {
-      id: 2,
-      name: "MSI",
-    },
-
+    brand: { id: 2, name: "MSI" },
     categoryId: 8,
-
     price: 2499,
-
     shortDescription: "High-performance gaming laptop.",
-
-    longDescription:
-      "A gaming laptop designed for demanding games and productivity workloads.",
-
-    images: [
-      "/images/products/laptop-front.jpg",
-    ],
-
+    longDescription: "A gaming laptop designed for demanding games and productivity workloads.",
+    images: ["/images/products/laptop-front.jpg"],
     specifications: [
       { name: "Processor", value: "AMD Ryzen 7" },
       { name: "RAM", value: 32, unit: "GB" },
@@ -68,12 +85,441 @@ export const products: Product[] = [
       { name: "Graphics Card", value: "RTX 5070" },
       { name: "Refresh Rate", value: 240, unit: "Hz" },
     ],
-
     promotion: {
       discount: 15,
       discountType: "percentage",
       startDate: "2026-11-01",
       endDate: "2026-12-01",
     },
+  },
+  {
+    id: 105,
+    name: "ASUS ROG Zephyrus G16",
+    sku: "ASUS-G16-001",
+    modelNumber: "GU605",
+    brand: { id: 1, name: "ASUS" },
+    categoryId: 8,
+    price: 2899,
+    shortDescription: "Premium thin-and-light gaming laptop.",
+    longDescription: "A premium gaming laptop combining a high-refresh-rate OLED display with powerful hardware.",
+    images: ["/images/products/zephyrus-g16.jpg"],
+    specifications: [
+      { name: "Processor", value: "Intel Core Ultra 9" },
+      { name: "RAM", value: 32, unit: "GB" },
+      { name: "Storage", value: 1, unit: "TB SSD" },
+      { name: "Graphics Card", value: "RTX 5070 Ti" },
+      { name: "Screen Size", value: 16, unit: "inches" },
+      { name: "Display", value: "OLED" },
+    ],
+  },
+
+  // ==========================================
+  // PROCESSORS (CPUs)
+  // ==========================================
+  {
+    id: 106,
+    name: "AMD Ryzen 7 9800X3D",
+    sku: "AMD-9800X3D-001",
+    modelNumber: "100-100001084WOF",
+    brand: { id: 4, name: "AMD" },
+    categoryId: 1,
+    price: 749,
+    shortDescription: "High-end gaming processor with 3D V-Cache.",
+    longDescription: "An AM5 desktop processor designed for exceptional gaming performance.",
+    images: ["/images/products/ryzen-9800x3d.jpg"],
+    specifications: [
+      { name: "Cores", value: 8 },
+      { name: "Threads", value: 16 },
+      { name: "Base Clock", value: 4.7, unit: "GHz" },
+      { name: "Max Boost", value: 5.2, unit: "GHz" },
+      { name: "Socket", value: "AM5" },
+      { name: "Cache", value: 96, unit: "MB" },
+    ],
+  },
+  {
+    id: 107,
+    name: "AMD Ryzen 5 9600X",
+    sku: "AMD-9600X-001",
+    modelNumber: "100-100001405WOF",
+    brand: { id: 4, name: "AMD" },
+    categoryId: 1,
+    price: 429,
+    shortDescription: "Efficient 6-core Zen 5 desktop processor.",
+    longDescription: "A modern desktop CPU suitable for gaming and everyday productivity.",
+    images: ["/images/products/ryzen-9600x.jpg"],
+    specifications: [
+      { name: "Cores", value: 6 },
+      { name: "Threads", value: 12 },
+      { name: "Base Clock", value: 3.9, unit: "GHz" },
+      { name: "Max Boost", value: 5.4, unit: "GHz" },
+      { name: "Socket", value: "AM5" },
+    ],
+  },
+  {
+    id: 108,
+    name: "Intel Core Ultra 7 265K",
+    sku: "INTEL-265K-001",
+    modelNumber: "BX80768265K",
+    brand: { id: 5, name: "Intel" },
+    categoryId: 1,
+    price: 599,
+    shortDescription: "High-performance unlocked desktop processor.",
+    longDescription: "An unlocked Intel desktop processor designed for demanding multitasking and gaming workloads.",
+    images: ["/images/products/core-ultra-7.jpg"],
+    specifications: [
+      { name: "Cores", value: 20 },
+      { name: "Threads", value: 20 },
+      { name: "Max Turbo", value: 5.5, unit: "GHz" },
+      { name: "Socket", value: "LGA1851" },
+      { name: "Series", value: "Core Ultra 200S" },
+    ],
+  },
+
+  // ==========================================
+  // GRAPHICS CARDS (GPUs)
+  // ==========================================
+  {
+    id: 109,
+    name: "ASUS ROG Strix GeForce RTX 5080 OC",
+    sku: "ASUS-RTX5080-001",
+    modelNumber: "ROG-STRIX-RTX5080-O16G",
+    brand: { id: 1, name: "ASUS" },
+    categoryId: 2,
+    price: 2299,
+    shortDescription: "Premium NVIDIA RTX 5080 graphics card.",
+    longDescription: "A high-end graphics card featuring advanced ray tracing and AI-powered rendering capabilities.",
+    images: ["/images/products/rtx-5080.jpg"],
+    specifications: [
+      { name: "GPU", value: "GeForce RTX 5080" },
+      { name: "Memory", value: 16, unit: "GB GDDR7" },
+      { name: "Interface", value: "PCIe 5.0" },
+      { name: "Cooling", value: "Triple Fan" },
+      { name: "Architecture", value: "Blackwell" },
+    ],
+  },
+  {
+    id: 110,
+    name: "MSI GeForce RTX 5070 Ti Gaming Trio",
+    sku: "MSI-5070TI-001",
+    modelNumber: "RTX-5070-TI-GAMING-TRIO",
+    brand: { id: 2, name: "MSI" },
+    categoryId: 2,
+    price: 1499,
+    shortDescription: "High-performance RTX 5070 Ti graphics card.",
+    longDescription: "A triple-fan graphics card designed for smooth high-resolution gaming.",
+    images: ["/images/products/rtx-5070ti.jpg"],
+    specifications: [
+      { name: "GPU", value: "GeForce RTX 5070 Ti" },
+      { name: "Memory", value: 16, unit: "GB GDDR7" },
+      { name: "Interface", value: "PCIe 5.0" },
+      { name: "Cooling", value: "Triple Fan" },
+    ],
+  },
+  {
+    id: 111,
+    name: "Gigabyte Radeon RX 9070 XT Gaming OC",
+    sku: "GIGA-RX9070XT-001",
+    modelNumber: "GV-R9070XTGAMING-OC-16GD",
+    brand: { id: 3, name: "Gigabyte" },
+    categoryId: 2,
+    price: 1199,
+    shortDescription: "AMD Radeon graphics card with 16GB memory.",
+    longDescription: "A gaming graphics card designed for high-resolution gaming and modern rendering workloads.",
+    images: ["/images/products/rx-9070xt.jpg"],
+    specifications: [
+      { name: "GPU", value: "Radeon RX 9070 XT" },
+      { name: "Memory", value: 16, unit: "GB GDDR6" },
+      { name: "Interface", value: "PCIe 5.0" },
+      { name: "Cooling", value: "Triple Fan" },
+    ],
+  },
+
+  // ==========================================
+  // MEMORY (RAM)
+  // ==========================================
+  {
+    id: 112,
+    name: "Corsair Vengeance DDR5 32GB 6000MHz",
+    sku: "COR-RAM-001",
+    modelNumber: "CMK32GX5M2B6000C36",
+    brand: { id: 6, name: "Corsair" },
+    categoryId: 4,
+    price: 179,
+    shortDescription: "32GB DDR5 memory kit for modern gaming PCs.",
+    longDescription: "A dual-channel DDR5 memory kit designed for modern desktop platforms.",
+    images: ["/images/products/corsair-vengeance.jpg"],
+    specifications: [
+      { name: "Capacity", value: 32, unit: "GB" },
+      { name: "Memory Type", value: "DDR5" },
+      { name: "Speed", value: 6000, unit: "MT/s" },
+      { name: "Configuration", value: "2 x 16GB" },
+      { name: "Latency", value: "CL36" },
+    ],
+  },
+  {
+    id: 113,
+    name: "G.Skill Trident Z5 Neo RGB 64GB",
+    sku: "GSKILL-RAM-001",
+    modelNumber: "F5-6000J3040G32GX2-TZ5NR",
+    brand: { id: 7, name: "G.Skill" },
+    categoryId: 4,
+    price: 329,
+    shortDescription: "High-capacity DDR5 RGB memory kit.",
+    longDescription: "A high-capacity memory kit featuring RGB lighting and AMD EXPO support.",
+    images: ["/images/products/trident-z5.jpg"],
+    specifications: [
+      { name: "Capacity", value: 64, unit: "GB" },
+      { name: "Memory Type", value: "DDR5" },
+      { name: "Speed", value: 6000, unit: "MT/s" },
+      { name: "Configuration", value: "2 x 32GB" },
+      { name: "Lighting", value: "RGB" },
+    ],
+  },
+
+  // ==========================================
+  // STORAGE
+  // ==========================================
+  {
+    id: 114,
+    name: "Samsung 990 PRO 2TB NVMe SSD",
+    sku: "SAMSUNG-990PRO-001",
+    modelNumber: "MZ-V9P2T0BW",
+    brand: { id: 8, name: "Samsung" },
+    categoryId: 5,
+    price: 269,
+    shortDescription: "High-speed PCIe 4.0 NVMe SSD.",
+    longDescription: "A high-performance SSD designed for fast application loading and file transfers.",
+    images: ["/images/products/samsung-990pro.jpg"],
+    specifications: [
+      { name: "Capacity", value: 2, unit: "TB" },
+      { name: "Interface", value: "PCIe 4.0 x4" },
+      { name: "Form Factor", value: "M.2 2280" },
+      { name: "Read Speed", value: 7450, unit: "MB/s" },
+      { name: "Write Speed", value: 6900, unit: "MB/s" },
+    ],
+  },
+  {
+    id: 115,
+    name: "WD Black SN850X 1TB NVMe SSD",
+    sku: "WD-SN850X-001",
+    modelNumber: "WDS100T2X0E",
+    brand: { id: 9, name: "Western Digital" },
+    categoryId: 5,
+    price: 159,
+    shortDescription: "Fast NVMe storage for gaming systems.",
+    longDescription: "A high-performance PCIe 4.0 SSD optimized for gaming and desktop workloads.",
+    images: ["/images/products/wd-sn850x.jpg"],
+    specifications: [
+      { name: "Capacity", value: 1, unit: "TB" },
+      { name: "Interface", value: "PCIe 4.0 x4" },
+      { name: "Form Factor", value: "M.2 2280" },
+      { name: "Read Speed", value: 7300, unit: "MB/s" },
+      { name: "Write Speed", value: 6300, unit: "MB/s" },
+    ],
+  },
+
+  // ==========================================
+  // POWER SUPPLIES
+  // ==========================================
+  {
+    id: 116,
+    name: "Corsair RM850x 850W Gold",
+    sku: "COR-PSU-001",
+    modelNumber: "RM850X-2024",
+    brand: { id: 6, name: "Corsair" },
+    categoryId: 6,
+    price: 219,
+    shortDescription: "Fully modular 850W 80 Plus Gold PSU.",
+    longDescription: "A reliable power supply designed for modern gaming PCs.",
+    images: ["/images/products/corsair-rm850x.jpg"],
+    specifications: [
+      { name: "Wattage", value: 850, unit: "W" },
+      { name: "Efficiency", value: "80 Plus Gold" },
+      { name: "Modularity", value: "Fully Modular" },
+      { name: "Standard", value: "ATX 3.1" },
+    ],
+  },
+
+  // ==========================================
+  // PC CASES
+  // ==========================================
+  {
+    id: 117,
+    name: "Lian Li O11 Dynamic EVO RGB",
+    sku: "LIANLI-CASE-001",
+    modelNumber: "O11DEG-W",
+    brand: { id: 10, name: "Lian Li" },
+    categoryId: 7,
+    price: 249,
+    shortDescription: "Premium dual-chamber PC case with RGB lighting.",
+    longDescription: "A spacious mid-tower case designed for showcase PC builds and advanced cooling configurations.",
+    images: ["/images/products/o11-evo.jpg"],
+    specifications: [
+      { name: "Form Factor", value: "Mid Tower" },
+      { name: "Motherboard Support", value: "ATX / E-ATX / Micro-ATX" },
+      { name: "Side Panel", value: "Tempered Glass" },
+      { name: "Lighting", value: "RGB" },
+    ],
+  },
+  {
+    id: 118,
+    name: "NZXT H9 Flow",
+    sku: "NZXT-CASE-001",
+    modelNumber: "CM-H91FB-01",
+    brand: { id: 11, name: "NZXT" },
+    categoryId: 7,
+    price: 229,
+    shortDescription: "Dual-chamber airflow-focused PC case.",
+    longDescription: "A modern PC case featuring panoramic glass panels and optimized airflow.",
+    images: ["/images/products/nzxt-h9.jpg"],
+    specifications: [
+      { name: "Form Factor", value: "Mid Tower" },
+      { name: "Motherboard Support", value: "ATX / Micro-ATX / Mini-ITX" },
+      { name: "Side Panel", value: "Tempered Glass" },
+      { name: "Cooling", value: "Multiple Fan Support" },
+    ],
+  },
+
+  // ==========================================
+  // CPU COOLING
+  // ==========================================
+  {
+    id: 119,
+    name: "NZXT Kraken Elite 360 RGB",
+    sku: "NZXT-AIO-001",
+    modelNumber: "RL-KR36E-B1",
+    brand: { id: 11, name: "NZXT" },
+    categoryId: 9,
+    price: 329,
+    shortDescription: "360mm liquid CPU cooler with LCD display.",
+    longDescription: "A premium all-in-one liquid cooler designed for high-performance desktop processors.",
+    images: ["/images/products/kraken-elite.jpg"],
+    specifications: [
+      { name: "Type", value: "Liquid Cooling" },
+      { name: "Radiator Size", value: 360, unit: "mm" },
+      { name: "Fan Count", value: 3 },
+      { name: "Display", value: "LCD" },
+      { name: "Lighting", value: "RGB" },
+    ],
+  },
+  {
+    id: 120,
+    name: "Noctua NH-D15 G2",
+    sku: "NOCTUA-COOLER-001",
+    modelNumber: "NH-D15-G2",
+    brand: { id: 12, name: "Noctua" },
+    categoryId: 9,
+    price: 189,
+    shortDescription: "Premium dual-tower air CPU cooler.",
+    longDescription: "A high-performance air cooler designed for quiet and efficient CPU cooling.",
+    images: ["/images/products/noctua-d15.jpg"],
+    specifications: [
+      { name: "Type", value: "Air Cooling" },
+      { name: "Fan Count", value: 2 },
+      { name: "Tower Design", value: "Dual Tower" },
+      { name: "Fan Size", value: 140, unit: "mm" },
+    ],
+  },
+
+  // ==========================================
+  // MONITORS
+  // ==========================================
+  {
+    id: 121,
+    name: "LG UltraGear 27GS95QE OLED",
+    sku: "LG-MONITOR-001",
+    modelNumber: "27GS95QE-B",
+    brand: { id: 13, name: "LG" },
+    categoryId: 10,
+    price: 1099,
+    shortDescription: "27-inch QHD OLED gaming monitor.",
+    longDescription: "An OLED gaming monitor offering high refresh rates and fast response times.",
+    images: ["/images/products/lg-ultragear.jpg"],
+    specifications: [
+      { name: "Screen Size", value: 27, unit: "inches" },
+      { name: "Resolution", value: "2560 x 1440" },
+      { name: "Panel", value: "OLED" },
+      { name: "Refresh Rate", value: 240, unit: "Hz" },
+      { name: "Response Time", value: "0.03ms" },
+    ],
+  },
+  {
+    id: 122,
+    name: "Samsung Odyssey G7 32-inch",
+    sku: "SAMSUNG-G7-001",
+    modelNumber: "LS32BG702",
+    brand: { id: 8, name: "Samsung" },
+    categoryId: 10,
+    price: 699,
+    shortDescription: "32-inch 4K gaming monitor.",
+    longDescription: "A large gaming monitor featuring 4K resolution and a high refresh rate.",
+    images: ["/images/products/samsung-g7.jpg"],
+    specifications: [
+      { name: "Screen Size", value: 32, unit: "inches" },
+      { name: "Resolution", value: "3840 x 2160" },
+      { name: "Panel", value: "IPS" },
+      { name: "Refresh Rate", value: 144, unit: "Hz" },
+    ],
+  },
+
+  // ==========================================
+  // PERIPHERALS
+  // ==========================================
+  {
+    id: 123,
+    name: "Logitech G Pro X Superlight 2",
+    sku: "LOGI-MOUSE-001",
+    modelNumber: "GPROXSL2",
+    brand: { id: 14, name: "Logitech" },
+    categoryId: 11,
+    price: 229,
+    shortDescription: "Lightweight wireless gaming mouse.",
+    longDescription: "A professional wireless gaming mouse designed for precision and low-latency performance.",
+    images: ["/images/products/gpro-superlight.jpg"],
+    specifications: [
+      { name: "Connection", value: "Wireless" },
+      { name: "Sensor", value: "HERO 2" },
+      { name: "Maximum DPI", value: 32000 },
+      { name: "Weight", value: 60, unit: "g" },
+      { name: "Battery", value: "Rechargeable" },
+    ],
+  },
+  {
+    id: 124,
+    name: "SteelSeries Apex Pro TKL Wireless",
+    sku: "STEELSERIES-KEYBOARD-001",
+    modelNumber: "APEX-PRO-TKL-WL",
+    brand: { id: 15, name: "SteelSeries" },
+    categoryId: 11,
+    price: 349,
+    shortDescription: "Wireless mechanical gaming keyboard.",
+    longDescription: "A compact gaming keyboard featuring adjustable mechanical switches and wireless connectivity.",
+    images: ["/images/products/apex-pro-tkl.jpg"],
+    specifications: [
+      { name: "Type", value: "Mechanical" },
+      { name: "Layout", value: "Tenkeyless" },
+      { name: "Connection", value: "Wireless / Bluetooth" },
+      { name: "Switches", value: "OmniPoint" },
+      { name: "Lighting", value: "RGB" },
+    ],
+  },
+  {
+    id: 125,
+    name: "HyperX Cloud III Wireless",
+    sku: "HYPERX-HEADSET-001",
+    modelNumber: "CLOUD-III-WIRELESS",
+    brand: { id: 16, name: "HyperX" },
+    categoryId: 11,
+    price: 199,
+    shortDescription: "Wireless gaming headset with spatial audio.",
+    longDescription: "A comfortable wireless gaming headset designed for extended gaming sessions.",
+    images: ["/images/products/hyperx-cloud3.jpg"],
+    specifications: [
+      { name: "Connection", value: "2.4GHz Wireless" },
+      { name: "Driver Size", value: 53, unit: "mm" },
+      { name: "Microphone", value: "Detachable" },
+      { name: "Battery Life", value: 120, unit: "hours" },
+      { name: "Audio", value: "DTS Headphone:X" },
+    ],
   },
 ];
