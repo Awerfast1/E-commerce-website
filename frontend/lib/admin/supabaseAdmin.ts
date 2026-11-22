@@ -19,9 +19,14 @@ function required(name: string) {
 export function getAdminDb(): SupabaseClient {
   if (cached) return cached;
 
+  const secretKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!secretKey) {
+    throw new Error("Missing SUPABASE_SECRET_KEY or SUPABASE_SERVICE_ROLE_KEY. Configure a server-only Supabase secret for admin features.");
+  }
+
   cached = createClient(
     required("NEXT_PUBLIC_SUPABASE_URL"),
-    required("SUPABASE_SECRET_KEY"),
+    secretKey,
     {
       auth: {
         persistSession: false,

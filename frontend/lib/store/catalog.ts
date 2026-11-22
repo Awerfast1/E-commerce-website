@@ -29,6 +29,13 @@ export interface ProductRow {
   product_images: { image_url: string; is_primary: boolean | null; display_order: number | null }[] | null;
 }
 
+interface LegacyProductRow {
+  id: string;
+  name: string;
+  price: number | string;
+  category: string | null;
+}
+
 /** Flattened product used by navigation, search, cart and the home page sections. */
 export interface StoreProduct {
   product_id: string;
@@ -66,11 +73,13 @@ function getDb(): SupabaseClient {
   if (cachedClient) return cachedClient;
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  const key =
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!url || !key) {
     throw new Error(
-      "Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY. Add them to frontend/.env.local",
+      "Missing NEXT_PUBLIC_SUPABASE_URL or a public Supabase key (NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY / NEXT_PUBLIC_SUPABASE_ANON_KEY). Add them to frontend/.env.local",
     );
   }
 
@@ -95,6 +104,64 @@ function activeVariants(row: ProductRow): VariantRow[] {
   return variants.length ? variants : (row.product_variants ?? []);
 }
 
+function slugify(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/đ/g, "d")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function legacyCategorySlug(categoryName: string): string {
+  const normalized = slugify(categoryName);
+  const aliases: [RegExp, string][] = [
+    [/gaming/, "gaming-laptops"],
+    [/laptop/, "laptop"],
+    [/keyboard|ban-phim/, "keyboards"],
+    [/mouse|mice|chuot/, "mice"],
+    [/headphone|tai-nghe/, "headphones"],
+    [/speaker|loa/, "speakers"],
+    [/storage|ssd|o-cung/, "storage"],
+    [/charger|sac/, "chargers"],
+    [/power-bank|pin-du-phong/, "power-banks"],
+    [/cable|cap/, "cables"],
+  ];
+  return aliases.find(([pattern]) => pattern.test(normalized))?.[1] || normalized;
+}
+
+function fromLegacyProduct(row: LegacyProductRow): ProductRow {
+  const categoryName = row.category?.trim() || "Sản phẩm";
+  const price = Number(row.price) || 0;
+  return {
+    product_id: row.id,
+    category_id: categoryName,
+    brand_id: null,
+    product_name: row.name,
+    slug: slugify(row.name) || row.id,
+    short_description: null,
+    description: null,
+    is_active: true,
+    is_featured: false,
+    categories: { slug: legacyCategorySlug(categoryName), category_name: categoryName },
+    brands: null,
+    product_variants: [{ sku: row.id, price, compare_at_price: null, is_active: true }],
+    product_specifications: [],
+    product_images: [],
+  };
+}
+
+async function getLegacyProductRows(): Promise<ProductRow[]> {
+  const { data, error } = await getDb()
+    .from("products")
+    .select("id, name, price, category")
+    .range(0, 999);
+
+  if (error) throw new Error(`Could not load the product catalog: ${error.message}`);
+  return ((data ?? []) as unknown as LegacyProductRow[]).map(fromLegacyProduct);
+}
+
 /**
  * Every active product with its category, brand, cheapest variant and image.
  * Cached per request so the storefront layout and page share a single query.
@@ -107,9 +174,7 @@ export const getProductRows = cache(async (): Promise<ProductRow[]> => {
     .order("product_name", { ascending: true })
     .range(0, 999);
 
-  if (error) {
-    throw new Error(`Could not load the product catalog: ${error.message}`);
-  }
+  if (error) return getLegacyProductRows();
 
   return (data ?? []) as unknown as ProductRow[];
 });
@@ -201,7 +266,13 @@ export const getProductById = cache(async (id: string): Promise<ProductRow | nul
   if (error) {
     // An id that is not a UUID (legacy demo product) is simply not in the database.
     if (error.code === "22P02") return null;
-    throw new Error(`Could not load product ${id}: ${error.message}`);
+    const { data: legacyData, error: legacyError } = await getDb()
+      .from("products")
+      .select("id, name, price, category")
+      .eq("id", id)
+      .maybeSingle();
+    if (legacyError) throw new Error(`Could not load product ${id}: ${legacyError.message}`);
+    return legacyData ? fromLegacyProduct(legacyData as unknown as LegacyProductRow) : null;
   }
 
   return (data as unknown as ProductRow) ?? null;
