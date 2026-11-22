@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Suspense, use, useEffect, useState } from "react";
+import { Suspense, use, useEffect, useMemo, useState } from "react";
 import { notFound } from "next/navigation";
 import { gamingDealsEndAt } from "@/data/gamingLaptopDeals";
-import { getAllProducts } from "@/app/components/cart";
+import { buildCartProducts, useStoreCatalog } from "@/app/components/cart";
 import { studentPricing } from "@/data/studentPricing";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -12,7 +12,8 @@ const money = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND
 
 function Summary({ params }: Props) {
   const { slug } = use(params);
-  const allProducts = getAllProducts();
+  const catalogProducts = useStoreCatalog();
+  const allProducts = useMemo(() => buildCartProducts(catalogProducts), [catalogProducts]);
   const laptop = allProducts.find(item => item.slug === slug);
   if (!laptop) notFound();
 
