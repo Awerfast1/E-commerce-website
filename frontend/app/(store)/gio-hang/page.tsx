@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect, Suspense } from "react";
-import { changeCart, useCart, getAllProducts } from "../components/cart";
-import LaptopIllustration from "../components/LaptopIllustration";
-import { gamingDealsEndAt } from "../../data/gamingLaptopDeals";
+import { useState, useEffect, useMemo, Suspense } from "react";
+import { buildCartProducts, changeCart, useCart, useStoreCatalog } from "@/app/components/cart";
+import LaptopIllustration from "@/app/components/LaptopIllustration";
+import { gamingDealsEndAt } from "@/data/gamingLaptopDeals";
 import styles from "./page.module.css";
 
 const money = (n: number) => n.toLocaleString("vi-VN") + "đ";
@@ -37,7 +37,8 @@ function CartContent() {
     };
   }, []);
 
-  const allProducts = getAllProducts();
+  const catalogProducts = useStoreCatalog();
+  const allProducts = useMemo(() => buildCartProducts(catalogProducts), [catalogProducts]);
   const rows = allProducts
     .filter(p => items[p.slug])
     .map(p => ({
