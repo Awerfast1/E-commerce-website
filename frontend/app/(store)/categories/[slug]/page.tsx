@@ -1,10 +1,10 @@
 import Link from "next/link";
-import LaptopCollection from "../../components/LaptopCollection";
-import GenericCategoryCollection, { CatalogProduct } from "../../components/GenericCategoryCollection";
+import LaptopCollection from "@/app/components/LaptopCollection";
+import GenericCategoryCollection, { CatalogProduct } from "@/app/components/GenericCategoryCollection";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { quickCategories } from "../../../data/quickCategories";
-import supabaseProductsRaw from "../../../data/supabaseProducts.json";
+import { quickCategories } from "@/data/quickCategories";
+import supabaseProductsRaw from "@/data/supabaseProducts.json";
 
 const supabaseProducts = supabaseProductsRaw as CatalogProduct[];
 
