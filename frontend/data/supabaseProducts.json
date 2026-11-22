@@ -11,6 +11,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-001-STD",
@@ -21,6 +24,20 @@
         "sku": "ABC-CHARGERS-DEMO-001-PRO",
         "price": 395000,
         "compare_at_price": 474000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -36,6 +53,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-002-STD",
@@ -46,6 +66,20 @@
         "sku": "ABC-CABLES-DEMO-002-PRO",
         "price": 205000,
         "compare_at_price": 246000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -61,6 +95,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-003-STD",
@@ -71,6 +108,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-003-PRO",
         "price": 610000,
         "compare_at_price": 732000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -86,6 +137,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-004-STD",
@@ -96,6 +150,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-004-PRO",
         "price": 280000,
         "compare_at_price": 336000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -111,6 +179,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-005-STD",
@@ -121,6 +192,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-005-PRO",
         "price": 270000,
         "compare_at_price": 324000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -136,6 +221,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-006-STD",
@@ -146,6 +234,20 @@
         "sku": "ABC-HEADPHONES-DEMO-006-PRO",
         "price": 825000,
         "compare_at_price": 990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -161,6 +263,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-007-STD",
@@ -171,6 +276,20 @@
         "sku": "ABC-SPEAKERS-DEMO-007-PRO",
         "price": 850000,
         "compare_at_price": 1020000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -186,6 +305,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-008-STD",
@@ -196,6 +318,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-008-PRO",
         "price": 950000,
         "compare_at_price": 1140000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -211,6 +347,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-009-STD",
@@ -221,6 +360,20 @@
         "sku": "ABC-MICE-DEMO-009-PRO",
         "price": 465000,
         "compare_at_price": 558000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -236,6 +389,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-010-STD",
@@ -246,6 +402,20 @@
         "sku": "ABC-STORAGE-DEMO-010-PRO",
         "price": 430000,
         "compare_at_price": 516000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -261,6 +431,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-011-STD",
@@ -271,6 +444,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-011-PRO",
         "price": 590000,
         "compare_at_price": 708000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -286,6 +473,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-012-STD",
@@ -296,6 +486,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-012-PRO",
         "price": 335000,
         "compare_at_price": 402000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -311,6 +515,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-013-STD",
@@ -321,6 +528,20 @@
         "sku": "ABC-CHARGERS-DEMO-013-PRO",
         "price": 410000,
         "compare_at_price": 492000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -336,6 +557,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-014-STD",
@@ -346,6 +570,20 @@
         "sku": "ABC-CABLES-DEMO-014-PRO",
         "price": 220000,
         "compare_at_price": 264000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -361,6 +599,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-015-STD",
@@ -371,6 +612,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-015-PRO",
         "price": 625000,
         "compare_at_price": 750000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -386,6 +641,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-016-STD",
@@ -396,6 +654,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-016-PRO",
         "price": 295000,
         "compare_at_price": 354000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -411,6 +683,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-017-STD",
@@ -421,6 +696,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-017-PRO",
         "price": 180000,
         "compare_at_price": 216000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -436,6 +725,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-018-STD",
@@ -446,6 +738,20 @@
         "sku": "ABC-HEADPHONES-DEMO-018-PRO",
         "price": 840000,
         "compare_at_price": 1008000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -461,6 +767,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-019-STD",
@@ -471,6 +780,20 @@
         "sku": "ABC-SPEAKERS-DEMO-019-PRO",
         "price": 865000,
         "compare_at_price": 1038000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -486,6 +809,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-020-STD",
@@ -496,6 +822,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-020-PRO",
         "price": 965000,
         "compare_at_price": 1158000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -511,6 +851,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-021-STD",
@@ -521,6 +864,20 @@
         "sku": "ABC-MICE-DEMO-021-PRO",
         "price": 480000,
         "compare_at_price": 576000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -536,6 +893,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-022-STD",
@@ -546,6 +906,20 @@
         "sku": "ABC-STORAGE-DEMO-022-PRO",
         "price": 445000,
         "compare_at_price": 534000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -561,6 +935,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-023-STD",
@@ -571,6 +948,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-023-PRO",
         "price": 500000,
         "compare_at_price": 600000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -586,6 +977,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-024-STD",
@@ -596,6 +990,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-024-PRO",
         "price": 350000,
         "compare_at_price": 420000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -611,6 +1019,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-025-STD",
@@ -621,6 +1032,20 @@
         "sku": "ABC-CHARGERS-DEMO-025-PRO",
         "price": 425000,
         "compare_at_price": 510000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -636,6 +1061,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-026-STD",
@@ -646,6 +1074,20 @@
         "sku": "ABC-CABLES-DEMO-026-PRO",
         "price": 235000,
         "compare_at_price": 282000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -661,6 +1103,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-027-STD",
@@ -671,6 +1116,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-027-PRO",
         "price": 640000,
         "compare_at_price": 768000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -686,6 +1145,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-028-STD",
@@ -696,6 +1158,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-028-PRO",
         "price": 310000,
         "compare_at_price": 372000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -711,6 +1187,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-029-STD",
@@ -721,6 +1200,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-029-PRO",
         "price": 195000,
         "compare_at_price": 234000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -736,6 +1229,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-030-STD",
@@ -746,6 +1242,20 @@
         "sku": "ABC-HEADPHONES-DEMO-030-PRO",
         "price": 750000,
         "compare_at_price": 900000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -761,6 +1271,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-031-STD",
@@ -771,6 +1284,20 @@
         "sku": "ABC-SPEAKERS-DEMO-031-PRO",
         "price": 880000,
         "compare_at_price": 1056000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -786,6 +1313,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-032-STD",
@@ -796,6 +1326,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-032-PRO",
         "price": 980000,
         "compare_at_price": 1176000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -811,6 +1355,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-033-STD",
@@ -821,6 +1368,20 @@
         "sku": "ABC-MICE-DEMO-033-PRO",
         "price": 495000,
         "compare_at_price": 594000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -836,6 +1397,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-034-STD",
@@ -846,6 +1410,20 @@
         "sku": "ABC-STORAGE-DEMO-034-PRO",
         "price": 460000,
         "compare_at_price": 552000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -861,6 +1439,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-035-STD",
@@ -871,6 +1452,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-035-PRO",
         "price": 515000,
         "compare_at_price": 618000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -886,6 +1481,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-036-STD",
@@ -896,6 +1494,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-036-PRO",
         "price": 365000,
         "compare_at_price": 438000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -911,6 +1523,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-037-STD",
@@ -921,6 +1536,20 @@
         "sku": "ABC-CHARGERS-DEMO-037-PRO",
         "price": 440000,
         "compare_at_price": 528000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -936,6 +1565,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-038-STD",
@@ -946,6 +1578,20 @@
         "sku": "ABC-CABLES-DEMO-038-PRO",
         "price": 250000,
         "compare_at_price": 300000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -961,6 +1607,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-039-STD",
@@ -971,6 +1620,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-039-PRO",
         "price": 550000,
         "compare_at_price": 660000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -986,6 +1649,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-040-STD",
@@ -996,6 +1662,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-040-PRO",
         "price": 325000,
         "compare_at_price": 390000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1011,6 +1691,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-041-STD",
@@ -1021,6 +1704,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-041-PRO",
         "price": 210000,
         "compare_at_price": 252000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1036,6 +1733,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-042-STD",
@@ -1046,6 +1746,20 @@
         "sku": "ABC-HEADPHONES-DEMO-042-PRO",
         "price": 765000,
         "compare_at_price": 918000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1061,6 +1775,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-043-STD",
@@ -1071,6 +1788,20 @@
         "sku": "ABC-SPEAKERS-DEMO-043-PRO",
         "price": 895000,
         "compare_at_price": 1074000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1086,6 +1817,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-044-STD",
@@ -1096,6 +1830,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-044-PRO",
         "price": 995000,
         "compare_at_price": 1194000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1111,6 +1859,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-045-STD",
@@ -1121,6 +1872,20 @@
         "sku": "ABC-MICE-DEMO-045-PRO",
         "price": 510000,
         "compare_at_price": 612000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1136,6 +1901,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-046-STD",
@@ -1146,6 +1914,20 @@
         "sku": "ABC-STORAGE-DEMO-046-PRO",
         "price": 475000,
         "compare_at_price": 570000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1161,6 +1943,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-047-STD",
@@ -1171,6 +1956,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-047-PRO",
         "price": 530000,
         "compare_at_price": 636000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1186,6 +1985,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-048-STD",
@@ -1196,6 +1998,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-048-PRO",
         "price": 380000,
         "compare_at_price": 456000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1211,6 +2027,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-049-STD",
@@ -1221,6 +2040,20 @@
         "sku": "ABC-CHARGERS-DEMO-049-PRO",
         "price": 350000,
         "compare_at_price": 420000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1236,6 +2069,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-050-STD",
@@ -1246,6 +2082,20 @@
         "sku": "ABC-CABLES-DEMO-050-PRO",
         "price": 265000,
         "compare_at_price": 318000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1261,6 +2111,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-051-STD",
@@ -1271,6 +2124,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-051-PRO",
         "price": 565000,
         "compare_at_price": 678000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1286,6 +2153,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-052-STD",
@@ -1296,6 +2166,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-052-PRO",
         "price": 340000,
         "compare_at_price": 408000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1311,6 +2195,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-053-STD",
@@ -1321,6 +2208,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-053-PRO",
         "price": 225000,
         "compare_at_price": 270000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1336,6 +2237,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-054-STD",
@@ -1346,6 +2250,20 @@
         "sku": "ABC-HEADPHONES-DEMO-054-PRO",
         "price": 780000,
         "compare_at_price": 936000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1361,6 +2279,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-055-STD",
@@ -1371,6 +2292,20 @@
         "sku": "ABC-SPEAKERS-DEMO-055-PRO",
         "price": 910000,
         "compare_at_price": 1092000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1386,6 +2321,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-056-STD",
@@ -1396,6 +2334,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-056-PRO",
         "price": 1010000,
         "compare_at_price": 1212000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1411,6 +2363,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-057-STD",
@@ -1421,6 +2376,20 @@
         "sku": "ABC-MICE-DEMO-057-PRO",
         "price": 525000,
         "compare_at_price": 630000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1436,6 +2405,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-058-STD",
@@ -1446,6 +2418,20 @@
         "sku": "ABC-STORAGE-DEMO-058-PRO",
         "price": 490000,
         "compare_at_price": 588000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1461,6 +2447,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-059-STD",
@@ -1471,6 +2460,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-059-PRO",
         "price": 545000,
         "compare_at_price": 654000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1486,6 +2489,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-060-STD",
@@ -1496,6 +2502,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-060-PRO",
         "price": 395000,
         "compare_at_price": 474000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1511,6 +2531,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-061-STD",
@@ -1521,6 +2544,20 @@
         "sku": "ABC-CHARGERS-DEMO-061-PRO",
         "price": 365000,
         "compare_at_price": 438000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1536,6 +2573,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-062-STD",
@@ -1546,6 +2586,20 @@
         "sku": "ABC-CABLES-DEMO-062-PRO",
         "price": 280000,
         "compare_at_price": 336000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1561,6 +2615,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-063-STD",
@@ -1571,6 +2628,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-063-PRO",
         "price": 580000,
         "compare_at_price": 696000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1586,6 +2657,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-064-STD",
@@ -1596,6 +2670,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-064-PRO",
         "price": 250000,
         "compare_at_price": 300000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1611,6 +2699,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-065-STD",
@@ -1621,6 +2712,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-065-PRO",
         "price": 240000,
         "compare_at_price": 288000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1636,6 +2741,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-066-STD",
@@ -1646,6 +2754,20 @@
         "sku": "ABC-HEADPHONES-DEMO-066-PRO",
         "price": 795000,
         "compare_at_price": 954000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1661,6 +2783,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-067-STD",
@@ -1671,6 +2796,20 @@
         "sku": "ABC-SPEAKERS-DEMO-067-PRO",
         "price": 925000,
         "compare_at_price": 1110000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1686,6 +2825,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-068-STD",
@@ -1696,6 +2838,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-068-PRO",
         "price": 1025000,
         "compare_at_price": 1230000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1711,6 +2867,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-069-STD",
@@ -1721,6 +2880,20 @@
         "sku": "ABC-MICE-DEMO-069-PRO",
         "price": 540000,
         "compare_at_price": 648000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1736,6 +2909,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-070-STD",
@@ -1746,6 +2922,20 @@
         "sku": "ABC-STORAGE-DEMO-070-PRO",
         "price": 400000,
         "compare_at_price": 480000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1761,6 +2951,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-071-STD",
@@ -1771,6 +2964,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-071-PRO",
         "price": 560000,
         "compare_at_price": 672000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1786,6 +2993,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-072-STD",
@@ -1796,6 +3006,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-072-PRO",
         "price": 410000,
         "compare_at_price": 492000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1811,6 +3035,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-073-STD",
@@ -1821,6 +3048,20 @@
         "sku": "ABC-CHARGERS-DEMO-073-PRO",
         "price": 380000,
         "compare_at_price": 456000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1836,6 +3077,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-074-STD",
@@ -1846,6 +3090,20 @@
         "sku": "ABC-CABLES-DEMO-074-PRO",
         "price": 190000,
         "compare_at_price": 228000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1861,6 +3119,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-075-STD",
@@ -1871,6 +3132,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-075-PRO",
         "price": 595000,
         "compare_at_price": 714000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1886,6 +3161,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-076-STD",
@@ -1896,6 +3174,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-076-PRO",
         "price": 265000,
         "compare_at_price": 318000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1911,6 +3203,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-077-STD",
@@ -1921,6 +3216,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-077-PRO",
         "price": 255000,
         "compare_at_price": 306000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1936,6 +3245,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-078-STD",
@@ -1946,6 +3258,20 @@
         "sku": "ABC-HEADPHONES-DEMO-078-PRO",
         "price": 810000,
         "compare_at_price": 972000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1961,6 +3287,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-079-STD",
@@ -1971,6 +3300,20 @@
         "sku": "ABC-SPEAKERS-DEMO-079-PRO",
         "price": 940000,
         "compare_at_price": 1128000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -1986,6 +3329,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-080-STD",
@@ -1996,6 +3342,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-080-PRO",
         "price": 1040000,
         "compare_at_price": 1248000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2011,6 +3371,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-081-STD",
@@ -2021,6 +3384,20 @@
         "sku": "ABC-MICE-DEMO-081-PRO",
         "price": 450000,
         "compare_at_price": 540000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2036,6 +3413,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-082-STD",
@@ -2046,6 +3426,20 @@
         "sku": "ABC-STORAGE-DEMO-082-PRO",
         "price": 415000,
         "compare_at_price": 498000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2061,6 +3455,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-083-STD",
@@ -2071,6 +3468,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-083-PRO",
         "price": 575000,
         "compare_at_price": 690000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2086,6 +3497,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-084-STD",
@@ -2096,6 +3510,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-084-PRO",
         "price": 320000,
         "compare_at_price": 384000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2111,6 +3539,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-085-STD",
@@ -2121,6 +3552,20 @@
         "sku": "ABC-CHARGERS-DEMO-085-PRO",
         "price": 395000,
         "compare_at_price": 474000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2136,6 +3581,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-086-STD",
@@ -2146,6 +3594,20 @@
         "sku": "ABC-CABLES-DEMO-086-PRO",
         "price": 205000,
         "compare_at_price": 246000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2161,6 +3623,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-087-STD",
@@ -2171,6 +3636,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-087-PRO",
         "price": 610000,
         "compare_at_price": 732000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2186,6 +3665,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-088-STD",
@@ -2196,6 +3678,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-088-PRO",
         "price": 280000,
         "compare_at_price": 336000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2211,6 +3707,9 @@
       "slug": "screen-protectors",
       "category_name": "Screen Protectors"
     },
+    "brands": {
+      "brand_name": "JBL"
+    },
     "product_variants": [
       {
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-089-STD",
@@ -2221,6 +3720,20 @@
         "sku": "ABC-SCREEN-PROTECTORS-DEMO-089-PRO",
         "price": 270000,
         "compare_at_price": 324000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2236,6 +3749,9 @@
       "slug": "headphones",
       "category_name": "Headphones"
     },
+    "brands": {
+      "brand_name": "Kingston"
+    },
     "product_variants": [
       {
         "sku": "ABC-HEADPHONES-DEMO-090-STD",
@@ -2246,6 +3762,20 @@
         "sku": "ABC-HEADPHONES-DEMO-090-PRO",
         "price": 825000,
         "compare_at_price": 990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2261,6 +3791,9 @@
       "slug": "speakers",
       "category_name": "Speakers"
     },
+    "brands": {
+      "brand_name": "Logitech"
+    },
     "product_variants": [
       {
         "sku": "ABC-SPEAKERS-DEMO-091-STD",
@@ -2271,6 +3804,20 @@
         "sku": "ABC-SPEAKERS-DEMO-091-PRO",
         "price": 850000,
         "compare_at_price": 1020000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2286,6 +3833,9 @@
       "slug": "keyboards",
       "category_name": "Keyboards"
     },
+    "brands": {
+      "brand_name": "Razer"
+    },
     "product_variants": [
       {
         "sku": "ABC-KEYBOARDS-DEMO-092-STD",
@@ -2296,6 +3846,20 @@
         "sku": "ABC-KEYBOARDS-DEMO-092-PRO",
         "price": 950000,
         "compare_at_price": 1140000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2311,6 +3875,9 @@
       "slug": "mice",
       "category_name": "Mice"
     },
+    "brands": {
+      "brand_name": "Samsung"
+    },
     "product_variants": [
       {
         "sku": "ABC-MICE-DEMO-093-STD",
@@ -2321,6 +3888,20 @@
         "sku": "ABC-MICE-DEMO-093-PRO",
         "price": 465000,
         "compare_at_price": 558000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2336,6 +3917,9 @@
       "slug": "storage",
       "category_name": "Storage"
     },
+    "brands": {
+      "brand_name": "Sony"
+    },
     "product_variants": [
       {
         "sku": "ABC-STORAGE-DEMO-094-STD",
@@ -2346,6 +3930,20 @@
         "sku": "ABC-STORAGE-DEMO-094-PRO",
         "price": 430000,
         "compare_at_price": 516000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2361,6 +3959,9 @@
       "slug": "hubs-adapters",
       "category_name": "Hubs & Adapters"
     },
+    "brands": {
+      "brand_name": "Ugreen"
+    },
     "product_variants": [
       {
         "sku": "ABC-HUBS-ADAPTERS-DEMO-095-STD",
@@ -2371,6 +3972,20 @@
         "sku": "ABC-HUBS-ADAPTERS-DEMO-095-PRO",
         "price": 590000,
         "compare_at_price": 708000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2386,6 +4001,9 @@
       "slug": "stands-mounts",
       "category_name": "Stands & Mounts"
     },
+    "brands": {
+      "brand_name": "Xiaomi"
+    },
     "product_variants": [
       {
         "sku": "ABC-STANDS-MOUNTS-DEMO-096-STD",
@@ -2396,6 +4014,20 @@
         "sku": "ABC-STANDS-MOUNTS-DEMO-096-PRO",
         "price": 335000,
         "compare_at_price": 402000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2411,6 +4043,9 @@
       "slug": "chargers",
       "category_name": "Chargers"
     },
+    "brands": {
+      "brand_name": "Anker"
+    },
     "product_variants": [
       {
         "sku": "ABC-CHARGERS-DEMO-097-STD",
@@ -2421,6 +4056,20 @@
         "sku": "ABC-CHARGERS-DEMO-097-PRO",
         "price": 410000,
         "compare_at_price": 492000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2436,6 +4085,9 @@
       "slug": "cables",
       "category_name": "Cables"
     },
+    "brands": {
+      "brand_name": "Apple"
+    },
     "product_variants": [
       {
         "sku": "ABC-CABLES-DEMO-098-STD",
@@ -2446,6 +4098,20 @@
         "sku": "ABC-CABLES-DEMO-098-PRO",
         "price": 220000,
         "compare_at_price": 264000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2461,6 +4127,9 @@
       "slug": "power-banks",
       "category_name": "Power Banks"
     },
+    "brands": {
+      "brand_name": "Baseus"
+    },
     "product_variants": [
       {
         "sku": "ABC-POWER-BANKS-DEMO-099-STD",
@@ -2471,6 +4140,20 @@
         "sku": "ABC-POWER-BANKS-DEMO-099-PRO",
         "price": 625000,
         "compare_at_price": 750000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2486,6 +4169,9 @@
       "slug": "phone-cases",
       "category_name": "Phone Cases"
     },
+    "brands": {
+      "brand_name": "Belkin"
+    },
     "product_variants": [
       {
         "sku": "ABC-PHONE-CASES-DEMO-100-STD",
@@ -2496,6 +4182,20 @@
         "sku": "ABC-PHONE-CASES-DEMO-100-PRO",
         "price": 295000,
         "compare_at_price": 354000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Material",
+        "specification_value": "ABS Plastic / Aluminium"
+      },
+      {
+        "specification_name": "Warranty",
+        "specification_value": "12 Months"
+      },
+      {
+        "specification_name": "Origin",
+        "specification_value": "Vietnam / Imported"
       }
     ]
   },
@@ -2511,11 +4211,100 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "GM-001-ASUSROGSTRIX",
         "price": 44990000,
         "compare_at_price": 49990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i7-14650HX"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch 2.5K"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "ASUS ROG Strix G16 (2025) G615JMR-S5155W"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "8 GB"
+      },
+      {
+        "specification_name": "Loại VRAM",
+        "specification_value": "GDDR7"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch 2.5K"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "2560 × 1600"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "IPS"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "240 Hz"
+      },
+      {
+        "specification_name": "Độ phủ màu",
+        "specification_value": "100% DCI-P3"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home Single Language"
       }
     ]
   },
@@ -2531,11 +4320,124 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "GM-002-ASUSROGZEPHYR",
         "price": 50990000,
         "compare_at_price": 55990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Ryzen AI 9 HX 370"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14 inch OLED 3K"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "ASUS ROG Zephyrus G14 (2025) GA403WM-QS051WS"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "AMD"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Loại RAM",
+        "specification_value": "LPDDR5X 7500"
+      },
+      {
+        "specification_name": "Giao thức SSD",
+        "specification_value": "PCIe 4.0 NVMe"
+      },
+      {
+        "specification_name": "Khe M.2",
+        "specification_value": "1"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "8 GB"
+      },
+      {
+        "specification_name": "Loại VRAM",
+        "specification_value": "GDDR7"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "14 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "14 inch OLED 3K"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "2880 × 1800"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "OLED"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "120 Hz"
+      },
+      {
+        "specification_name": "Wi-Fi",
+        "specification_value": "Wi-Fi 7"
+      },
+      {
+        "specification_name": "Bluetooth",
+        "specification_value": "5.4"
+      },
+      {
+        "specification_name": "Cổng HDMI",
+        "specification_value": "HDMI 2.1"
+      },
+      {
+        "specification_name": "Cổng USB-C",
+        "specification_value": "USB 3.2 Gen 2 và USB4"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home Single Language"
       }
     ]
   },
@@ -2551,11 +4453,100 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "GM-003-ASUSROGZEPHYR",
         "price": 67990000,
         "compare_at_price": 74990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 255H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5070"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch OLED 2.5K"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "ASUS ROG Zephyrus G16 (2025) GU605CP-QR115W"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5070"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "8 GB"
+      },
+      {
+        "specification_name": "Loại VRAM",
+        "specification_value": "GDDR7"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch OLED 2.5K"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "2560 × 1600"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "OLED"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "240 Hz"
+      },
+      {
+        "specification_name": "Độ phủ màu",
+        "specification_value": "100% DCI-P3"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home Single Language"
       }
     ]
   },
@@ -2571,11 +4562,124 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "GM-004-ASUSTUFGAMING",
         "price": 36990000,
         "compare_at_price": 40990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Ryzen 7 260"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch FHD+"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "ASUS TUF Gaming A16 (2025) FA608UM-RV266W"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "AMD"
+      },
+      {
+        "specification_name": "Cấu hình CPU",
+        "specification_value": "8 nhân, 16 luồng; xung tối đa 5.1 GHz"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Loại RAM",
+        "specification_value": "DDR5-5600 SO-DIMM"
+      },
+      {
+        "specification_name": "RAM tối đa",
+        "specification_value": "64 GB"
+      },
+      {
+        "specification_name": "Khe RAM",
+        "specification_value": "2 SO-DIMM"
+      },
+      {
+        "specification_name": "Giao thức SSD",
+        "specification_value": "PCIe 4.0 NVMe"
+      },
+      {
+        "specification_name": "Khe M.2",
+        "specification_value": "2"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "8 GB"
+      },
+      {
+        "specification_name": "Loại VRAM",
+        "specification_value": "GDDR7"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch FHD+"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "1920 × 1200"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "IPS"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "144 Hz"
+      },
+      {
+        "specification_name": "Độ phủ màu",
+        "specification_value": "100% sRGB"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home"
       }
     ]
   },
@@ -2591,11 +4695,96 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ACER"
+    },
     "product_variants": [
       {
         "sku": "GM-005-ACERPREDATORH",
         "price": 71990000,
         "compare_at_price": 79990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 9 386H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch OLED 2.5K"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ACER"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Acer Predator Helios Neo 16S AI PHN16S-I51-98CX"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "8 GB"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch OLED 2.5K"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "2560 × 1600"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "OLED"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "165 Hz"
+      },
+      {
+        "specification_name": "Độ phủ màu",
+        "specification_value": "100% DCI-P3"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home Single Language"
       }
     ]
   },
@@ -2611,11 +4800,116 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ACER"
+    },
     "product_variants": [
       {
         "sku": "GM-006-ACERNITROV16",
         "price": 27900000,
         "compare_at_price": 31200000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Ryzen AI 5 240"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5050"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch FHD+"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ACER"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Acer Nitro V 16 AI ANV16-42-R309"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "AMD"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5050"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch FHD+"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "1920 × 1200"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "IPS"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "180 Hz"
+      },
+      {
+        "specification_name": "Màn hình cảm ứng",
+        "specification_value": "Không"
+      },
+      {
+        "specification_name": "Loại RAM",
+        "specification_value": "DDR5"
+      },
+      {
+        "specification_name": "RAM tối đa",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Giao thức SSD",
+        "specification_value": "PCIe NVMe 4.0"
+      },
+      {
+        "specification_name": "Form factor SSD",
+        "specification_value": "M.2"
+      },
+      {
+        "specification_name": "Wi-Fi",
+        "specification_value": "Wi-Fi 6 (802.11ax)"
+      },
+      {
+        "specification_name": "Bluetooth",
+        "specification_value": "5.3 trở lên"
+      },
+      {
+        "specification_name": "Cổng HDMI",
+        "specification_value": "Có"
       }
     ]
   },
@@ -2631,11 +4925,104 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ACER"
+    },
     "product_variants": [
       {
         "sku": "GM-007-ACERNITROV16",
         "price": 39999000,
         "compare_at_price": 43999000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Ryzen AI 5 340"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch FHD+"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ACER"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Acer Nitro V 16S AI ANV16S-61-R7KQ"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "AMD"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Loại RAM",
+        "specification_value": "DDR5"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "8 GB"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch FHD+"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "1920 × 1200"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "IPS"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "180 Hz"
+      },
+      {
+        "specification_name": "Độ phủ màu",
+        "specification_value": "100% sRGB"
+      },
+      {
+        "specification_name": "Độ sáng",
+        "specification_value": "400 nit"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home"
       }
     ]
   },
@@ -2651,11 +5038,80 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "LENOVO"
+    },
     "product_variants": [
       {
         "sku": "GM-008-LENOVOLEGIONP",
         "price": 75900000,
         "compare_at_price": 83900000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 9 275HX"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5080"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch OLED 2.5K"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LENOVO"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Lenovo Legion Pro 7i Gen 10"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5080"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "16 GB"
+      },
+      {
+        "specification_name": "Loại VRAM",
+        "specification_value": "GDDR7"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch OLED 2.5K"
       }
     ]
   },
@@ -2671,11 +5127,84 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "LENOVO"
+    },
     "product_variants": [
       {
         "sku": "GM-009-LENOVOLEGIONP",
         "price": 57800000,
         "compare_at_price": 63800000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 9 275HX"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5070"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch 2.5K"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LENOVO"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Lenovo Legion Pro 5i Gen 10"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Loại RAM",
+        "specification_value": "DDR5"
+      },
+      {
+        "specification_name": "Khe RAM",
+        "specification_value": "2"
+      },
+      {
+        "specification_name": "Khe SSD",
+        "specification_value": "2 M.2"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5070"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch 2.5K"
       }
     ]
   },
@@ -2691,11 +5220,88 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "LENOVO"
+    },
     "product_variants": [
       {
         "sku": "GM-010-LENOVOLEGION5",
         "price": 51000000,
         "compare_at_price": 56000000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 255HX"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "15.1 inch OLED 2.5K"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LENOVO"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Lenovo Legion 5i Gen 10"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5060"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "15.1 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "15.1 inch OLED 2.5K"
+      },
+      {
+        "specification_name": "Độ phân giải",
+        "specification_value": "2560 × 1600"
+      },
+      {
+        "specification_name": "Tấm nền",
+        "specification_value": "OLED"
+      },
+      {
+        "specification_name": "Tần số quét",
+        "specification_value": "165 Hz"
+      },
+      {
+        "specification_name": "Độ phủ màu",
+        "specification_value": "100% DCI-P3"
       }
     ]
   },
@@ -2711,11 +5317,84 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ALIENWARE"
+    },
     "product_variants": [
       {
         "sku": "GM-011-ALIENWARE16AR",
         "price": 80990000,
         "compare_at_price": 89990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 9 275HX"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5080"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16 inch QHD+"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ALIENWARE"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Alienware 16 Area-51"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5080"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "16 GB"
+      },
+      {
+        "specification_name": "Loại VRAM",
+        "specification_value": "GDDR7"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "16 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "16 inch QHD+"
+      },
+      {
+        "specification_name": "Loại RAM",
+        "specification_value": "DDR5"
       }
     ]
   },
@@ -2731,11 +5410,80 @@
       "slug": "laptop-gaming",
       "category_name": "Laptop Gaming"
     },
+    "brands": {
+      "brand_name": "ALIENWARE"
+    },
     "product_variants": [
       {
         "sku": "GM-012-ALIENWARE18AR",
         "price": 71800000,
         "compare_at_price": 79800000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 9 275HX"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "RTX 5070 Ti"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "2 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "18 inch QHD+"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ALIENWARE"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Alienware 18 Area-51"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Gaming"
+      },
+      {
+        "specification_name": "Hãng CPU",
+        "specification_value": "Intel"
+      },
+      {
+        "specification_name": "Dung lượng SSD",
+        "specification_value": "2 TB SSD"
+      },
+      {
+        "specification_name": "Hãng GPU",
+        "specification_value": "NVIDIA"
+      },
+      {
+        "specification_name": "Card đồ họa",
+        "specification_value": "RTX 5070 Ti"
+      },
+      {
+        "specification_name": "Dung lượng VRAM",
+        "specification_value": "12 GB"
+      },
+      {
+        "specification_name": "Loại VRAM",
+        "specification_value": "GDDR7"
+      },
+      {
+        "specification_name": "Kích thước màn hình",
+        "specification_value": "18 inch"
+      },
+      {
+        "specification_name": "Thông tin màn hình",
+        "specification_value": "18 inch QHD+"
       }
     ]
   },
@@ -2751,11 +5499,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "VP-001-ASUSZENBOOK14",
         "price": 24990000,
         "compare_at_price": 28990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Zenbook"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 5 125H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch 3K OLED 120Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.20 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Chuẩn Intel Evo, màn hình Lumina OLED 3K, pin 75Wh dùng cả ngày"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch 3K OLED 120Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2771,11 +5588,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "VP-002-ASUSZENBOOKS",
         "price": 44990000,
         "compare_at_price": 48990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Zenbook"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 258V"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics 140V"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "32 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch 3K OLED 120Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.20 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Chất liệu gốm nhôm Ceraluminum, NPU 47 TOPS chuẩn Copilot+ PC"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics 140V"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "1 TB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch 3K OLED 120Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2791,11 +5677,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "VP-003-ASUSVIVOBOOK1",
         "price": 10490000,
         "compare_at_price": 12990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Vivobook"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i3-1215U"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel UHD Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "8 GB DDR4"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "15.6 inch FHD IPS"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.70 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Bản lề 180 độ, bảo vệ kháng khuẩn ASUS Antimicrobial Guard"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel UHD Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "15.6 inch FHD IPS"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2811,11 +5766,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "VP-004-ASUSVIVOBOOK1",
         "price": 16490000,
         "compare_at_price": 18990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Vivobook"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i5-13500H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB DDR4"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16.0 inch WUXGA (1920x1200)"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.88 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Chip dòng H hiệu năng cao, màn hình tỉ lệ 16:10 rộng rãi"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "16.0 inch WUXGA (1920x1200)"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2831,11 +5855,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ASUS"
+    },
     "product_variants": [
       {
         "sku": "VP-005-ASUSVIVOBOOKS",
         "price": 23990000,
         "compare_at_price": 26990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Vivobook"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 5 125H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch 3K OLED 120Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.30 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Thiết kế kim loại siêu mỏng nhẹ, bàn phím RGB 1 vùng cá tính"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ASUS"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch 3K OLED 120Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2851,11 +5944,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ACER"
+    },
     "product_variants": [
       {
         "sku": "VP-006-ACERSWIFTGO1",
         "price": 23490000,
         "compare_at_price": 26990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Swift"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 155H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch 2.8K OLED 90Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.32 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Camera QHD 1440p tích hợp AI PurifiedVoice khử ồn 3 micro"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ACER"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch 2.8K OLED 90Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2871,11 +6033,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ACER"
+    },
     "product_variants": [
       {
         "sku": "VP-007-ACERSWIFTGO1",
         "price": 20990000,
         "compare_at_price": 23990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Swift"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 5 125H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch 2.8K OLED 90Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.32 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Màn hình OLED 100% DCI-P3 sắc nét, chuẩn văn phòng doanh nhân"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ACER"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch 2.8K OLED 90Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2891,11 +6122,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ACER"
+    },
     "product_variants": [
       {
         "sku": "VP-008-ACERASPIRE5A",
         "price": 13990000,
         "compare_at_price": 16490000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Aspire"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i5-1335U"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "15.6 inch FHD IPS"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.70 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Tản nhiệt 2 quạt hiệu quả, vỏ nhôm sang trọng phân khúc học sinh"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ACER"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "15.6 inch FHD IPS"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2911,11 +6211,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "ACER"
+    },
     "product_variants": [
       {
         "sku": "VP-009-ACERASPIRELIT",
         "price": 11990000,
         "compare_at_price": 14490000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Aspire"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i5-1235U"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB DDR5"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch WUXGA IPS 16:10"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.50 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "RAM DDR5 tốc độ cao, kích thước gọn gàng cho học sinh sinh viên"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "ACER"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch WUXGA IPS 16:10"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2931,11 +6300,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "LENOVO"
+    },
     "product_variants": [
       {
         "sku": "VP-010-LENOVOTHINKPAD",
         "price": 21990000,
         "compare_at_price": 24990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "ThinkPad"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 5 125U"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB DDR5"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch WUXGA IPS 300 nits"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.44 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Độ bền chuẩn quân đội MIL-STD-810H, bàn phím gõ êm số 1 thế giới"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LENOVO"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch WUXGA IPS 300 nits"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2951,11 +6389,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "LENOVO"
+    },
     "product_variants": [
       {
         "sku": "VP-011-LENOVOTHINKBOO",
         "price": 22990000,
         "compare_at_price": 25990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "ThinkBook"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 155H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB DDR5 5600"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch WUXGA IPS"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.38 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Thiết kế 2 tông màu thời thượng, vỏ nhôm nguyên khối bền chắc"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LENOVO"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch WUXGA IPS"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2971,11 +6478,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "LENOVO"
+    },
     "product_variants": [
       {
         "sku": "VP-012-LENOVOTHINKBOO",
         "price": 23990000,
         "compare_at_price": 26990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "ThinkBook"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 5 125H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16.0 inch 2.5K IPS 120Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.80 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Màn hình 2.5K tần số quét 120Hz mượt mà, đầy đủ cổng kết nối"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LENOVO"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "16.0 inch 2.5K IPS 120Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -2991,11 +6567,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "LENOVO"
+    },
     "product_variants": [
       {
         "sku": "VP-013-LENOVOIDEAPAD",
         "price": 13490000,
         "compare_at_price": 15490000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "15.6 inch FHD IPS"
+      },
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "IdeaPad"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i5-12450H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel UHD Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.62 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Chip dòng H mạnh mẽ trong phân khúc phổ thông, cảm biến vân tay"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LENOVO"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel UHD Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "15.6 inch FHD IPS"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -3011,11 +6656,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "DELL"
+    },
     "product_variants": [
       {
         "sku": "VP-014-DELLINSPIRON1",
         "price": 21490000,
         "compare_at_price": 24490000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Inspiron"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 5 125H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch FHD+ IPS 16:10"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.56 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Độ bền trứ danh từ Dell, bảo hành tận nơi Dell ProSupport"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "DELL"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch FHD+ IPS 16:10"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -3031,11 +6745,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "DELL"
+    },
     "product_variants": [
       {
         "sku": "VP-015-DELLINSPIRON1",
         "price": 14490000,
         "compare_at_price": 16990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Inspiron"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i5-1235U"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB DDR4"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "15.6 inch FHD 120Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.65 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Màn hình 120Hz cuộn lướt văn bản mượt, nâng cấp RAM dễ dàng"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "DELL"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "15.6 inch FHD 120Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -3051,11 +6834,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "DELL"
+    },
     "product_variants": [
       {
         "sku": "VP-016-DELLXPS13934",
         "price": 46990000,
         "compare_at_price": 51990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "XPS"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 155H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "13.4 inch FHD+ 120Hz"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.19 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Kiệt tác thiết kế nhôm phay xước CNC và kính cường lực Gorilla Glass 7"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "DELL"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "13.4 inch FHD+ 120Hz"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -3071,11 +6923,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "HP"
+    },
     "product_variants": [
       {
         "sku": "VP-017-HPPAVILION14",
         "price": 15490000,
         "compare_at_price": 17990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Pavilion"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core i5-1235U"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB DDR4"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch FHD IPS"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.41 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Hệ thống âm thanh Bang & Olufsen cao cấp, màu vàng gold sang trọng"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "HP"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Iris Xe"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch FHD IPS"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -3091,11 +7012,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "HP"
+    },
     "product_variants": [
       {
         "sku": "VP-018-HPENVYX36014",
         "price": 27990000,
         "compare_at_price": 30990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "Envy"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 155U"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch 2.8K OLED Cảm ứng xoay gập 360"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.39 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Xoay gập 2-trong-1 tiện lợi, màn hình cảm ứng OLED kèm bút stylus"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "HP"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch 2.8K OLED Cảm ứng xoay gập 360"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -3111,11 +7101,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "LG"
+    },
     "product_variants": [
       {
         "sku": "VP-019-LGGRAM142024",
         "price": 31990000,
         "compare_at_price": 35990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "gram"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 7 155H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "14.0 inch WUXGA IPS chống chói"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.12 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Trọng lượng siêu nhẹ kỷ lục 1.12kg, chuẩn độ bền quân sự Mỹ MIL-STD"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LG"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "14.0 inch WUXGA IPS chống chói"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   },
@@ -3131,11 +7190,80 @@
       "slug": "laptop-van-phong",
       "category_name": "Laptop Văn Phòng"
     },
+    "brands": {
+      "brand_name": "LG"
+    },
     "product_variants": [
       {
         "sku": "VP-020-LGGRAM162024",
         "price": 33990000,
         "compare_at_price": 37990000
+      }
+    ],
+    "product_specifications": [
+      {
+        "specification_name": "Dòng sản phẩm",
+        "specification_value": "gram"
+      },
+      {
+        "specification_name": "CPU",
+        "specification_value": "Core Ultra 5 125H"
+      },
+      {
+        "specification_name": "Card đồ họa (GPU)",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Dung lượng RAM",
+        "specification_value": "16 GB LPDDR5X"
+      },
+      {
+        "specification_name": "Ổ cứng lưu trữ",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Màn hình",
+        "specification_value": "16.0 inch WQXGA (2560x1600)"
+      },
+      {
+        "specification_name": "Trọng lượng",
+        "specification_value": "1.19 kg"
+      },
+      {
+        "specification_name": "Đặc điểm nổi bật",
+        "specification_value": "Màn hình lớn 16 inch nhưng chỉ nặng 1.19kg, pin khủng 77Wh"
+      },
+      {
+        "specification_name": "Hãng sản xuất",
+        "specification_value": "LG"
+      },
+      {
+        "specification_name": "Nhu cầu sử dụng",
+        "specification_value": "Laptop Văn Phòng, Học tập & Doanh nhân mỏng nhẹ"
+      },
+      {
+        "specification_name": "GPU đồ họa",
+        "specification_value": "Intel Arc Graphics"
+      },
+      {
+        "specification_name": "Ổ cứng",
+        "specification_value": "512 GB SSD"
+      },
+      {
+        "specification_name": "Kích thước & Tấm nền",
+        "specification_value": "16.0 inch WQXGA (2560x1600)"
+      },
+      {
+        "specification_name": "Màu sắc & hiển thị",
+        "specification_value": "Chuẩn màu cao, chống chói bảo vệ mắt"
+      },
+      {
+        "specification_name": "Hệ điều hành",
+        "specification_value": "Windows 11 Home bản quyền"
+      },
+      {
+        "specification_name": "Kết nối không dây",
+        "specification_value": "Wi-Fi 6E / Wi-Fi 7, Bluetooth 5.3+"
       }
     ]
   }

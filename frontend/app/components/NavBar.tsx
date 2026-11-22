@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCart } from "./cart";
 import { useEffect, useRef, useState } from "react";
 import { products } from "../../data/Products";
+import { megaMenuData } from "../../data/megaMenuData";
 import styles from "./NavBar.module.css";
 
 const paths = {
@@ -159,7 +160,7 @@ export default function NavBar() {
                       </div>
 
                       <div className={styles.megaGrid}>
-                        {/* Cột 1: Thương hiệu & Nhu cầu */}
+                        {/* Cột 1: Thương hiệu & Giá bán */}
                         <div className={styles.megaCol}>
                           <h3 className={styles.megaColHeading}>Thương hiệu ›</h3>
                           <ul className={styles.megaList}>
@@ -175,6 +176,52 @@ export default function NavBar() {
                               <li key={label}>
                                 <Link
                                   href={`/categories/laptop?brand=${encodeURIComponent(brand)}`}
+                                  onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                                >
+                                  {label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+
+                          <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>Giá bán ›</h3>
+                          <ul className={styles.megaList}>
+                            {[
+                              { label: "Dưới 15 triệu", max: "15000000" },
+                              { label: "Từ 15 đến 25 triệu", min: "15000000", max: "25000000" },
+                              { label: "Từ 25 đến 40 triệu", min: "25000000", max: "40000000" },
+                              { label: "Trên 40 triệu", min: "40000000" },
+                            ].map(({ label, min, max }) => {
+                              const params = new URLSearchParams();
+                              if (min) params.set("min", min);
+                              if (max) params.set("max", max);
+                              return (
+                                <li key={label}>
+                                  <Link
+                                    href={`/categories/laptop?${params.toString()}`}
+                                    onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                                  >
+                                    {label}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+
+                        {/* Cột 2: ACER & Nhu cầu */}
+                        <div className={styles.megaCol}>
+                          <h3 className={styles.megaColHeading}>ACER ›</h3>
+                          <ul className={styles.megaList}>
+                            {[
+                              { label: "PREDATOR Series", series: "Predator Helios" },
+                              { label: "NITRO Series", series: "Nitro" },
+                              { label: "SWIFT Series", series: "Swift" },
+                              { label: "ASPIRE Series", series: "Aspire" },
+                            ].map(({ label, series }) => (
+                              <li key={label}>
+                                <Link
+                                  href={`/categories/laptop?brand=Acer&series=${encodeURIComponent(series)}`}
                                   onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
                                 >
                                   {label}
@@ -204,33 +251,14 @@ export default function NavBar() {
                           </ul>
                         </div>
 
-                        {/* Cột 2: ACER & ASUS */}
+                        {/* Cột 3: ASUS & LENOVO */}
                         <div className={styles.megaCol}>
-                          <h3 className={styles.megaColHeading}>ACER ›</h3>
+                          <h3 className={styles.megaColHeading}>ASUS ›</h3>
                           <ul className={styles.megaList}>
                             {[
-                              { label: "PREDATOR HELIOS", series: "Predator Helios" },
-                              { label: "NITRO Series", series: "Nitro" },
-                              { label: "SWIFT Series (Mỏng nhẹ)", series: "Swift" },
-                              { label: "ASPIRE Series", series: "Aspire" },
-                            ].map(({ label, series }) => (
-                              <li key={label}>
-                                <Link
-                                  href={`/categories/laptop?brand=Acer&series=${encodeURIComponent(series)}`}
-                                  onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                                >
-                                  {label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-
-                          <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>ASUS ›</h3>
-                          <ul className={styles.megaList}>
-                            {[
-                              { label: "ROG STRIX / ZEPHYRUS", series: "ROG Strix" },
-                              { label: "TUF GAMING", series: "TUF Gaming" },
-                              { label: "ZENBOOK OLED (Cao cấp)", series: "Zenbook" },
+                              { label: "ROG Series", series: "ROG Strix" },
+                              { label: "TUF GAMING Series", series: "TUF Gaming" },
+                              { label: "ZENBOOK Series", series: "Zenbook" },
                               { label: "VIVOBOOK Series", series: "Vivobook" },
                             ].map(({ label, series }) => (
                               <li key={label}>
@@ -243,17 +271,14 @@ export default function NavBar() {
                               </li>
                             ))}
                           </ul>
-                        </div>
 
-                        {/* Cột 3: LENOVO & DELL */}
-                        <div className={styles.megaCol}>
-                          <h3 className={styles.megaColHeading}>LENOVO ›</h3>
+                          <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>LENOVO ›</h3>
                           <ul className={styles.megaList}>
                             {[
-                              { label: "LEGION Gaming", series: "Legion Pro" },
-                              { label: "THINKPAD (Bền bỉ)", series: "ThinkPad" },
-                              { label: "THINKBOOK (Doanh nghiệp)", series: "ThinkBook" },
-                              { label: "IDEAPAD Slim", series: "IdeaPad" },
+                              { label: "LEGION Series", series: "Legion Pro" },
+                              { label: "THINKPAD Series", series: "ThinkPad" },
+                              { label: "THINKBOOK Series", series: "ThinkBook" },
+                              { label: "IDEAPAD Series", series: "IdeaPad" },
                             ].map(({ label, series }) => (
                               <li key={label}>
                                 <Link
@@ -265,34 +290,16 @@ export default function NavBar() {
                               </li>
                             ))}
                           </ul>
-
-                          <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>DELL & ALIENWARE ›</h3>
-                          <ul className={styles.megaList}>
-                            {[
-                              { label: "DELL XPS 13 (Ultrabook)", series: "XPS" },
-                              { label: "DELL INSPIRON 14/15", series: "Inspiron" },
-                              { label: "ALIENWARE Area-51", series: "Area-51" },
-                            ].map(({ label, series }) => (
-                              <li key={label}>
-                                <Link
-                                  href={`/categories/laptop?series=${encodeURIComponent(series)}`}
-                                  onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                                >
-                                  {label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
                         </div>
 
-                        {/* Cột 4: HP, LG & Mức Giá */}
+                        {/* Cột 4: DELL, HP & LG */}
                         <div className={styles.megaCol}>
-                          <h3 className={styles.megaColHeading}>HP & LG GRAM ›</h3>
+                          <h3 className={styles.megaColHeading}>DELL & ALIENWARE ›</h3>
                           <ul className={styles.megaList}>
                             {[
-                              { label: "HP ENVY x360 (Cảm ứng)", series: "Envy" },
-                              { label: "HP PAVILION 14", series: "Pavilion" },
-                              { label: "LG GRAM 14/16 (Siêu nhẹ)", series: "gram" },
+                              { label: "XPS Series", series: "XPS" },
+                              { label: "INSPIRON Series", series: "Inspiron" },
+                              { label: "ALIENWARE Series", series: "Area-51" },
                             ].map(({ label, series }) => (
                               <li key={label}>
                                 <Link
@@ -305,32 +312,64 @@ export default function NavBar() {
                             ))}
                           </ul>
 
-                          <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>Khoảng giá ›</h3>
+                          <h3 className={`${styles.megaColHeading} ${styles.mtSection}`}>HP & LG ›</h3>
                           <ul className={styles.megaList}>
                             {[
-                              { label: "Dưới 15 triệu", max: "15000000" },
-                              { label: "Từ 15 đến 25 triệu", min: "15000000", max: "25000000" },
-                              { label: "Từ 25 đến 40 triệu", min: "25000000", max: "40000000" },
-                              { label: "Trên 40 triệu", min: "40000000" },
-                            ].map(({ label, min, max }) => {
-                              const params = new URLSearchParams();
-                              if (min) params.set("min", min);
-                              if (max) params.set("max", max);
-                              return (
-                                <li key={label}>
-                                  <Link
-                                    href={`/categories/laptop?${params.toString()}`}
-                                    onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
-                                  >
-                                    {label}
-                                  </Link>
-                                </li>
-                              );
-                            })}
+                              { label: "ENVY Series", series: "Envy" },
+                              { label: "PAVILION Series", series: "Pavilion" },
+                              { label: "GRAM Series", series: "gram" },
+                            ].map(({ label, series }) => (
+                              <li key={label}>
+                                <Link
+                                  href={`/categories/laptop?series=${encodeURIComponent(series)}`}
+                                  onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                                >
+                                  {label}
+                                </Link>
+                              </li>
+                            ))}
                           </ul>
                         </div>
                       </div>
                     </div>
+                  ) : activeCategory && megaMenuData[activeCategory] ? (
+                    (() => {
+                      const data = megaMenuData[activeCategory];
+                      return (
+                        <div className={styles.laptopMegaMenu}>
+                          <div className={styles.megaHeader}>
+                            <span className={styles.megaTitle}>{data.title}</span>
+                            <Link
+                              href={data.viewAllHref}
+                              className={styles.megaViewAll}
+                              onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                            >
+                              Xem tất cả ›
+                            </Link>
+                          </div>
+
+                          <div className={styles.megaGrid}>
+                            {data.columns.map((col, cIdx) => (
+                              <div key={cIdx} className={styles.megaCol}>
+                                <h3 className={styles.megaColHeading}>{col.title}</h3>
+                                <ul className={styles.megaList}>
+                                  {col.items.map((it, iIdx) => (
+                                    <li key={iIdx}>
+                                      <Link
+                                        href={it.href}
+                                        onClick={() => categoryDropdownRef.current?.removeAttribute("open")}
+                                      >
+                                        {it.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })()
                   ) : activeCategory ? (
                     <div className={styles.laptopMegaMenu}>
                       <div className={styles.megaHeader}>
