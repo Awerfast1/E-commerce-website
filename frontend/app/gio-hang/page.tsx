@@ -141,13 +141,17 @@ function CartContent() {
                     </button>
                   </div>
                   <button
+                    className={styles.remove}
                     aria-label={`Xóa ${p.name}`}
+                    title={`Xóa ${p.name}`}
                     onClick={() => {
                       changeCart(id, "remove");
                       setUserExcluded(excluded.filter(v => v !== id));
                     }}
                   >
-                    Xóa
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 7h16M10 11v6m4-6v6M5 7l1 14h12l1-14M9 7V4h6v3" />
+                    </svg>
                   </button>
                 </article>
               ))}

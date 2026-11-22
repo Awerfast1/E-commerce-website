@@ -9,6 +9,9 @@
 .bar,.panel dl div { display: flex; justify-content: space-between; gap: 12px; }
 .row { display: grid; grid-template-columns: auto 60px minmax(100px,1fr) auto auto auto; gap: 12px; align-items: center; margin-top: 12px; }
 .row a { font-weight: 600; }
+.remove { display:grid; place-items:center; width:36px; height:36px; padding:7px; color:#8a969f; background:transparent; border:0; border-radius:7px; }
+.remove svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.remove:hover,.remove:focus-visible { color:#c7202c; background:#fff1f2; }
 .row strong,.panel strong { color: #cb2732; }
 .row del,.panel small { display: block; color: #617184; font-size: 13px; }
 .qty { display: flex; align-items: center; gap: 8px; border: 1px solid #bfccd9; border-radius: 7px; }
