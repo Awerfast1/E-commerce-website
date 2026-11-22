@@ -3,10 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./GearVnShowcase.module.css";
-import supabaseProductsRaw from "../../data/supabaseProducts.json";
-import type { CatalogProduct } from "./GenericCategoryCollection";
-
-const supabaseProducts = supabaseProductsRaw as CatalogProduct[];
+import type { StoreProduct } from "@/lib/store/catalog";
 const currency = new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" });
 
 function AccessoryIllustration({ slug, index }: { slug: string; index: number }) {
@@ -89,21 +86,22 @@ export default function AccessoryShowcase({
   title,
   badge,
   categorySlug,
+  products: categoryProducts,
 }: {
   title: string;
   badge: string;
   categorySlug: string;
+  products: StoreProduct[];
 }) {
-  const categoryProducts = supabaseProducts.filter(p => p.categories?.slug === categorySlug);
   const brands = [
     "TẤT CẢ",
-    ...Array.from(new Set(categoryProducts.map(p => p.brands?.brand_name).filter(Boolean) as string[])),
+    ...Array.from(new Set(categoryProducts.map(p => p.brandName).filter(Boolean))),
   ];
 
   const [selectedBrand, setSelectedBrand] = useState("TẤT CẢ");
 
   const filtered = categoryProducts
-    .filter(p => selectedBrand === "TẤT CẢ" || p.brands?.brand_name === selectedBrand)
+    .filter(p => selectedBrand === "TẤT CẢ" || p.brandName === selectedBrand)
     .slice(0, 5); // Chuẩn GearVN: top 5 sản phẩm ngang
 
   return (
@@ -133,9 +131,8 @@ export default function AccessoryShowcase({
 
       <div className={styles.grid}>
         {filtered.map((product, idx) => {
-          const variant = product.product_variants?.[0];
-          const price = variant?.price || 0;
-          const compareAtPrice = variant?.compare_at_price;
+          const price = product.price;
+          const compareAtPrice = product.compareAtPrice > price ? product.compareAtPrice : 0;
           const discount = compareAtPrice && compareAtPrice > price
             ? Math.round((1 - price / compareAtPrice) * 100)
             : 0;
@@ -150,7 +147,7 @@ export default function AccessoryShowcase({
               </Link>
 
               <div className={styles.specs}>
-                <span>{product.brands?.brand_name || "Chính hãng"}</span>
+                <span>{product.brandName || "Chính hãng"}</span>
                 <span>{product.short_description || "Bảo hành 24T"}</span>
               </div>
 
