@@ -1,16 +1,11 @@
-import Link from "next/link";
-import LaptopCollection from "@/app/components/LaptopCollection";
-import GenericCategoryCollection, { CatalogProduct } from "@/app/components/GenericCategoryCollection";
 import { Suspense } from "react";
+import { connection } from "next/server";
 import { notFound } from "next/navigation";
+
+import LaptopCollection from "@/app/components/LaptopCollection";
+import GenericCategoryCollection from "@/app/components/GenericCategoryCollection";
 import { quickCategories } from "@/data/quickCategories";
-import supabaseProductsRaw from "@/data/supabaseProducts.json";
-
-const supabaseProducts = supabaseProductsRaw as CatalogProduct[];
-
-export function generateStaticParams() {
-  return quickCategories.map(category => ({ slug: category.slug }));
-}
+import { getCategoryProducts, toCatalogProduct } from "@/lib/store/catalog";
 
 async function CategoryContent({
   params,
@@ -25,9 +20,9 @@ async function CategoryContent({
   if (slug === "laptop") return <LaptopCollection />;
 
   // Đối với các danh mục phụ kiện khác (Bàn phím, Chuột, Tai nghe, Củ sạc,...)
-  const categoryProducts = supabaseProducts.filter(
-    product => product.categories?.slug === slug
-  );
+  // sản phẩm được đọc trực tiếp từ Supabase nên admin sửa là web cập nhật theo.
+  await connection();
+  const categoryProducts = (await getCategoryProducts(slug)).map(toCatalogProduct);
 
   return <GenericCategoryCollection category={category} products={categoryProducts} />;
 }
