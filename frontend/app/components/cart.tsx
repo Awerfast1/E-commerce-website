@@ -1,10 +1,18 @@
 "use client";
-import { useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useMemo,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 import LaptopIllustration from "./LaptopIllustration";
 import styles from "./CartDrawer.module.css";
 import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../data/gamingLaptopDeals";
 import { officeLaptopDeals, officeLaptopSlug } from "../../data/officeLaptopDeals";
-import supabaseProductsRaw from "../../data/supabaseProducts.json";
+import type { StoreProduct } from "@/lib/store/catalog";
 
 const key = "congears.cart.v1";
 const empty = () => "{}";
@@ -26,7 +34,19 @@ export interface CartProduct {
   link: string;
 }
 
-export function getAllProducts(): CartProduct[] {
+const CatalogContext = createContext<StoreProduct[]>([]);
+
+/** Shares the database catalog loaded by the storefront layout with client components. */
+export function CatalogProvider({ products, children }: { products: StoreProduct[]; children: ReactNode }) {
+  return <CatalogContext.Provider value={products}>{children}</CatalogContext.Provider>;
+}
+
+export function useStoreCatalog(): StoreProduct[] {
+  return useContext(CatalogContext);
+}
+
+/** Combines the static laptop deals with every product stored in the database. */
+export function buildCartProducts(remote: StoreProduct[]): CartProduct[] {
   const gaming: CartProduct[] = gamingLaptopDeals.map((item, index) => ({
     name: item.name,
     price: item.price,
@@ -48,38 +68,29 @@ export function getAllProducts(): CartProduct[] {
   const existingSlugs = new Set([...gaming, ...office].map(p => p.slug));
 
   const catalogProducts: CartProduct[] = [];
-  for (let i = 0; i < (supabaseProductsRaw as any[]).length; i++) {
-    const p = (supabaseProductsRaw as any[])[i];
-    const slug = p.slug || p.product_id;
-    if (existingSlugs.has(slug)) continue;
-
-    const variant = p.product_variants?.[0];
-    const price = variant?.price ?? 1000000;
-    const oldPrice = variant?.compare_at_price && variant.compare_at_price > price ? variant.compare_at_price : price;
-    const image = p.product_images?.find((img: any) => img.is_primary)?.image_url ?? p.product_images?.[0]?.image_url;
+  for (const product of remote) {
+    const slug = product.slug || product.product_id;
+    if (!slug || existingSlugs.has(slug)) continue;
 
     catalogProducts.push({
-      name: p.product_name,
-      price,
-      oldPrice,
+      name: product.product_name,
+      price: product.price,
+      oldPrice: product.compareAtPrice > product.price ? product.compareAtPrice : product.price,
       slug,
       artIndex: -1,
-      imageUrl: image,
-      link: `/Product/${p.product_id}`,
+      imageUrl: product.imageUrl,
+      link: `/Product/${product.product_id}`,
     });
   }
 
   return [...gaming, ...office, ...catalogProducts];
 }
 
-const allProductsList = getAllProducts();
-const catalog = new Set(allProductsList.map(d => d.slug));
-
 function parse(raw: string): Record<string, number> {
   try {
     const items: Record<string, number> = {};
     for (const [id, n] of Object.entries(JSON.parse(raw))) {
-      if (catalog.has(id) && typeof n === "number" && Number.isSafeInteger(n) && n > 0) items[id] = n;
+      if (typeof n === "number" && Number.isSafeInteger(n) && n > 0) items[id] = n;
     }
     return items;
   } catch {
@@ -137,6 +148,8 @@ export function AddToCart({ slug, children }: { slug: string; children: ReactNod
   const [quantity, setQuantity] = useState("1");
   const [sale, setSale] = useState(false);
 
+  const remote = useStoreCatalog();
+  const allProductsList = useMemo(() => buildCartProducts(remote), [remote]);
   const product = allProductsList.find(item => item.slug === slug);
   if (!product) return null;
 
