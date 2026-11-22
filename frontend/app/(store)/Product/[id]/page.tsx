@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import supabaseProductsRaw from "../../../data/supabaseProducts.json";
-import { products as dummyProducts } from "../../../data/Products";
+import supabaseProductsRaw from "@/data/supabaseProducts.json";
+import { products as dummyProducts } from "@/data/Products";
 import styles from "../../gaming-laptops/[slug]/page.module.css";
 import catalogStyles from "./page.module.css";
-import ProductSpecsDrawer from "../../components/ProductSpecsDrawer";
-import { AddToCart, BuyNowButton } from "../../components/cart";
+import ProductSpecsDrawer from "@/app/components/ProductSpecsDrawer";
+import { AddToCart, BuyNowButton } from "@/app/components/cart";
 const highlightLabels = ["CPU", "Processor", "RAM", "Storage", "Ổ cứng", "Graphics Card", "Card đồ họa", "Screen Size", "Màn hình", "Refresh Rate", "Độ phân giải"];
 
 interface ProductSpec { specification_name: string; specification_value: string }
