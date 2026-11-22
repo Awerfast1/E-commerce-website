@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
-import { changeCart, useCart, getAllProducts } from "../components/cart";
-import LaptopIllustration from "../components/LaptopIllustration";
-import { gamingDealsEndAt } from "../../data/gamingLaptopDeals";
+import { changeCart, useCart, getAllProducts } from "@/app/components/cart";
+import LaptopIllustration from "@/app/components/LaptopIllustration";
+import { gamingDealsEndAt } from "@/data/gamingLaptopDeals";
 import styles from "./page.module.css";
 
 const money = (n: number) => n.toLocaleString("vi-VN") + "đ";
