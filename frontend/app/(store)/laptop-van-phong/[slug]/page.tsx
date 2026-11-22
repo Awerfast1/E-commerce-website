@@ -1,12 +1,12 @@
-import { getOfficeLaptopSpecifications } from "../../../data/officeLaptopSpecifications";
+import { getOfficeLaptopSpecifications } from "@/data/officeLaptopSpecifications";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import LaptopIllustration from "../../components/LaptopIllustration";
-import OfficeLaptopSpecs from "../../components/OfficeLaptopSpecs";
-import { AddToCart, BuyNowButton } from "../../components/cart";
-import { officeLaptopDeals, officeLaptopSlug } from "../../../data/officeLaptopDeals";
+import LaptopIllustration from "@/app/components/LaptopIllustration";
+import OfficeLaptopSpecs from "@/app/components/OfficeLaptopSpecs";
+import { AddToCart, BuyNowButton } from "@/app/components/cart";
+import { officeLaptopDeals, officeLaptopSlug } from "@/data/officeLaptopDeals";
 import styles from "./page.module.css";
 
 type Props = { params: Promise<{ slug: string }> };

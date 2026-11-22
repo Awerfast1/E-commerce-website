@@ -1,12 +1,12 @@
-import { getGamingLaptopSpecifications } from "../../../data/gamingLaptopSpecifications";
+import { getGamingLaptopSpecifications } from "@/data/gamingLaptopSpecifications";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import LaptopIllustration from "../../components/LaptopIllustration";
-import GamingLaptopSpecs from "../../components/GamingLaptopSpecs";
-import { AddToCart, BuyNowButton } from "../../components/cart";
-import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../../data/gamingLaptopDeals";
+import LaptopIllustration from "@/app/components/LaptopIllustration";
+import GamingLaptopSpecs from "@/app/components/GamingLaptopSpecs";
+import { AddToCart, BuyNowButton } from "@/app/components/cart";
+import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "@/data/gamingLaptopDeals";
 import styles from "./page.module.css";
 
 type Props = { params: Promise<{ slug: string }> };

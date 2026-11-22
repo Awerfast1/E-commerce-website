@@ -2,45 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import supabaseProductsRaw from "../../../data/supabaseProducts.json";
-import { products as dummyProducts } from "../../../data/Products";
+import { connection } from "next/server";
+import { products as dummyProducts } from "@/data/Products";
+import { getProductById, toCatalogProduct } from "@/lib/store/catalog";
 import styles from "../../gaming-laptops/[slug]/page.module.css";
 import catalogStyles from "./page.module.css";
-import ProductSpecsDrawer from "../../components/ProductSpecsDrawer";
-import { AddToCart, BuyNowButton } from "../../components/cart";
+import ProductSpecsDrawer from "@/app/components/ProductSpecsDrawer";
+import { AddToCart, BuyNowButton } from "@/app/components/cart";
 const highlightLabels = ["CPU", "Processor", "RAM", "Storage", "Ổ cứng", "Graphics Card", "Card đồ họa", "Screen Size", "Màn hình", "Refresh Rate", "Độ phân giải"];
 
-interface ProductSpec { specification_name: string; specification_value: string }
-interface ProductVariant { sku: string; price: number; compare_at_price: number }
-interface ProductDetail {
-  product_id: string;
-  product_name: string;
-  slug: string;
-  short_description?: string;
-  description?: string;
-  categories?: { slug: string; category_name: string };
-  brands?: { brand_name: string };
-  product_images?: { image_url: string; is_primary: boolean }[];
-  product_variants?: ProductVariant[];
-  product_specifications?: ProductSpec[];
-}
-const supabaseProducts = supabaseProductsRaw as ProductDetail[];
 const formatVND = (price: number) => new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(price);
-
-export function generateStaticParams() {
-  return [...supabaseProducts.map(p => ({id:p.product_id})), ...dummyProducts.map(p => ({id:String(p.id)}))];
-}
 
 export async function generateMetadata({params}:{params:Promise<{id:string}>}):Promise<Metadata>{
   const {id}=await params;
-  const remote=supabaseProducts.find(p=>p.product_id===id);
+  const remote=await getProductById(id);
   const legacy=dummyProducts.find(p=>String(p.id)===id);
   return {title: remote ? `${remote.product_name} | ConGears` : legacy ? `${legacy.name} | ConGears` : "Sản phẩm | ConGears"};
 }
 
 async function ProductContent({params}:{params:Promise<{id:string}>}){
   const {id}=await params;
-  const remote=supabaseProducts.find(p=>p.product_id===id);
+  await connection();
+  const row=await getProductById(id);
+  const remote=row ? toCatalogProduct(row) : undefined;
   const legacy=dummyProducts.find(p=>String(p.id)===id);
   if(!remote&&!legacy)notFound();
 
@@ -51,9 +35,9 @@ async function ProductContent({params}:{params:Promise<{id:string}>}){
   const variant=remote?.product_variants?.[0];
   const price=variant?.price ?? legacy!.price*25000;
   const oldPrice=variant?.compare_at_price && variant.compare_at_price>price ? variant.compare_at_price : 0;
-  const specs=remote?.product_specifications?.map(s=>[s.specification_name,s.specification_value] as const)
+  const specs=remote?.product_specifications.map(s=>[s.specification_name,s.specification_value] as const)
     ?? legacy!.specifications.map(s=>[s.name,`${s.value}${s.unit ? ` ${s.unit}` : ""}`] as const);
-  const image=remote?.product_images?.find(i=>i.is_primary)?.image_url ?? remote?.product_images?.[0]?.image_url ?? legacy?.images[0];
+  const image=remote?.product_images.find(i=>i.is_primary)?.image_url ?? remote?.product_images[0]?.image_url ?? legacy?.images[0];
   const description=remote?.description ?? legacy?.longDescription ?? legacy?.shortDescription ?? "";
 
   return <main className={styles.page} lang="vi">
@@ -102,5 +86,5 @@ async function ProductContent({params}:{params:Promise<{id:string}>}){
 }
 
 export default function ProductDetailPage(props:{params:Promise<{id:string}>}){
-  return <Suspense fallback={<div className="min-h-96"/>}><ProductContent params={props.params}/></Suspense>;
+  return <Suspense fallback={<div className="min-h-96"/>}><ProductContent params={props.params} /></Suspense>;
 }

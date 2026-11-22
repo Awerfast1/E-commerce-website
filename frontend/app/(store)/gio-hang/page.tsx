@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect, Suspense, useRef } from "react";
-import { changeCart, useCart, getAllProducts } from "../components/cart";
-import LaptopIllustration from "../components/LaptopIllustration";
-import { gamingDealsEndAt } from "../../data/gamingLaptopDeals";
-import { getCurrentUser } from "../../lib/auth";
+import { useState, useEffect, useMemo, Suspense, useRef } from "react";
+import { buildCartProducts, changeCart, useCart, useStoreCatalog } from "@/app/components/cart";
+import LaptopIllustration from "@/app/components/LaptopIllustration";
+import { gamingDealsEndAt } from "@/data/gamingLaptopDeals";
+import { getCurrentUser } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 
@@ -20,6 +20,8 @@ function CartContent() {
   const [step, setStep] = useState(searchParams.get("step") === "1" ? 1 : 0);
   const [recipient, setRecipient] = useState({ name: "", phone: "", address: "" });
   const [sale, setSale] = useState(false);
+  const catalogProducts = useStoreCatalog();
+  const allProducts = useMemo(() => buildCartProducts(catalogProducts), [catalogProducts]);
   const [checkingAuth, setCheckingAuth] = useState(false);
   const removeIntentHandled = useRef(false);
   const removeIntent = searchParams.get("remove");
@@ -41,10 +43,10 @@ function CartContent() {
   useEffect(() => {
     if (!removeIntent || removeIntentHandled.current) return;
     removeIntentHandled.current = true;
-    const validSlugs = new Set(getAllProducts().map(product => product.slug));
+    const validSlugs = new Set(allProducts.map(product => product.slug));
     removeIntent.split(",").filter(id => validSlugs.has(id)).forEach(id => changeCart(id, "remove"));
     router.replace("/gio-hang");
-  }, [removeIntent, router]);
+  }, [allProducts, removeIntent, router]);
 
   useEffect(() => {
     const end = Date.parse(gamingDealsEndAt);
@@ -65,7 +67,6 @@ function CartContent() {
     };
   }, []);
 
-  const allProducts = getAllProducts();
   const rows = allProducts
     .filter(p => items[p.slug])
     .map(p => ({
