@@ -5,6 +5,7 @@ import styles from "./CartDrawer.module.css";
 import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "../../data/gamingLaptopDeals";
 import { officeLaptopDeals, officeLaptopSlug } from "../../data/officeLaptopDeals";
 import supabaseProductsRaw from "../../data/supabaseProducts.json";
+import { useRouter } from "next/navigation";
 
 const key = "congears.cart.v1";
 const empty = () => "{}";
@@ -125,18 +126,16 @@ export function changeCart(id: string, delta: number | "remove") {
 }
 
 export function BuyNowButton({ slug, className, children }: { slug: string; className?: string; children?: ReactNode }) {
+  const router = useRouter();
+
   return (
     <button
       type="button"
       className={className}
       style={{ cursor: "pointer" }}
       onClick={() => {
-        try {
-          changeCart(slug, 1);
-        } catch {
-          // ignore error if storage fails
-        }
-        window.location.assign(`/gio-hang?select=${encodeURIComponent(slug)}`);
+        changeCart(slug, 1);
+        router.push(`/gio-hang?select=${encodeURIComponent(slug)}`);
       }}
     >
       {children || "Mua ngay"}

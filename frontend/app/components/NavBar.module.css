@@ -267,7 +267,9 @@
   color: #dc2626;
 }
 .services { gap: clamp(12px, 1.8vw, 34px); }
-.services > span, .actions button { gap: .65em; white-space: nowrap; }
+.services > span, .services a, .actions button { gap: .65em; white-space: nowrap; }
+.serviceLink { display:flex; align-items:center; color:inherit; text-decoration:none; }
+.serviceLink:hover { color: #fff; opacity: .84; }
 .services svg { width: 1.7em; }
 .actions { gap: clamp(8px, .85vw, 16px); }
 .actions button {

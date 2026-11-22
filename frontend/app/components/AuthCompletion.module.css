@@ -1,0 +1,15 @@
+.page { display:grid; flex:1; place-items:center; min-height:100svh; padding:24px; background:#f6f8fa; color:#182536; }
+.card { width:min(100%,460px); padding:36px; border:1px solid #e3e9ef; border-radius:16px; background:white; box-shadow:0 14px 44px rgb(24 39 56 / 7%); }
+.brand { display:flex; align-items:center; gap:9px; margin-bottom:28px; color:#c90012; font-size:23px; font-weight:800; }
+.brand:first-letter { display:inline-block; }
+.brand span { font-size:17px; letter-spacing:-.5px; }
+.card h1 { margin:0 0 10px; font-size:27px; }
+.card p { color:#5e6f80; line-height:1.6; }
+.card form { display:grid; gap:16px; margin-top:22px; }
+.card label { display:grid; gap:7px; font-size:14px; font-weight:650; }
+.card input { height:46px; padding:0 12px; border:1px solid #d6dde4; border-radius:8px; outline:none; }
+.card input:focus { border-color:#227dc0; box-shadow:0 0 0 3px rgb(34 125 192 / 12%); }
+.card button,.back { display:grid; place-items:center; width:100%; min-height:46px; border:0; border-radius:8px; color:white; background:#c90012; font-weight:700; }
+.card button:disabled { opacity:.7; }
+.back { margin-top:20px; }
+@media(max-width:520px) { .card { padding:28px 22px; } }

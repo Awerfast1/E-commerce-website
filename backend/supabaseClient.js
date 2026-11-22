@@ -14,4 +14,20 @@ if (!hasSupabaseConfig) {
 // during module loading when required environment values are absent.
 const supabase = hasSupabaseConfig ? createClient(supabaseUrl, supabaseAnonKey) : null;
 
-module.exports = { supabase };
+function createAuthClient() {
+  if (!hasSupabaseConfig) {
+    throw new Error("Supabase authentication is not configured.");
+  }
+
+  // Use a fresh stateless client per request so concurrent users never share auth state.
+  return createClient(supabaseUrl, supabaseAnonKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+      detectSessionInUrl: false,
+      flowType: "implicit",
+    },
+  });
+}
+
+module.exports = { supabase, createAuthClient };

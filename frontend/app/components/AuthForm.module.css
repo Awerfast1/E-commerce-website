@@ -1,0 +1,28 @@
+.formWrap { width:100%; color:#172536; }
+.formWrap h1 { margin:0; font-size:clamp(26px,2vw,34px); line-height:1.2; font-weight:750; }
+.subtitle { margin:8px 0 26px; color:#68798a; line-height:1.5; font-size:15px; }
+.form { display:grid; gap:17px; }
+.form > label { display:block; color:#283849; font-size:14px; font-weight:650; }
+.form > label i { color:#cf1e2b; font-size:.8em; font-style:normal; vertical-align:super; line-height:0; }
+.form > label > input:not([type="checkbox"]),.form > label > .passwordField { display:flex; margin-top:7px; }
+.form input:not([type="checkbox"]) { width:100%; min-width:0; height:46px; padding:0 13px; border:1px solid #d7dce2; border-radius:8px; background:#fff; color:#172536; font:400 15px Arial,sans-serif; outline:none; }
+.form input::placeholder { color:#9ba5ae; }
+.form input:focus { border-color:#227dc0; box-shadow:0 0 0 3px rgb(34 125 192 / 12%); }
+.passwordField { display:flex; position:relative; align-items:center; }
+.passwordField input { padding-right:58px !important; }
+.passwordField button { position:absolute; right:10px; padding:5px; color:#68798a; background:transparent; font-size:12px; }
+.formOptions { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:-4px; font-size:13px; }
+.checkLabel,.terms { display:flex; align-items:flex-start; gap:8px; color:#536274; font-size:13px; font-weight:400; }
+.checkLabel input,.terms input { accent-color:#c90012; margin:2px 0 0; }
+.formOptions > button,.switchText button { padding:0; color:#c90012; background:none; font-size:inherit; font-weight:650; }
+.terms { line-height:1.45; }
+.error,.notice { margin:0; padding:10px 12px; border-radius:7px; font-size:13px; line-height:1.45; }
+.error { color:#a4131e; background:#fff0f1; border:1px solid #ffd1d5; }
+.notice { color:#145c43; background:#edf9f3; border:1px solid #c6ead9; }
+.submit { width:100%; min-height:48px; border-radius:9px; color:#fff; background:#c90012; font-size:16px; font-weight:700; transition:background .16s ease,transform .16s ease; }
+.submit:hover:not(:disabled) { background:#b00010; transform:translateY(-1px); }
+.submit:disabled { cursor:wait; opacity:.7; }
+.switchText { margin:20px 0 0; color:#5f6d7b; text-align:center; font-size:14px; }
+.switchText button { margin-left:3px; }
+.verifyDestination { margin:0; color:#566779; font-size:14px; }
+@media(max-width:540px) { .subtitle { margin-bottom:20px; } .form { gap:14px; } }

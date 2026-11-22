@@ -1,0 +1,23 @@
+.page { min-height:100svh; display:grid; grid-template-columns:minmax(300px,26%) minmax(0,1fr); background:#f7f8fa; color:#172536; }
+.brandPanel { position:relative; display:flex; flex-direction:column; min-height:100%; padding:42px clamp(24px,3vw,54px) 32px; overflow:hidden; color:#fff; background:linear-gradient(155deg,#c90012 0%,#ae0010 58%,#7f0712 100%); }
+.brandPanel::after { position:absolute; inset:0; z-index:0; pointer-events:none; content:""; opacity:.1; background-image:radial-gradient(#fff 0.7px,transparent .7px); background-size:18px 18px; }
+.brand,.pitch,.support { position:relative; z-index:1; }
+.brand { display:flex; align-items:center; gap:10px; width:max-content; color:#fff; font-size:25px; font-weight:850; letter-spacing:-1px; }
+.brand span { display:grid; place-items:center; width:43px; height:43px; border:2px solid rgb(255 255 255 / 90%); border-radius:50%; font-size:27px; font-weight:600; letter-spacing:0; }
+.pitch { margin:auto 0; max-width:420px; }
+.kicker { margin:0 0 12px; color:#ffe2e4; font-size:13px; font-weight:700; letter-spacing:.06em; }
+.pitch h2 { margin:0; font-size:clamp(28px,2.2vw,38px); line-height:1.2; font-weight:800; }
+.pitchText { margin:14px 0 24px; max-width:360px; color:#ffe9eb; font-size:15px; line-height:1.6; }
+.pitch ul { display:grid; gap:16px; padding:0; margin:0; list-style:none; }
+.pitch li { display:flex; align-items:center; gap:12px; }
+.pitch li > span { display:grid; flex:0 0 42px; place-items:center; width:42px; height:42px; border-radius:11px; background:rgb(255 255 255 / 17%); font-size:20px; font-weight:800; }
+.pitch li div { display:grid; gap:3px; }
+.pitch li strong { font-size:14px; }
+.pitch li small { color:#ffe2e4; font-size:12px; line-height:1.4; }
+.support { display:grid; gap:7px; padding-top:20px; border-top:1px solid rgb(255 255 255 / 24%); }
+.support small { color:#ffe2e4; font-size:11px; }
+.support strong { font-size:13px; line-height:1.5; }
+.formPanel { display:grid; place-items:center; padding:48px 28px; }
+.formCard { width:min(100%,490px); padding:34px 38px; border:1px solid #edf0f3; border-radius:16px; background:#fff; box-shadow:0 14px 45px rgb(24 39 56 / 6%); }
+@media(max-width:900px) { .page { grid-template-columns:minmax(260px,34%) minmax(0,1fr); }.brandPanel { padding-inline:26px; }.formCard { padding:30px 26px; } }
+@media(max-width:680px) { .page { display:block; }.brandPanel { min-height:auto; padding:20px 22px; }.brand { font-size:21px; }.brand span { width:36px;height:36px;font-size:23px; }.pitch,.support { display:none; }.formPanel { min-height:calc(100svh - 76px); padding:28px 16px; }.formCard { padding:26px 21px; box-shadow:0 8px 28px rgb(24 39 56 / 7%); } }

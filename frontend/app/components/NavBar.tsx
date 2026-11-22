@@ -6,6 +6,8 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import supabaseProductsRaw from "../../data/supabaseProducts.json";
 import { megaMenuData } from "../../data/megaMenuData";
 import styles from "./NavBar.module.css";
+import AuthModal from "./AuthModal";
+import { AuthUser, getCurrentUser } from "../../lib/auth";
 
 interface SearchProduct {
   product_id: string;
@@ -112,6 +114,13 @@ function Icon({ name }: { name: keyof typeof paths }) {
   );
 }
 
+function getAccountLabel(user: AuthUser | null) {
+  const displayName = user?.user_metadata.display_name?.trim();
+  if (!displayName) return "Đăng nhập";
+  const nameParts = displayName.split(/\s+/);
+  return nameParts[nameParts.length - 1];
+}
+
 export const navCategories = [
   { label: "Laptop", slug: "laptop" },
   { label: "Bàn phím", slug: "keyboards" },
@@ -132,6 +141,8 @@ export const topBarCategories = navCategories.slice(0, 11);
 
 export default function NavBar() {
   const count = Object.values(useCart()).reduce((sum, n) => sum + n, 0);
+  const [currentUser, setCurrentUser] = useState<AuthUser | null>(null);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -148,6 +159,16 @@ export default function NavBar() {
   });
   const categoryDropdownRef = useRef<HTMLDetailsElement>(null);
   const searchContainerRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    let active = true;
+    getCurrentUser().then(user => {
+      if (active) setCurrentUser(user);
+    }).catch(() => {
+      if (active) setCurrentUser(null);
+    });
+    return () => { active = false; };
+  }, []);
 
   const saveRecentSearch = (termToSave: string) => {
     const trimmed = termToSave.trim();
@@ -447,13 +468,17 @@ export default function NavBar() {
         </form>
         <div className={styles.services}>
           <span><Icon name="headset" /><span>CSKH</span></span>
-          <span><Icon name="orders" /><span>Tra cứu<br />đơn hàng</span></span>
+          <Link className={styles.serviceLink} href="/tra-cuu-don-hang" aria-label="Tra cứu đơn hàng">
+            <Icon name="orders" /><span>Tra cứu<br />đơn hàng</span>
+          </Link>
         </div>
         <div className={styles.actions}>
           <Link className={styles.cartLink} href="/gio-hang" aria-label={`Giỏ hàng, ${count} sản phẩm`}>
             <Icon name="cart" />{count > 0 && <b>{count}</b>}
           </Link>
-          <button disabled title="Đăng nhập đang được phát triển"><Icon name="user" />Đăng nhập</button>
+          <button type="button" onClick={() => setAuthModalOpen(true)} aria-label={currentUser ? `Tài khoản ${getAccountLabel(currentUser)}` : "Đăng nhập"}>
+            <Icon name="user" />{currentUser ? getAccountLabel(currentUser) : "Đăng nhập"}
+          </button>
         </div>
       </div>
 
@@ -761,6 +786,17 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
+      {authModalOpen && (
+        <AuthModal
+          currentUser={currentUser}
+          onClose={() => setAuthModalOpen(false)}
+          onAuthenticated={user => {
+            setCurrentUser(user);
+            setAuthModalOpen(false);
+          }}
+          onSignedOut={() => setCurrentUser(null)}
+        />
+      )}
     </header>
   );
 }

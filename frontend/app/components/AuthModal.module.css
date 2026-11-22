@@ -1,0 +1,12 @@
+.backdrop { position:fixed; inset:0; z-index:1000; display:grid; place-items:center; padding:20px; background:rgb(15 23 32 / 58%); backdrop-filter:blur(2px); }
+.dialog { position:relative; width:min(100%,500px); max-height:min(92vh,760px); overflow:auto; padding:36px 32px 30px; border-radius:18px; background:#fff; box-shadow:0 24px 80px rgb(0 0 0 / 28%); animation:appear .18s ease-out; }
+.close { position:absolute; top:13px; right:15px; display:grid; place-items:center; width:34px; height:34px; border-radius:50%; color:#66717c; background:transparent; font-size:28px; line-height:1; }
+.close:hover { background:#f1f3f5; color:#15191d; }
+.account { display:grid; justify-items:center; gap:12px; padding:18px 0 8px; text-align:center; }
+.avatar { display:grid; place-items:center; width:62px; height:62px; border-radius:50%; color:white; background:#1769a8; font-size:26px; font-weight:700; }
+.account h2 { margin:0; font-size:22px; }
+.account p { margin:0 0 10px; color:#697888; }
+.account > button { width:100%; min-height:46px; border-radius:8px; color:white; background:#c90012; font-weight:700; }
+@keyframes appear { from { opacity:0; transform:translateY(8px) scale(.99); } to { opacity:1; transform:translateY(0) scale(1); } }
+@media(max-width:540px) { .backdrop { padding:10px; align-items:end; } .dialog { padding:34px 22px 25px; border-radius:18px 18px 8px 8px; } }
+@media(prefers-reduced-motion:reduce) { .dialog { animation:none; } }

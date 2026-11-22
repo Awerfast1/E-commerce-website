@@ -1,22 +1,50 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, useRef } from "react";
 import { changeCart, useCart, getAllProducts } from "../components/cart";
 import LaptopIllustration from "../components/LaptopIllustration";
 import { gamingDealsEndAt } from "../../data/gamingLaptopDeals";
+import { getCurrentUser } from "../../lib/auth";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 
 const money = (n: number) => n.toLocaleString("vi-VN") + "đ";
 
 function CartContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const selectParam = searchParams.get("select");
   const items = useCart();
   const [userExcluded, setUserExcluded] = useState<string[] | null>(null);
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(searchParams.get("step") === "1" ? 1 : 0);
   const [recipient, setRecipient] = useState({ name: "", phone: "", address: "" });
   const [sale, setSale] = useState(false);
+  const [checkingAuth, setCheckingAuth] = useState(false);
+  const removeIntentHandled = useRef(false);
+  const removeIntent = searchParams.get("remove");
+
+  async function continueToShipping() {
+    setCheckingAuth(true);
+    try {
+      const user = await getCurrentUser().catch(() => null);
+      if (!user) {
+        router.push(`/dang-nhap?redirect=${encodeURIComponent("/gio-hang?step=1")}`);
+        return;
+      }
+      setStep(1);
+    } finally {
+      setCheckingAuth(false);
+    }
+  }
+
+  useEffect(() => {
+    if (!removeIntent || removeIntentHandled.current) return;
+    removeIntentHandled.current = true;
+    const validSlugs = new Set(getAllProducts().map(product => product.slug));
+    removeIntent.split(",").filter(id => validSlugs.has(id)).forEach(id => changeCart(id, "remove"));
+    router.replace("/gio-hang");
+  }, [removeIntent, router]);
 
   useEffect(() => {
     const end = Date.parse(gamingDealsEndAt);
@@ -155,8 +183,8 @@ function CartContent() {
                   </button>
                 </article>
               ))}
-              <button className={styles.next} disabled={!selected.length} onClick={() => setStep(1)}>
-                Tiếp theo　›
+              <button className={styles.next} disabled={!selected.length || checkingAuth} onClick={() => void continueToShipping()}>
+                {checkingAuth ? "Đang kiểm tra..." : "Tiếp theo　›"}
               </button>
             </>
           ) : stage === 1 ? (
