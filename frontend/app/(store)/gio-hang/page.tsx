@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect, Suspense } from "react";
-import { changeCart, useCart, getAllProducts } from "@/app/components/cart";
+import { useState, useEffect, useMemo, Suspense } from "react";
+import { buildCartProducts, changeCart, useCart, useStoreCatalog } from "@/app/components/cart";
 import LaptopIllustration from "@/app/components/LaptopIllustration";
 import { gamingDealsEndAt } from "@/data/gamingLaptopDeals";
 import styles from "./page.module.css";
@@ -38,7 +38,8 @@ function CartContent() {
     };
   }, []);
 
-  const allProducts = getAllProducts();
+  const catalogProducts = useStoreCatalog();
+  const allProducts = useMemo(() => buildCartProducts(catalogProducts), [catalogProducts]);
   const rows = allProducts
     .filter(p => items[p.slug])
     .map(p => ({
