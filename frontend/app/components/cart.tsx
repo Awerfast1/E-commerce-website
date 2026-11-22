@@ -26,6 +26,20 @@ export interface CartProduct {
   link: string;
 }
 
+interface SupabaseRawProduct {
+  product_id: string;
+  slug?: string;
+  product_name: string;
+  product_variants?: Array<{
+    price?: number;
+    compare_at_price?: number;
+  }>;
+  product_images?: Array<{
+    image_url: string;
+    is_primary?: boolean;
+  }>;
+}
+
 export function getAllProducts(): CartProduct[] {
   const gaming: CartProduct[] = gamingLaptopDeals.map((item, index) => ({
     name: item.name,
@@ -47,16 +61,17 @@ export function getAllProducts(): CartProduct[] {
 
   const existingSlugs = new Set([...gaming, ...office].map(p => p.slug));
 
+  const rawProducts = supabaseProductsRaw as unknown as SupabaseRawProduct[];
   const catalogProducts: CartProduct[] = [];
-  for (let i = 0; i < (supabaseProductsRaw as any[]).length; i++) {
-    const p = (supabaseProductsRaw as any[])[i];
+  for (let i = 0; i < rawProducts.length; i++) {
+    const p = rawProducts[i];
     const slug = p.slug || p.product_id;
     if (existingSlugs.has(slug)) continue;
 
     const variant = p.product_variants?.[0];
     const price = variant?.price ?? 1000000;
     const oldPrice = variant?.compare_at_price && variant.compare_at_price > price ? variant.compare_at_price : price;
-    const image = p.product_images?.find((img: any) => img.is_primary)?.image_url ?? p.product_images?.[0]?.image_url;
+    const image = p.product_images?.find(img => img.is_primary)?.image_url ?? p.product_images?.[0]?.image_url;
 
     catalogProducts.push({
       name: p.product_name,

@@ -19,12 +19,32 @@ interface SearchProduct {
   imageUrl?: string;
 }
 
-const allSearchProducts: SearchProduct[] = (supabaseProductsRaw as any[]).map(p => {
+interface SupabaseProductImage {
+  image_url: string;
+  is_primary?: boolean;
+}
+
+interface SupabaseProductVariant {
+  price?: number;
+  compare_at_price?: number;
+}
+
+interface SupabaseProductRecord {
+  product_id: string;
+  slug: string;
+  product_name: string;
+  categories?: { slug?: string; category_name?: string };
+  brands?: { brand_name?: string };
+  product_variants?: SupabaseProductVariant[];
+  product_images?: SupabaseProductImage[];
+}
+
+const allSearchProducts: SearchProduct[] = (supabaseProductsRaw as unknown as SupabaseProductRecord[]).map(p => {
   const variant = p.product_variants?.[0];
   const price = Number(variant?.price || 0);
   const compareAtPrice = Number(variant?.compare_at_price || price);
   const primaryImage =
-    p.product_images?.find((img: any) => img.is_primary)?.image_url ||
+    p.product_images?.find(img => img.is_primary)?.image_url ||
     p.product_images?.[0]?.image_url ||
     "https://placehold.co/800x800?text=" + encodeURIComponent(p.product_name || "ConGears");
 
@@ -115,22 +135,19 @@ export default function NavBar() {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const categoryDropdownRef = useRef<HTMLDetailsElement>(null);
-  const searchContainerRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
+  const [recentSearches, setRecentSearches] = useState<string[]>(() => {
+    if (typeof window === "undefined") {
+      return ["bàn phím dareu", "chuột logitech"];
+    }
     try {
       const saved = localStorage.getItem("congears_recent_searches");
-      if (saved) {
-        setRecentSearches(JSON.parse(saved));
-      } else {
-        setRecentSearches(["bàn phím dareu", "chuột logitech"]);
-      }
+      return saved ? JSON.parse(saved) : ["bàn phím dareu", "chuột logitech"];
     } catch {
-      setRecentSearches(["bàn phím dareu", "chuột logitech"]);
+      return ["bàn phím dareu", "chuột logitech"];
     }
-  }, []);
+  });
+  const categoryDropdownRef = useRef<HTMLDetailsElement>(null);
+  const searchContainerRef = useRef<HTMLFormElement>(null);
 
   const saveRecentSearch = (termToSave: string) => {
     const trimmed = termToSave.trim();

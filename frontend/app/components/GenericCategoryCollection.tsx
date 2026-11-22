@@ -147,17 +147,31 @@ export default function GenericCategoryCollection({
   const minParam = searchParams.get("min") || "";
   const maxParam = searchParams.get("max") || "";
 
-  // Lấy bộ định nghĩa bộ lọc chuẩn GearVN cho danh mục này
-  const gearvnFilters = categoryFilterDefinitions[category.slug] || [
+  // Lấy bộ định nghĩa bộ lọc chuẩn GearVN cho danh mục này, đồng thời đồng bộ thương hiệu thực tế trong cơ sở dữ liệu
+  const baseGearvnFilters = categoryFilterDefinitions[category.slug] || [
     {
       key: "Khoảng giá",
       options: ["Dưới 300.000đ", "Từ 300.000đ - 600.000đ", "Từ 600.000đ - 1.2 triệu", "Trên 1.2 triệu"],
     },
     {
       key: "Thương hiệu",
-      options: Array.from(new Set(products.map(p => p.brands?.brand_name).filter(Boolean) as string[])),
+      options: [],
     },
   ];
+
+  const actualBrands = Array.from(new Set(products.map(p => p.brands?.brand_name).filter(Boolean) as string[])).sort();
+
+  const gearvnFilters = baseGearvnFilters.map(filter => {
+    if (filter.key === "Thương hiệu") {
+      // Hợp nhất các thương hiệu đặc trưng của GearVN với các thương hiệu có hàng trong database
+      const mergedBrands = Array.from(new Set([...actualBrands, ...filter.options]));
+      return {
+        ...filter,
+        options: mergedBrands,
+      };
+    }
+    return filter;
+  });
 
   // Giá trị bộ lọc khởi tạo từ query params
   const initialFilters: Record<string, string> = {};
@@ -190,34 +204,34 @@ export default function GenericCategoryCollection({
       setUserMin("");
       setUserMax("");
     }
-    setUserFilters(old => ({ ...(old ?? activeFilters), [key]: value ?? "" }));
+    setUserFilters(old => ({ ...(old ?? initialFilters), [key]: value ?? "" }));
   }
 
-  // Hàm parse khoảng giá chuỗi thành [min, max]
+  function parsePriceValue(input: string): number {
+    const source = input.trim().toLowerCase();
+    const token = source.match(/\d+(?:[.,]\d+)?/)?.[0];
+    if (!token) return 0;
+    if (source.includes("triệu")) return Number(token.replace(",", ".")) * 1_000_000;
+    return Number(token.replace(/[.,]/g, ""));
+  }
+
+  // Parse tiền Việt: dấu chấm trong "600.000đ" là phân cách hàng nghìn,
+  // còn số thập phân chỉ dùng cho đơn vị triệu như "1.5 triệu".
   function parsePriceRange(rangeStr: string): [number, number] {
-    if (rangeStr.includes("Dưới")) {
-      const match = rangeStr.match(/\d+(\.\d+)?/);
-      const val = match ? parseFloat(match[0]) : 500000;
-      const num = rangeStr.includes("triệu") ? val * 1e6 : val * 1000;
-      return [0, num];
-    }
-    if (rangeStr.includes("Trên")) {
-      const match = rangeStr.match(/\d+(\.\d+)?/);
-      const val = match ? parseFloat(match[0]) : 1000000;
-      const num = rangeStr.includes("triệu") ? val * 1e6 : val * 1000;
-      return [num, Infinity];
-    }
-    // "Từ X - Y"
-    const parts = rangeStr.replace("Từ ", "").split("-").map(s => s.trim());
-    if (parts.length === 2) {
-      const parseVal = (str: string) => {
-        const m = str.match(/\d+(\.\d+)?/);
-        const v = m ? parseFloat(m[0]) : 0;
-        return str.includes("triệu") ? v * 1e6 : v * 1000;
-      };
-      return [parseVal(parts[0]), parseVal(parts[1])];
-    }
+    if (rangeStr.startsWith("Dưới")) return [0, parsePriceValue(rangeStr)];
+    if (rangeStr.startsWith("Trên")) return [parsePriceValue(rangeStr), Infinity];
+
+    const parts = rangeStr.replace(/^Từ\s*/i, "").split("-").map(part => part.trim());
+    if (parts.length === 2) return [parsePriceValue(parts[0]), parsePriceValue(parts[1])];
     return [0, Infinity];
+  }
+
+  // Hàm chuẩn hóa chuỗi tiếng Việt bỏ dấu để tìm kiếm mềm dẻo
+  function normalizeText(str: string): string {
+    return (str || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
   }
 
   // Lọc sản phẩm
@@ -249,14 +263,28 @@ export default function GenericCategoryCollection({
       const fullText = (
         product.product_name +
         " " +
+        (product.brands?.brand_name || "") +
+        " " +
         (product.short_description || "") +
         " " +
         (product.description || "") +
         " " +
         (product.product_specifications?.map(s => s.specification_name + " " + s.specification_value).join(" ") || "")
-      ).toLowerCase();
+      );
 
-      return fullText.includes(value.toLowerCase());
+      const normText = normalizeText(fullText);
+      const normValue = normalizeText(value);
+
+      if (normText.includes(normValue)) return true;
+
+      // Hỗ trợ bóc tách từ khóa con khi lựa chọn chứa dấu ngoặc hoặc gạch chéo
+      // Ví dụ: "Over-ear (Chụp tai)" -> so khớp "over-ear" hoặc "chup tai"
+      const subTokens = normValue
+        .split(/[\(\)\/,\-]+/)
+        .map(t => t.trim())
+        .filter(t => t.length >= 2);
+
+      return subTokens.some(tok => normText.includes(tok));
     });
   });
 
@@ -295,6 +323,7 @@ export default function GenericCategoryCollection({
               const choices = options;
               const isExpanded = expanded[key];
               const displayed = isExpanded ? choices : choices.slice(0, 6);
+              const radioGroupName = `filter-${category.slug}-${key}`;
 
               return (
                 <details open key={key}>
@@ -302,7 +331,8 @@ export default function GenericCategoryCollection({
                   <label>
                     <input
                       type="radio"
-                      name={key}
+                      name={radioGroupName}
+                      value=""
                       checked={
                         !activeFilters[key] &&
                         !(key === "Khoảng giá" && (activeMin || activeMax))
@@ -316,7 +346,8 @@ export default function GenericCategoryCollection({
                     <label key={choice}>
                       <input
                         type="radio"
-                        name={key}
+                        name={radioGroupName}
+                        value={choice}
                         checked={activeFilters[key] === choice}
                         onChange={() => toggle(key, choice)}
                       />{" "}

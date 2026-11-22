@@ -67,6 +67,7 @@ const gamingItems: CombinedLaptop[] = gamingLaptopDeals.map((product, index) => 
     link: `/gaming-laptops/${gamingLaptopSlug(product.name)}`,
     artIndex: index,
     values: {
+      ...specs,
       "Nhu cầu": "Laptop Gaming",
       "Hãng sản xuất": brandName,
       "Dòng sản phẩm": seriesName,
@@ -74,7 +75,6 @@ const gamingItems: CombinedLaptop[] = gamingLaptopDeals.map((product, index) => 
       "Dòng GPU": product.gpu,
       RAM: ramCategory,
       SSD: product.storage.replace(" SSD", ""),
-      ...specs,
     },
   };
 });
@@ -102,6 +102,7 @@ const officeItems: CombinedLaptop[] = officeLaptopDeals.map((product, index) => 
     link: `/laptop-van-phong/${officeLaptopSlug(product.name)}`,
     artIndex: index + 20,
     values: {
+      ...specs,
       "Nhu cầu": "Laptop Văn Phòng",
       "Hãng sản xuất": brandName,
       "Dòng sản phẩm": product.series,
@@ -109,7 +110,6 @@ const officeItems: CombinedLaptop[] = officeLaptopDeals.map((product, index) => 
       "Dòng GPU": product.gpu,
       RAM: ramCategory,
       SSD: storageClean,
-      ...specs,
     },
   };
 });
@@ -196,14 +196,22 @@ export default function LaptopCollection() {
 
   const rows = allLaptops
     .map(l => ({ ...l, currentPrice: sale ? l.price : l.oldPrice }))
-    .filter(({ values, currentPrice }) =>
+    .filter(({ name, brand, series, values, currentPrice }) =>
       (!activeMin || currentPrice >= Number(activeMin)) &&
       (!activeMax || currentPrice <= Number(activeMax)) &&
       Object.entries(activeFilters).every(([key, value]) => {
         if (!value) return true;
-        if (key !== "Khoảng giá") return values[key] === value;
-        const i = ranges.indexOf(value);
-        return currentPrice >= limits[i] * 1e6 && (currentPrice < limits[i + 1] * 1e6 || (i === ranges.length - 1 && currentPrice === limits[i + 1] * 1e6));
+        if (key === "Khoảng giá") {
+          const i = ranges.indexOf(value);
+          return currentPrice >= limits[i] * 1e6 && (currentPrice < limits[i + 1] * 1e6 || (i === ranges.length - 1 && currentPrice === limits[i + 1] * 1e6));
+        }
+        if (key === "Dòng sản phẩm") {
+          return series === value || name.toLowerCase().includes(value.toLowerCase()) || values[key] === value;
+        }
+        if (key === "Hãng sản xuất") {
+          return brand.toLowerCase() === value.toLowerCase() || values[key]?.toLowerCase() === value.toLowerCase();
+        }
+        return values[key] === value;
       })
     );
 
