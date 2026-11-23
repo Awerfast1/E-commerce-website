@@ -23,18 +23,22 @@ function CartContent() {
   const catalogProducts = useStoreCatalog();
   const allProducts = useMemo(() => buildCartProducts(catalogProducts), [catalogProducts]);
   const [checkingAuth, setCheckingAuth] = useState(false);
+  const [authCheckError, setAuthCheckError] = useState("");
   const removeIntentHandled = useRef(false);
   const removeIntent = searchParams.get("remove");
 
   async function continueToShipping() {
     setCheckingAuth(true);
+    setAuthCheckError("");
     try {
-      const user = await getCurrentUser().catch(() => null);
+      const user = await getCurrentUser();
       if (!user) {
         router.push(`/dang-nhap?redirect=${encodeURIComponent("/gio-hang?step=1")}`);
         return;
       }
       setStep(1);
+    } catch {
+      setAuthCheckError("Chưa thể xác minh đăng nhập do lỗi kết nối. Giỏ hàng và phiên đăng nhập của bạn vẫn được giữ; vui lòng thử lại.");
     } finally {
       setCheckingAuth(false);
     }
@@ -187,6 +191,7 @@ function CartContent() {
               <button className={styles.next} disabled={!selected.length || checkingAuth} onClick={() => void continueToShipping()}>
                 {checkingAuth ? "Đang kiểm tra..." : "Tiếp theo　›"}
               </button>
+              {authCheckError && <p className={styles.authError} role="alert">{authCheckError}</p>}
             </>
           ) : stage === 1 ? (
             <form

@@ -19,6 +19,7 @@
 .page button { cursor: pointer; }
 .page button:disabled { cursor: default; opacity: .65; }
 .next { display: block; margin: 16px 0 0 auto; padding: 12px 22px; background: #1769a8; color: white; border-radius: 8px; font-weight: 600; }
+.authError { margin-top: 10px; color: #b4232d; font-size: 14px; text-align: right; }
 .panel h2,.empty h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
 .panel dl div,.panel p { padding: 9px 0; }
 .panel dl div:last-child { border-top: 1px solid #d7e1ea; font-weight: 700; }

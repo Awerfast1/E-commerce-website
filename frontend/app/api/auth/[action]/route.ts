@@ -26,9 +26,13 @@ async function callBackend(path: string, init?: RequestInit) {
   });
 }
 
-function applySessionCookies(response: NextResponse, session?: AuthSession | null, rememberMe = false) {
+function applySessionCookies(
+  response: NextResponse,
+  session?: AuthSession | null,
+  rememberMe = false,
+  secure = false,
+) {
   if (!session?.access_token || !session.refresh_token) return response;
-  const secure = process.env.NODE_ENV === "production";
   response.cookies.set(ACCESS_COOKIE, session.access_token, {
     httpOnly: true,
     secure,
@@ -53,10 +57,10 @@ function applySessionCookies(response: NextResponse, session?: AuthSession | nul
   return response;
 }
 
-function clearSessionCookies(response: NextResponse) {
-  response.cookies.set(ACCESS_COOKIE, "", { httpOnly: true, path: "/", maxAge: 0 });
-  response.cookies.set(REFRESH_COOKIE, "", { httpOnly: true, path: "/", maxAge: 0 });
-  response.cookies.set(REMEMBER_COOKIE, "", { httpOnly: true, path: "/", maxAge: 0 });
+function clearSessionCookies(response: NextResponse, secure = false) {
+  response.cookies.set(ACCESS_COOKIE, "", { httpOnly: true, secure, path: "/", maxAge: 0 });
+  response.cookies.set(REFRESH_COOKIE, "", { httpOnly: true, secure, path: "/", maxAge: 0 });
+  response.cookies.set(REMEMBER_COOKIE, "", { httpOnly: true, secure, path: "/", maxAge: 0 });
   return response;
 }
 
@@ -70,6 +74,7 @@ async function readBackendResponse(response: Response) {
 
 export async function POST(request: NextRequest, context: RouteContext) {
   const { action } = await context.params;
+  const secureCookies = request.nextUrl.protocol === "https:";
 
   if (!["login", "register", "verify-otp", "logout", "forgot-password", "callback", "update-password"].includes(action)) {
     return NextResponse.json({ error: "Không tìm thấy thao tác xác thực." }, { status: 404 });
@@ -84,7 +89,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
           headers: { Authorization: `Bearer ${accessToken}` },
         });
       }
-      return clearSessionCookies(new NextResponse(null, { status: 204 }));
+      return clearSessionCookies(new NextResponse(null, { status: 204 }), secureCookies);
     }
 
     const body = await request.json();
@@ -103,6 +108,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
         NextResponse.json({ user: result.user }),
         { access_token: accessToken, refresh_token: refreshToken },
         true,
+        secureCookies,
       );
     }
 
@@ -132,7 +138,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
     const { session, ...publicResult } = result;
     const response = NextResponse.json(publicResult, { status: backendResponse.status });
     return action === "login" || action === "register" || action === "verify-otp"
-      ? applySessionCookies(response, session, action === "login" && body.rememberMe === true)
+      ? applySessionCookies(response, session, action === "login" && body.rememberMe === true, secureCookies)
       : response;
   } catch (error) {
     return NextResponse.json(
@@ -144,6 +150,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
 
 export async function GET(_request: NextRequest, context: RouteContext) {
   const { action } = await context.params;
+  const secureCookies = _request.nextUrl.protocol === "https:";
   if (action !== "session") return NextResponse.json({ error: "Không tìm thấy thao tác xác thực." }, { status: 404 });
 
   const accessToken = _request.cookies.get(ACCESS_COOKIE)?.value;
@@ -164,11 +171,11 @@ export async function GET(_request: NextRequest, context: RouteContext) {
       const result = await readBackendResponse(refreshResponse);
       if (refreshResponse.ok && result.session?.access_token) {
         const rememberMe = _request.cookies.get(REMEMBER_COOKIE)?.value === "1";
-        return applySessionCookies(NextResponse.json({ user: result.user }), result.session, rememberMe);
+        return applySessionCookies(NextResponse.json({ user: result.user }), result.session, rememberMe, secureCookies);
       }
     }
 
-    return clearSessionCookies(NextResponse.json({ user: null }));
+    return clearSessionCookies(NextResponse.json({ user: null }), secureCookies);
   } catch {
     return NextResponse.json({ error: "Không thể kiểm tra phiên đăng nhập." }, { status: 503 });
   }

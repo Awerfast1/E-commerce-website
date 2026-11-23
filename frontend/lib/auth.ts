@@ -43,8 +43,11 @@ export function requestPasswordReset(identifier: string) {
 
 export async function getCurrentUser(): Promise<AuthUser | null> {
   const response = await fetch("/api/auth/session", { cache: "no-store" });
-  if (!response.ok) return null;
   const result = await response.json();
+  if (response.status === 503) {
+    throw new Error(result.error || "Không thể xác minh phiên đăng nhập. Vui lòng thử lại.");
+  }
+  if (!response.ok) return null;
   return (result.user as AuthUser | null) || null;
 }
 
