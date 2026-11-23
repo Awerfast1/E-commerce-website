@@ -67,10 +67,11 @@ export async function proxy(request: NextRequest) {
     // Update the request cookie for this render and persist the rotated refresh token.
     request.cookies.set(ADMIN_COOKIE, encodeSession(nextSession));
     const response = NextResponse.next({ request });
+    const forwardedProto = request.headers.get("x-forwarded-proto")?.split(",")[0].trim();
     response.cookies.set(ADMIN_COOKIE, encodeSession(nextSession), {
       httpOnly: true,
       sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
+      secure: forwardedProto ? forwardedProto === "https" : request.nextUrl.protocol === "https:",
       path: "/",
       maxAge: 60 * 60 * 8,
     });

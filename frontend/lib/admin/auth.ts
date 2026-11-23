@@ -1,7 +1,7 @@
 import "server-only";
 
 import { createClient } from "@supabase/supabase-js";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 import { getAdminDb } from "./supabaseAdmin";
@@ -67,11 +67,18 @@ export async function readSessionCookie(): Promise<AdminSession | null> {
 }
 
 export async function writeSessionCookie(session: AdminSession) {
-  const store = await cookies();
+  const [store, requestHeaders] = await Promise.all([cookies(), headers()]);
+  const forwardedProto = requestHeaders.get("x-forwarded-proto")?.split(",")[0].trim();
+  const originProto = requestHeaders.get("origin") ? new URL(requestHeaders.get("origin")!).protocol : null;
+  const secure = forwardedProto
+    ? forwardedProto === "https"
+    : originProto
+      ? originProto === "https:"
+      : process.env.NODE_ENV === "production";
   store.set(ADMIN_COOKIE, encodeSession(session), {
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure,
     path: "/",
     maxAge: 60 * 60 * 8,
   });
