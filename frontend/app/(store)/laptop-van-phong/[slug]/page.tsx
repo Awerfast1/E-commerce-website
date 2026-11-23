@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import LaptopIllustration from "@/app/components/LaptopIllustration";
 import OfficeLaptopSpecs from "@/app/components/OfficeLaptopSpecs";
 import { AddToCart, BuyNowButton } from "@/app/components/cart";
+import ProductActivityTracker from "@/app/components/ProductActivityTracker";
 import { officeLaptopDeals, officeLaptopSlug } from "@/data/officeLaptopDeals";
 import styles from "./page.module.css";
 
@@ -44,6 +45,7 @@ async function OfficeLaptopContent({ params }: Props) {
 
   return (
     <main className={styles.page}>
+      <ProductActivityTracker slug={slug} />
       <nav className={styles.breadcrumb} aria-label="Đường dẫn">
         <Link href="/">Trang chủ</Link><span>›</span><Link href="/#laptop-van-phong">Laptop văn phòng</Link><span>›</span><span aria-current="page">{deal.name}</span>
       </nav>

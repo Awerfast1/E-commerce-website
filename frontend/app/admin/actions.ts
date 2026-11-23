@@ -99,6 +99,7 @@ export async function saveRecord(tableKey: string, id: string | null, formData: 
 
   const config = getTableConfig(tableKey);
   if (!config) redirect("/admin");
+  if (config.readOnly) redirectWithError(tableHref(config.key), "Bảng này chỉ dùng để theo dõi.");
 
   if (!id && config.allowCreate === false) {
     redirectWithError(tableHref(config.key), "Bảng này không cho phép tạo mới từ admin.");
@@ -173,7 +174,7 @@ export async function deleteRecord(tableKey: string, id: string) {
 
   const config = getTableConfig(tableKey);
   if (!config) redirect("/admin");
-  if (config.allowDelete === false) {
+  if (config.readOnly || config.allowDelete === false) {
     redirectWithError(tableHref(config.key), "Bảng này không cho phép xóa.");
   }
 

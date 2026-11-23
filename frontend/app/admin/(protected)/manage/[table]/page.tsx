@@ -66,6 +66,10 @@ function renderCell(value: unknown, column: Column) {
           {String(value)}
         </span>
       );
+    case "json": {
+      const text = typeof value === "string" ? value : JSON.stringify(value) ?? String(value);
+      return <code title={text} className="block max-w-72 whitespace-normal break-all text-xs text-slate-500">{truncate(text, 80)}</code>;
+    }
     default: {
       const text = String(value);
       return (
@@ -246,12 +250,12 @@ export default async function TableListPage({
                       ))}
                       <td className="px-4 py-3 align-top">
                         <div className="flex items-center justify-end gap-2">
-                          <Link
+                          {!config.readOnly && <Link
                             href={`${tableHref(config.key)}/${id}`}
                             className="rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-600 transition hover:bg-slate-100"
                           >
                             Sửa
-                          </Link>
+                          </Link>}
                           {config.allowDelete !== false && (
                             <DeleteButton action={deleteRecord.bind(null, config.key, id)} />
                           )}

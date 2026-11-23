@@ -97,7 +97,8 @@ async function fetchSupabaseUser(accessToken: string): Promise<SupabaseUser | nu
     cache: "no-store",
   });
 
-  if (!response.ok) return null;
+  if (response.status === 401 || response.status === 403) return null;
+  if (!response.ok) throw new Error(`Supabase Auth user check failed (${response.status})`);
   return (await response.json()) as SupabaseUser;
 }
 
@@ -132,9 +133,9 @@ export async function getAdminSession(): Promise<{ user: AdminUser; session: Adm
   const session = await readSessionCookie();
   if (!session) return null;
 
-  if (session.expires_at && session.expires_at * 1000 < Date.now()) {
-    return null;
-  }
+  // Cookie refresh belongs in proxy.ts, where response cookies can be written.
+  // A Server Component must not try to mutate cookies while rendering.
+  if (session.expires_at && session.expires_at * 1000 <= Date.now()) return null;
 
   const user = await fetchSupabaseUser(session.access_token);
   if (!user?.id) return null;

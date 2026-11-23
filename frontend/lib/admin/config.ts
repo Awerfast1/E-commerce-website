@@ -42,7 +42,7 @@ export type Field = {
 export type Column = {
   path: string;
   label: string;
-  type?: "text" | "currency" | "number" | "date" | "datetime" | "boolean" | "status" | "badge";
+  type?: "text" | "currency" | "number" | "date" | "datetime" | "boolean" | "status" | "badge" | "json";
   maxWidth?: number;
 };
 
@@ -63,6 +63,7 @@ export type TableConfig = {
   defaultSort?: { column: string; ascending: boolean };
   allowCreate?: boolean;
   allowDelete?: boolean;
+  readOnly?: boolean;
 };
 
 export type GroupKey = "overview" | "catalog" | "inventory" | "sales" | "customers" | "content";
@@ -400,6 +401,36 @@ export const TABLES: TableConfig[] = [
     ],
     searchFields: ["order_code"],
     defaultSort: { column: "placed_at", ascending: false },
+  },
+  {
+    key: "user_activity_logs",
+    table: "user_activity_logs",
+    label: "Hoạt động người dùng",
+    singular: "hoạt động",
+    group: "customers",
+    primaryKey: "activity_id",
+    description: "Nhật ký đăng nhập, xem sản phẩm, thao tác giỏ hàng và đặt đơn trên storefront.",
+    icon: "list",
+    select: "*, profiles(display_name)",
+    columns: [
+      { path: "profiles.display_name", label: "Khách hàng", maxWidth: 200 },
+      { path: "event_type", label: "Hoạt động", type: "badge" },
+      { path: "description", label: "Chi tiết", maxWidth: 360 },
+      { path: "metadata", label: "Dữ liệu sự kiện", type: "json", maxWidth: 300 },
+      { path: "created_at", label: "Thời điểm", type: "datetime" },
+    ],
+    fields: [
+      { name: "user_id", label: "Khách hàng", type: "text", readOnly: true },
+      { name: "event_type", label: "Hoạt động", type: "text", readOnly: true },
+      { name: "description", label: "Chi tiết", type: "textarea", readOnly: true },
+      { name: "metadata", label: "Dữ liệu", type: "textarea", readOnly: true, wide: true },
+      { name: "created_at", label: "Thời điểm", type: "datetime", readOnly: true },
+    ],
+    searchFields: ["event_type", "description"],
+    defaultSort: { column: "created_at", ascending: false },
+    allowCreate: false,
+    allowDelete: false,
+    readOnly: true,
   },
   {
     key: "order_items",

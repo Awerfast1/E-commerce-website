@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import LaptopIllustration from "@/app/components/LaptopIllustration";
 import GamingLaptopSpecs from "@/app/components/GamingLaptopSpecs";
 import { AddToCart, BuyNowButton } from "@/app/components/cart";
+import ProductActivityTracker from "@/app/components/ProductActivityTracker";
 import { gamingDealsEndAt, gamingLaptopDeals, gamingLaptopSlug } from "@/data/gamingLaptopDeals";
 import styles from "./page.module.css";
 
@@ -43,6 +44,7 @@ async function GamingLaptopContent({ params }: Props) {
 
   return (
     <main className={styles.page} data-deal-detail data-deals-end-at={gamingDealsEndAt}>
+      <ProductActivityTracker slug={slug} />
       <nav className={styles.breadcrumb} aria-label="Đường dẫn">
         <Link href="/">Trang chủ</Link><span>›</span><Link href="/#laptop-gaming">Laptop gaming</Link><span>›</span><span aria-current="page">{deal.name}</span>
       </nav>

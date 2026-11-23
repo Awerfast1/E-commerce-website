@@ -9,6 +9,7 @@ import styles from "../../gaming-laptops/[slug]/page.module.css";
 import catalogStyles from "./page.module.css";
 import ProductSpecsDrawer from "@/app/components/ProductSpecsDrawer";
 import { AddToCart, BuyNowButton } from "@/app/components/cart";
+import ProductActivityTracker from "@/app/components/ProductActivityTracker";
 const highlightLabels = ["CPU", "Processor", "RAM", "Storage", "Ổ cứng", "Graphics Card", "Card đồ họa", "Screen Size", "Màn hình", "Refresh Rate", "Độ phân giải"];
 
 const formatVND = (price: number) => new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(price);
@@ -41,6 +42,7 @@ async function ProductContent({params}:{params:Promise<{id:string}>}){
   const description=remote?.description ?? legacy?.longDescription ?? legacy?.shortDescription ?? "";
 
   return <main className={styles.page} lang="vi">
+    <ProductActivityTracker slug={remote?.slug ?? id} />
     <nav className={styles.breadcrumb} aria-label="Đường dẫn"><Link href="/">Trang chủ</Link><span>›</span><Link href={`/categories/${categorySlug}`}>{category}</Link><span>›</span><span aria-current="page">{name}</span></nav>
     <div className={styles.hero}>
       <section className={styles.gallery} aria-label={`Hình sản phẩm ${name}`}>

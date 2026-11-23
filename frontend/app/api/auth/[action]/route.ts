@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { authenticateStoreUser, recordUserActivity } from "@/lib/store/storefrontMonitoring";
 
 const ACCESS_COOKIE = "congears_access_token";
 const REFRESH_COOKIE = "congears_refresh_token";
@@ -84,6 +85,8 @@ export async function POST(request: NextRequest, context: RouteContext) {
     if (action === "logout") {
       const accessToken = request.cookies.get(ACCESS_COOKIE)?.value;
       if (accessToken) {
+        const user = await authenticateStoreUser(accessToken).catch(() => null);
+        if (user) await recordUserActivity(user.id, "logout", "Người dùng đã đăng xuất.").catch(() => undefined);
         await callBackend("/api/auth/logout", {
           method: "POST",
           headers: { Authorization: `Bearer ${accessToken}` },
@@ -104,6 +107,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
       });
       const result = await readBackendResponse(userResponse);
       if (!userResponse.ok) return NextResponse.json(result, { status: userResponse.status });
+      if (result.user?.id) await recordUserActivity(result.user.id, "auth_callback", "Người dùng hoàn tất đăng nhập hoặc xác thực tài khoản.").catch(() => undefined);
       return applySessionCookies(
         NextResponse.json({ user: result.user }),
         { access_token: accessToken, refresh_token: refreshToken },
@@ -136,6 +140,15 @@ export async function POST(request: NextRequest, context: RouteContext) {
     });
     const result = await readBackendResponse(backendResponse);
     const { session, ...publicResult } = result;
+    const activityUserId = result.user?.id;
+    if (backendResponse.ok && activityUserId && ["login", "register", "verify-otp"].includes(action)) {
+      const labels: Record<string, string> = {
+        login: "Người dùng đăng nhập thành công.",
+        register: "Người dùng tạo tài khoản.",
+        "verify-otp": "Người dùng xác thực tài khoản.",
+      };
+      await recordUserActivity(activityUserId, action, labels[action]).catch(() => undefined);
+    }
     const response = NextResponse.json(publicResult, { status: backendResponse.status });
     return action === "login" || action === "register" || action === "verify-otp"
       ? applySessionCookies(response, session, action === "login" && body.rememberMe === true, secureCookies)

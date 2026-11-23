@@ -18,7 +18,7 @@ export default async function EditRecordPage({
   const { table, id } = await params;
   const query = await searchParams;
   const config = getTableConfig(table);
-  if (!config) notFound();
+  if (!config || config.readOnly) notFound();
 
   const { data, error } = await getAdminDb()
     .from(config.table)

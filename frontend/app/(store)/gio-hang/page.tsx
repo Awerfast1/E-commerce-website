@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect, useMemo, Suspense, useRef } from "react";
-import { buildCartProducts, changeCart, useCart, useStoreCatalog } from "@/app/components/cart";
+import { buildCartProducts, changeCart, clearCartItems, useCart, useStoreCatalog } from "@/app/components/cart";
 import LaptopIllustration from "@/app/components/LaptopIllustration";
 import { gamingDealsEndAt } from "@/data/gamingLaptopDeals";
 import { getCurrentUser } from "@/lib/auth";
@@ -11,6 +11,21 @@ import styles from "./page.module.css";
 
 const money = (n: number) => n.toLocaleString("vi-VN") + "đ";
 
+function createOrderRequestId() {
+  if (typeof globalThis.crypto?.randomUUID === "function") return globalThis.crypto.randomUUID();
+  if (typeof globalThis.crypto?.getRandomValues === "function") {
+    const bytes = globalThis.crypto.getRandomValues(new Uint8Array(16));
+    bytes[6] = (bytes[6] & 0x0f) | 0x40;
+    bytes[8] = (bytes[8] & 0x3f) | 0x80;
+    const hex = [...bytes].map(value => value.toString(16).padStart(2, "0")).join("");
+    return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+  }
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, char => {
+    const value = Math.floor(Math.random() * 16);
+    return (char === "x" ? value : (value & 0x3) | 0x8).toString(16);
+  });
+}
+
 function CartContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -18,8 +33,25 @@ function CartContent() {
   const items = useCart();
   const [userExcluded, setUserExcluded] = useState<string[] | null>(null);
   const [step, setStep] = useState(searchParams.get("step") === "1" ? 1 : 0);
-  const [recipient, setRecipient] = useState({ name: "", phone: "", address: "" });
+  const [recipient, setRecipient] = useState({ name: "", phone: "", address: "", ward: "", district: "", city: "" });
   const [sale, setSale] = useState(false);
+  const [placingOrder, setPlacingOrder] = useState(false);
+  const [quotingOrder, setQuotingOrder] = useState(false);
+  const [orderError, setOrderError] = useState("");
+  const [quote, setQuote] = useState<{
+    subtotal: number;
+    listSubtotal: number;
+    discountAmount: number;
+    items: { slug: string; name: string; quantity: number; unit_price: number; compare_at_price: number; line_total: number }[];
+  } | null>(null);
+  const [placedOrder, setPlacedOrder] = useState<{
+    order_code: string;
+    subtotal: number;
+    discount_amount: number;
+    total_amount: number;
+    items: { name: string; quantity: number }[];
+  } | null>(null);
+  const requestId = useRef("");
   const catalogProducts = useStoreCatalog();
   const allProducts = useMemo(() => buildCartProducts(catalogProducts), [catalogProducts]);
   const [checkingAuth, setCheckingAuth] = useState(false);
@@ -84,7 +116,69 @@ function CartContent() {
   const count = Object.values(items).reduce((sum, n) => sum + n, 0);
   const original = selected.reduce((sum, { p, id }) => sum + p.oldPrice * items[id], 0);
   const total = sale ? selected.reduce((sum, { p, id }) => sum + p.price * items[id], 0) : original;
-  const stage = selected.length ? step : 0;
+  const stage = placedOrder ? 2 : selected.length ? step : 0;
+
+  async function prepareOrderReview() {
+    setQuotingOrder(true);
+    setOrderError("");
+    try {
+      const response = await fetch("/api/orders/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: selected.map(({ p, id }) => ({ slug: p.slug, quantity: items[id] })) }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || "Ch\u01b0a l\u1ea5y \u0111\u01b0\u1ee3c gi\u00e1 hi\u1ec7n t\u1ea1i.");
+      setQuote(result.quote);
+      setStep(2);
+    } catch (error) {
+      setOrderError(error instanceof Error ? error.message : "Ch\u01b0a l\u1ea5y \u0111\u01b0\u1ee3c gi\u00e1 hi\u1ec7n t\u1ea1i.");
+    } finally {
+      setQuotingOrder(false);
+    }
+  }
+
+  async function placeOrder() {
+    if (placingOrder || !selected.length || !quote) return;
+    setPlacingOrder(true);
+    setOrderError("");
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 30_000);
+    try {
+      // Reuse the key after a timeout so retrying cannot create a duplicate order.
+      const idempotencyKey = requestId.current || createOrderRequestId();
+      requestId.current = idempotencyKey;
+      const response = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        signal: controller.signal,
+        body: JSON.stringify({
+          requestId: idempotencyKey,
+          expectedTotal: quote.subtotal,
+          items: selected.map(({ p, id }) => ({ slug: p.slug, quantity: items[id] })),
+          recipient,
+        }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || "Chưa thể tiếp nhận đơn hàng.");
+      setPlacedOrder({
+        ...result.order,
+        items: quote.items.map(({ name, quantity }) => ({ name, quantity })),
+      });
+      clearCartItems(selected.map(({ id }) => id));
+      requestId.current = "";
+      setStep(0);
+    } catch (error) {
+      if (error instanceof Error && error.name === "AbortError") {
+        setOrderError("Máy chủ phản hồi quá lâu. Bạn có thể thử gửi lại an toàn.");
+        return;
+      }
+      setOrderError(error instanceof Error ? error.message : "Chưa thể tiếp nhận đơn hàng.");
+    } finally {
+      window.clearTimeout(timeoutId);
+      setPlacingOrder(false);
+    }
+  }
 
   return (
     <main className={styles.page}>
@@ -104,7 +198,7 @@ function CartContent() {
               </li>
             ))}
           </ol>
-          {!rows.length ? (
+          {!rows.length && !placedOrder ? (
             <section className={styles.empty}>
               <svg width="66" height="66" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M1 2h4l1 3h16l-3 9H8L4 4H1z" />
@@ -198,36 +292,49 @@ function CartContent() {
               className={styles.panel}
               onSubmit={e => {
                 e.preventDefault();
-                setStep(2);
+                void prepareOrderReview();
               }}
             >
               <h2>Thông tin giao hàng</h2>
-              {(["name", "phone", "address"] as const).map((key, i) => (
+              {(["name", "phone", "address", "ward", "district", "city"] as const).map((key, i) => (
                 <label key={key}>
-                  {["Tên người nhận", "Số điện thoại", "Địa chỉ nhận hàng"][i]}
+                  {["T\u00ean ng\u01b0\u1eddi nh\u1eadn", "S\u1ed1 \u0111i\u1ec7n tho\u1ea1i", "\u0110\u1ecba ch\u1ec9 nh\u1eadn h\u00e0ng", "Ph\u01b0\u1eddng/X\u00e3", "Qu\u1eadn/Huy\u1ec7n", "T\u1ec9nh/Th\u00e0nh ph\u1ed1"][i]}
                   <input
-                    required
+                    required={key === "name" || key === "phone" || key === "address" || key === "city"}
                     type={key === "phone" ? "tel" : "text"}
                     value={recipient[key]}
                     onChange={e => setRecipient({ ...recipient, [key]: e.target.value })}
                   />
                 </label>
               ))}
-              <button className={styles.next}>Kiểm tra đơn hàng　›</button>
+              {orderError && <p className={styles.authError} role="alert">{orderError}</p>}
+              <button className={styles.next} disabled={quotingOrder}>
+                {quotingOrder ? "\u0110ang ki\u1ec3m tra gi\u00e1..." : "Ki\u1ec3m tra đơn hàng　›"}
+              </button>
             </form>
           ) : (
             <section className={styles.panel}>
-              <h2>Kiểm tra đơn hàng</h2>
+              <h2>{placedOrder ? "\u0110\u00e3 ti\u1ebfp nh\u1eadn \u0111\u01a1n h\u00e0ng" : "Ki\u1ec3m tra \u0111\u01a1n h\u00e0ng"}</h2>
               <p>
                 {recipient.name} · {recipient.phone}
               </p>
               <p>{recipient.address}</p>
-              {selected.map(({ p, id }) => (
-                <p key={id}>
-                  {p.name} × {items[id]}
+              {(placedOrder?.items ?? quote?.items ?? selected.map(({ p, id }) => ({ name: p.name, quantity: items[id] }))).map((item, index) => (
+                <p key={`${item.name}-${index}`}>
+                  {item.name} &times; {item.quantity}
                 </p>
               ))}
-              <small>Website chưa tiếp nhận đơn hàng trực tuyến.</small>
+              {placedOrder ? (
+                <p>{"\u0110\u01a1n h\u00e0ng \u0111ang ch\u1edd c\u1eeda h\u00e0ng x\u00e1c nh\u1eadn. T\u1ed5ng ti\u1ec1n theo gi\u00e1 trong c\u01a1 s\u1edf d\u1eef li\u1ec7u: "}<strong>{money(placedOrder.total_amount)}</strong>.</p>
+              ) : (
+                <>
+                  <small>{"\u0110\u01a1n s\u1ebd \u0111\u01b0\u1ee3c ghi nh\u1eadn v\u1edbi tr\u1ea1ng th\u00e1i ch\u1edd x\u00e1c nh\u1eadn. Gi\u00e1 hi\u1ec7n t\u1ea1i \u0111\u00e3 \u0111\u01b0\u1ee3c x\u00e1c nh\u1eadn t\u1eeb catalog trong c\u01a1 s\u1edf d\u1eef li\u1ec7u."}</small>
+                  {orderError && <p className={styles.authError} role="alert">{orderError}</p>}
+                  <button className={styles.next} type="button" disabled={placingOrder} onClick={() => void placeOrder()}>
+                    {placingOrder ? "\u0110ang g\u1eedi \u0111\u01a1n..." : "X\u00e1c nh\u1eadn \u0111\u1eb7t h\u00e0ng"}
+                  </button>
+                </>
+              )}
             </section>
           )}
         </section>
@@ -236,11 +343,11 @@ function CartContent() {
           <dl>
             <div>
               <dt>Tổng giá niêm yết</dt>
-              <dd>{money(original)}</dd>
+              <dd>{money(placedOrder?.subtotal ?? quote?.listSubtotal ?? original)}</dd>
             </div>
             <div>
               <dt>Giảm giá sản phẩm</dt>
-              <dd>{money(original - total)}</dd>
+              <dd>{money(placedOrder?.discount_amount ?? quote?.discountAmount ?? original - total)}</dd>
             </div>
             <div>
               <dt>Ưu đãi HSSV</dt>
@@ -249,11 +356,11 @@ function CartContent() {
             <div>
               <dt>Tạm tính</dt>
               <dd>
-                <strong>{money(total)}</strong>
+                <strong>{money(placedOrder?.total_amount ?? quote?.subtotal ?? total)}</strong>
               </dd>
             </div>
           </dl>
-          {!rows.length && <button className={styles.orderDisabled} disabled>Đặt mua hàng</button>}
+          {!rows.length && !placedOrder && <button className={styles.orderDisabled} disabled>Đặt mua hàng</button>}
           <small>Ưu đãi học sinh, sinh viên áp dụng sau khi xác minh.</small>
         </aside>
       </div>

@@ -114,9 +114,24 @@ export function useCart() {
 
 export function changeCart(id: string, delta: number | "remove") {
   const items = parse(snapshot());
+  const previous = items[id] || 0;
   const next = delta === "remove" ? 0 : (items[id] || 0) + delta;
   if (next > 0) items[id] = next;
   else delete items[id];
+  localStorage.setItem(key, JSON.stringify(items));
+  window.dispatchEvent(new Event(key));
+  const eventType = next === 0 ? "cart_removed" : previous === 0 ? "cart_added" : "cart_quantity_changed";
+  void fetch("/api/activity", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ eventType, slug: id, quantity: next || null }),
+    keepalive: true,
+  }).catch(() => undefined);
+}
+
+export function clearCartItems(ids: string[]) {
+  const items = parse(snapshot());
+  ids.forEach(id => delete items[id]);
   localStorage.setItem(key, JSON.stringify(items));
   window.dispatchEvent(new Event(key));
 }
