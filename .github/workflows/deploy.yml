@@ -102,6 +102,7 @@ jobs:
   stage-4-deploy-production:
     name: Stage 4 - Auto Deploy Production (Level 4)
     needs: stage-3-deploy-testing
+    environment: PRODUCTION
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Production EC2 via SSH
