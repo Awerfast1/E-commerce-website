@@ -249,7 +249,7 @@ export default function NavBar({ products }: { products: StoreProduct[] }) {
           <input
             type="search"
             aria-label="Tìm sản phẩm"
-            placeholder="Bạn cần tìm gì?"
+            placeholder="Bạn cần tìm gìBALWAFJEKFAEJFKLSF?"
             value={query}
             onChange={event => {
               setQuery(event.target.value);
